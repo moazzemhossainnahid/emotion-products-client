@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const ExclusivePackages = () => {
+const LightsExclusivePackages = () => {
     return (
         <div className='w-full md:w-5/6 mx-auto bg-white py-10 p-5'>
             <div className="w-full">
@@ -181,4 +181,4 @@ const ExclusivePackages = () => {
     );
 };
 
-export default ExclusivePackages;
+export default LightsExclusivePackages;

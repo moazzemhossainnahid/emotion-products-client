@@ -45,9 +45,9 @@ const TrustedPartners = () => {
   return (
     <div className="flex justify-center items-center w-full mx-auto bg-white ">
 
-      <div className="w-full max-w-7xl mx-auto py-7">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 max-w-7xl mx-auto py-7">
 
-        <Slider className='' {...settings}>
+        {/* <Slider className='' {...settings}> */}
           {
             TPartnersData?.map((item) => {
               return (
@@ -65,7 +65,7 @@ const TrustedPartners = () => {
               )
             })
           }
-        </Slider>
+        {/* </Slider> */}
 
       </div>
     </div>

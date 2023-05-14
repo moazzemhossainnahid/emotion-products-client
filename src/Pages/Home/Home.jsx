@@ -5,6 +5,8 @@ import ValuableSpeech from '../../Components/Home/ValuableSpeech';
 import Overview from '../../Components/Home/Overview';
 import TrustedPartners from '../../Components/Others/TrustedPartners';
 import ExclusivePackages from '../../Components/Home/ExclusivePackages';
+import SuccessStories from '../../Components/Home/SuccessStories';
+import CarPortVideos from '../../Components/Home/CarPortVideos';
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
             <ValuableSpeech />
             <Overview />
             <ExclusivePackages />
+            <CarPortVideos />
+            <SuccessStories />
             <TrustedPartners />
         </div>
     );

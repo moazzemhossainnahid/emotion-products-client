@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PremiumService = () => {
+const LightsPremiumService = () => {
     return (
         <div className='bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
@@ -41,8 +41,13 @@ const PremiumService = () => {
                     </div>
                 </div>
             </div>
+
+            {/* https://i.ibb.co/ss8GzgH/Vector.png
+            https://i.ibb.co/fqS9XLf/Vector-3.png
+            https://i.ibb.co/92fkF9g/Vector-2.png
+            https://i.ibb.co/kKSXVCt/Vector-1.png */}
         </div>
     );
 };
 
-export default PremiumService;
+export default LightsPremiumService;
