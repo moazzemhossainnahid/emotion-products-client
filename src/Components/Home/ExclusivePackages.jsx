@@ -1,8 +1,9 @@
 import React from 'react';
+import { FaCheck } from 'react-icons/fa';
 
 const ExclusivePackages = () => {
     return (
-        <div className='w-full md:w-5/6 mx-auto bg-white py-10'>
+        <div className='w-full md:w-5/6 mx-auto bg-white py-10 p-5'>
             <div className="w-full">
                 <h3 className="text-2xl font-semibold">Take A Look On Our exclusive <br /> Projects.</h3>
                 <div className="flex items-center pt-3">
@@ -11,13 +12,40 @@ const ExclusivePackages = () => {
                 </div>
             </div>
 
-            <section className="w-full">
+            <section className="w-full pt-10">
                 <div className="flex flex-col md:flex-row justify-between items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto">
-
+                        <img src="https://i.ibb.co/XpsNBjd/Rectangle-14.png" alt="" className="" />
                     </div>
-                    <div className="w-full md:w-3/6 mx-auto">
-
+                    <div className="w-full md:w-3/6 mx-auto p-5">
+                        <h5 className="text-md text-gray-400">Project 01</h5>
+                        <h3 className="text-xl font-semibold text-gray-700 pt-3">Free School Street Carport</h3>
+                        <div className="pt-5 space-y-3">
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">Fully Customized and Foldable</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">03 Car Parking And Shelter space</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">Fully metal body roof</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">Fully Customized and Foldable</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">protect your car from sun and rain</span>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <FaCheck className='text-[#00C2FF]' />
+                                <span className="">Fully Customized and Foldable</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
