@@ -14,8 +14,9 @@ const ExclusivePackages = () => {
 
             <section className="w-full pt-10">
                 <div className="flex flex-col md:flex-row justify-between py-7 items-center w-full gap-5">
-                    <div className="w-full md:w-3/6 mx-auto">
-                        <img src="https://i.ibb.co/XpsNBjd/Rectangle-14.png" alt="" className="" />
+                    <div className="w-full md:w-3/6 mx-auto relative">
+                        <img src="https://i.ibb.co/XpsNBjd/Rectangle-14.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5">
                         <h5 className="text-md text-gray-400">Project 01</h5>
@@ -48,9 +49,15 @@ const ExclusivePackages = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="pt-20 pb-7 hidden md:block">
+                    <p className="border-b border-[#00C2FF] w-full"></p>
+                </div>
+
                 <div className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
-                    <div className="w-full md:w-3/6 mx-auto">
-                        <img src="https://i.ibb.co/k3Wc87Y/Rectangle-114.png" alt="" className="" />
+                    <div className="w-full md:w-3/6 mx-auto relative">
+                        <img src="https://i.ibb.co/k3Wc87Y/Rectangle-114.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5">
                         <h5 className="text-md text-gray-400">Project 02</h5>
@@ -83,9 +90,15 @@ const ExclusivePackages = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="pt-20 pb-7 hidden md:block">
+                    <p className="border-b border-[#00C2FF] w-full"></p>
+                </div>
+
                 <div className="flex flex-col md:flex-row justify-between py-10 items-center w-full gap-5">
-                    <div className="w-full md:w-3/6 mx-auto">
-                        <img src="https://i.ibb.co/r5Yssd7/Rectangle-114-1.png" alt="" className="" />
+                    <div className="w-full md:w-3/6 mx-auto relative">
+                        <img src="https://i.ibb.co/r5Yssd7/Rectangle-114-1.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5">
                         <h5 className="text-md text-gray-400">Project 03</h5>
@@ -118,9 +131,15 @@ const ExclusivePackages = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="pt-20 pb-7 hidden md:block">
+                    <p className="border-b border-[#00C2FF] w-full"></p>
+                </div>
+
                 <div className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
-                    <div className="w-full md:w-3/6 mx-auto">
-                        <img src="https://i.ibb.co/86bfH9k/Rectangle-114-2.png" alt="" className="" />
+                    <div className="w-full md:w-3/6 mx-auto relative">
+                        <img src="https://i.ibb.co/86bfH9k/Rectangle-114-2.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5">
                         <h5 className="text-md text-gray-400">Project 04</h5>
