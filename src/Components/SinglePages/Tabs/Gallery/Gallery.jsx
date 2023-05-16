@@ -3,6 +3,8 @@ import { SlideshowLightbox } from 'lightbox.js-react';
 import 'lightbox.js-react/dist/index.css';
 
 const Gallery = () => {
+
+    
     return (
         <div className='w-full md:w-4/5 mx-auto py-10'>
             <SlideshowLightbox className="container grid grid-cols-3 gap-2 mx-auto">

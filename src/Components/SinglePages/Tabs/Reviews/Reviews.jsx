@@ -9,7 +9,7 @@ const Reviews = () => {
                 <div className="flex">
                     <div className="space-y-1 mr-10">
                         <h3 className="text-4xl font-bold">4.9/5</h3>
-                        <div className="flex space-x-1 text-lg text-yellow-400">
+                        <div className="flex space-x-1 text-lg text-cyan-400">
                             <AiFillStar />
                             <AiFillStar />
                             <AiFillStar />
@@ -20,7 +20,7 @@ const Reviews = () => {
                     </div>
                     <div>
                         <div className="flex items-center mb-1.5 gap-5">
-                            <div className="flex space-x-1 text-lg text-yellow-400">
+                            <div className="flex space-x-1 text-lg text-cyan-400">
                                 <AiFillStar />
                                 <AiFillStar />
                                 <AiFillStar />
@@ -29,43 +29,43 @@ const Reviews = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-48 bg-gray-400 rounded h-2.5">
-                                    <div className="bg-yellow-400 h-2.5 rounded w-4/5"></div>
+                                    <div className="bg-cyan-400 h-2.5 rounded w-4/5"></div>
                                 </div>
                                 <p>18</p>
                             </div>
                         </div>
                         <div className="flex items-center mb-1.5 gap-5">
                             <div className="flex space-x-1 text-lg">
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
                                 <AiFillStar />
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-48 bg-gray-400 rounded h-2.5">
-                                    <div className="bg-yellow-400 h-2.5 rounded w-28"></div>
+                                    <div className="bg-cyan-400 h-2.5 rounded w-28"></div>
                                 </div>
                                 <p>12</p>
                             </div>
                         </div>
                         <div className="flex items-center mb-1.5 gap-5">
                             <div className="flex space-x-1 text-lg ">
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
                                 <AiFillStar />
@@ -73,17 +73,17 @@ const Reviews = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-48 bg-gray-400 rounded h-2.5">
-                                    <div className="bg-yellow-400 h-2.5 rounded w-20"></div>
+                                    <div className="bg-cyan-400 h-2.5 rounded w-20"></div>
                                 </div>
                                 <p>8</p>
                             </div>
                         </div>
                         <div className="flex items-center mb-1.5 gap-5">
                             <div className="flex space-x-1 text-lg ">
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
                                 <AiFillStar />
@@ -92,14 +92,14 @@ const Reviews = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-48 bg-gray-400 rounded h-2.5">
-                                    <div className="bg-yellow-400 h-2.5 rounded w-12"></div>
+                                    <div className="bg-cyan-400 h-2.5 rounded w-12"></div>
                                 </div>
                                 <p>5</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-5">
                             <div className="flex space-x-1 text-lg">
-                                <span className="text-yellow-400">
+                                <span className="text-cyan-400">
                                     <AiFillStar />
                                 </span>
                                 <AiFillStar />
@@ -109,7 +109,7 @@ const Reviews = () => {
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-48 bg-gray-400 rounded h-2.5">
-                                    <div className="bg-yellow-400 h-2.5 rounded w-8"></div>
+                                    <div className="bg-cyan-400 h-2.5 rounded w-8"></div>
                                 </div>
                                 <p>2</p>
                             </div>
@@ -126,7 +126,7 @@ const Reviews = () => {
                                 </div>
                                 <div className="space-y-3 pl-5">
                                     <h3 className="text-2xl font-semibold">by Jonayed Islam</h3>
-                                    <div className="flex space-x-1 text-yellow-400 text-lg">
+                                    <div className="flex space-x-1 text-cyan-400 text-lg">
                                         <AiFillStar />
                                         <AiFillStar />
                                         <AiFillStar />
@@ -142,8 +142,8 @@ const Reviews = () => {
                                     <img src={img1} alt="" />
                                 </div>
                                 <div className="space-y-3 pl-5">
-                                    <h3 className="text-2xl font-semibold">by Ashraful Alam</h3>
-                                    <div className="flex space-x-1 text-yellow-400 text-lg">
+                                    <h3 className="text-2xl font-semibold">by MD. NAHID</h3>
+                                    <div className="flex space-x-1 text-cyan-400 text-lg">
                                         <AiFillStar />
                                         <AiFillStar />
                                         <AiFillStar />
@@ -160,7 +160,7 @@ const Reviews = () => {
                                 </div>
                                 <div className="space-y-3 pl-5">
                                     <h3 className="text-2xl font-semibold">by Emran Hossen</h3>
-                                    <div className="flex space-x-1 text-yellow-400 text-lg">
+                                    <div className="flex space-x-1 text-cyan-400 text-lg">
                                         <AiFillStar />
                                         <AiFillStar />
                                         <AiFillStar />
