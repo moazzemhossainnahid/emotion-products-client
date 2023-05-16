@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaPlayCircle } from 'react-icons/fa';
 
 const Overview = () => {
     return (
@@ -17,6 +18,10 @@ const Overview = () => {
                 </ul>
             </div>
             <p className="text-gray-400">Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+
+            <div className="pt-7">
+                <button className="bg-primary text-black px-7 flex items-center py-2 text-semibold rounded-3xl"> <FaPlayCircle className='pr-3 text-3xl' /> See How To Use</button>
+            </div>
         </div>
     );
 };
