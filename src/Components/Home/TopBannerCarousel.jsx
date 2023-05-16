@@ -49,11 +49,17 @@ const TopBannerCarousel = () => {
                         return (
                             <div key={idx} className={`bg-[url('${data?.img}')] h-[60vh] md:h-[85vh] relative bg-cover`}>
                                 <div className="w-full text-center absolute bottom-40 space-y-3">
-                                    <h3 className="text-3xl md:text-5xl text-white">{data?.title}</h3>
-                                    <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
-                                    <button className='bg-[#00C2FF] justify-center btn btn-warning px-7 py-2 text-black rounded'>
-                                        <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
-                                    </button>
+                                    <Slide top duration={1500}>
+                                        <h3 className="text-3xl md:text-5xl text-white">{data?.title}</h3>
+                                    </Slide>
+                                    <Slide bottom duration={2000}>
+                                        <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
+                                    </Slide>
+                                    <Slide bottom duration={2500}>
+                                        <button className='bg-[#00C2FF] justify-center btn btn-warning px-7 py-2 text-black rounded'>
+                                            <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
+                                        </button>
+                                    </Slide>
                                 </div>
                             </div>
                         )
