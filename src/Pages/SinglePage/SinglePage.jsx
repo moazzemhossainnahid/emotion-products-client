@@ -1,12 +1,12 @@
 import React from 'react';
 import ProductView from '../../Components/SinglePages/ProductView';
-import ProductRelatedView from '../../Components/SinglePages/ProductRelatedView';
+import ProductTabsView from '../../Components/SinglePages/ProductTabsView';
 
 const SinglePage = () => {
     return (
         <div className='container w-full'>
             <ProductView/>
-            <ProductRelatedView/>
+            <ProductTabsView/>
         </div>
     );
 };
