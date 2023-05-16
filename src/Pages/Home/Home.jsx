@@ -7,11 +7,12 @@ import TrustedPartners from '../../Components/Others/TrustedPartners';
 import ExclusivePackages from '../../Components/Home/ExclusivePackages';
 import SuccessStories from '../../Components/Home/SuccessStories';
 import CarPortVideos from '../../Components/Home/CarPortVideos';
+import TopBannerCarousel from '../../Components/Home/TopBannerCarousel';
 
 const Home = () => {
     return (
         <div className=''>
-            <TopBanner />
+            <TopBannerCarousel />
             <PremiumService />
             <ValuableSpeech />
             <Overview />
