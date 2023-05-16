@@ -4,6 +4,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { flushSync } from 'react-dom';
 
 import "./SwiperStyle.css";
+import { FaQuoteLeft } from 'react-icons/fa';
 const TWEEN_FACTOR = 4.2
 
 const numberWithinRange = (number, min, max) =>
@@ -158,7 +159,7 @@ const SuccessStoriesCarousel = () => {
 
                                 }
                                 <p className="text-xs break-words md:text-sm">{feedback?.feedbackComment.length > 100 ? `${feedback?.feedbackComment.slice(0, 100)}...` : feedback?.feedbackComment}</p>
-
+                                <h3 className="text-gray-400 text-3xl text-center flex justify-center pt-5"><FaQuoteLeft /></h3>
                             </div>
                         </div>
                     ))}
