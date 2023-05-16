@@ -4,7 +4,7 @@ import { AiFillStar } from 'react-icons/ai';
 const Reviews = () => {
     const img1 = "https://i.ibb.co/k3Wc87Y/Rectangle-114.png";
     return (
-        <div>
+        <div className='w-full md:w-4/5 mx-auto py-10'>
             <div className="pt-10">
                 <div className="flex">
                     <div className="space-y-1 mr-10">
