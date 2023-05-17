@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LightsPremiumService = () => {
+const SofaPremiumService = () => {
     return (
         <div className='bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
@@ -45,4 +45,4 @@ const LightsPremiumService = () => {
     );
 };
 
-export default LightsPremiumService;
+export default SofaPremiumService;

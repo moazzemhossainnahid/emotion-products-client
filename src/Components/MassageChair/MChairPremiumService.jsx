@@ -41,11 +41,6 @@ const MChairPremiumService = () => {
                     </div>
                 </div>
             </div>
-
-            {/* https://i.ibb.co/ss8GzgH/Vector.png
-            https://i.ibb.co/fqS9XLf/Vector-3.png
-            https://i.ibb.co/92fkF9g/Vector-2.png
-            https://i.ibb.co/kKSXVCt/Vector-1.png */}
         </div>
     );
 };
