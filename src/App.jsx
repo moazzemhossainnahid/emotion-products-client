@@ -21,7 +21,7 @@ function App() {
             <Route path='/lights' element={<Lights />} />
             <Route path='/massagechair' element={<MassageChair />} />
             <Route path='/sofa' element={<Sofa />} />
-            <Route path='/spage' element={<SinglePage />} />
+            <Route path='/productdetails/:id' element={<SinglePage />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
