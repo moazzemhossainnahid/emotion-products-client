@@ -1687,11 +1687,6 @@
   "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.394.tgz"
   "version" "1.4.394"
 
-"embla-carousel-autoplay@^8.0.0-rc03":
-  "integrity" "sha512-AEMoMAsOG5mpL2TidI6CfbfS9MSF0oQFoyy69s77HZVkTs2jmkP4TFxjsplFX0URjYsvsTL0jc67MMacrpP2jw=="
-  "resolved" "https://registry.npmjs.org/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc03.tgz"
-  "version" "8.0.0-rc03"
-
 "embla-carousel-react@^7.1.0":
   "integrity" "sha512-tbYRPRZSDNd2QLNqYDcArAakGIxtUbhS7tkP0dGXktXHGgcX+3ji3VrOUTOftBiujZrMV8kRxtrRUe/1soloIQ=="
   "resolved" "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-7.1.0.tgz"
@@ -1699,28 +1694,10 @@
   dependencies:
     "embla-carousel" "7.1.0"
 
-"embla-carousel-react@^8.0.0-rc03":
-  "integrity" "sha512-PxxBdAUlUgPXqeoO7JRuG2l/axXBzSxjz6eYRw3ifzGW0maIBWkdVB5lLC8JSFmCDXI8R3ZaQuL5d7KFvJOkBw=="
-  "resolved" "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-8.0.0-rc03.tgz"
-  "version" "8.0.0-rc03"
-  dependencies:
-    "embla-carousel" "8.0.0-rc03"
-    "embla-carousel-reactive-utils" "8.0.0-rc03"
-
-"embla-carousel-reactive-utils@8.0.0-rc03":
-  "integrity" "sha512-m2ZaxmG0MBs9nFsA3vEz0ZUNiwJaoJM8f//ENe8ODM/rEIiHkSQ1fN90k3k2NX9JemcllYGqz/bmE5cMYGXjJQ=="
-  "resolved" "https://registry.npmjs.org/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc03.tgz"
-  "version" "8.0.0-rc03"
-
 "embla-carousel@7.1.0":
   "integrity" "sha512-Bh8Pa8NWzgugLkf8sAGexQlBCNDFaej5BXiKgQdRJ1mUC9NWBrw9Z23YVPVGkguWoz5LMjZXXFVGCobl3UPt/Q=="
   "resolved" "https://registry.npmjs.org/embla-carousel/-/embla-carousel-7.1.0.tgz"
   "version" "7.1.0"
-
-"embla-carousel@8.0.0-rc03":
-  "integrity" "sha512-2goVwmTYZdGFcRejbYJlaC/iWDPv/VAsASE60uLQYLSKpuQRTxq/huu548OozLsH/2uSelVszvmzfinZnnk/iw=="
-  "resolved" "https://registry.npmjs.org/embla-carousel/-/embla-carousel-8.0.0-rc03.tgz"
-  "version" "8.0.0-rc03"
 
 "enquire.js@^2.1.6":
   "integrity" "sha512-/KujNpO+PT63F7Hlpu4h3pE3TokKRHN26JYmQpPyjkRD/N57R7bPDNojMXdi7uveAKjYB7yQnartCxZnFWr0Xw=="

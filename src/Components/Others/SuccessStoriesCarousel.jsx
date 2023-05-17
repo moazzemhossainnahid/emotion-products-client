@@ -45,7 +45,7 @@ const SuccessStoriesCarousel = () => {
                 <div class="container">
                     <div class="slider">
                         <div class="owl-carousel">
-                            {ourFeedback?.map((feedback, index) => (
+                            {ourFeedback?.map((feedback) => (
                                 <div
                                     className="slider-card bg-transparent"
                                     key={feedback?.id}
