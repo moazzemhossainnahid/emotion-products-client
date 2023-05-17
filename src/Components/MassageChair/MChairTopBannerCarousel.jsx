@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Slide from 'react-reveal/Slide';
 import Slider from 'react-slick';
 
-const TopBannerCarousel = () => {
+const MChairTopBannerCarousel = () => {
     const settings = {
         dots: true,
         autoplay: true,
@@ -81,4 +81,4 @@ const TopBannerCarousel = () => {
     );
 };
 
-export default TopBannerCarousel;
+export default MChairTopBannerCarousel;

@@ -7,11 +7,12 @@ import LightsExclusivePackages from '../../Components/Lights/LightsExclusivePack
 import MChairVideos from '../../Components/MassageChair/MChairVideos';
 import MChairSuccessStories from '../../Components/MassageChair/MChairSuccessStories';
 import TrustedPartners from '../../Components/Others/TrustedPartners';
+import MChairTopBannerCarousel from '../../Components/MassageChair/MChairTopBannerCarousel';
 
 const MassageChair = () => {
     return (
         <div className=''>
-            <MChairTopBanner />
+            <MChairTopBannerCarousel />
             <MChairPremiumService />
             <MChairValuableSpeech />
             <MChairOverview />

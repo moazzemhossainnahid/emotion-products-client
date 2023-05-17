@@ -7,11 +7,12 @@ import LightsExclusivePackages from '../../Components/Lights/LightsExclusivePack
 import LightsVideos from '../../Components/Lights/LightsVideos';
 import LightsSuccessStories from '../../Components/Lights/LightsSuccessStories';
 import TrustedPartners from '../../Components/Others/TrustedPartners';
+import LightsTopBannerCarousel from '../../Components/Lights/LightsTopBannerCarousel';
 
 const Lights = () => {
     return (
         <div className=''>
-            <LightsTopBanner />
+            <LightsTopBannerCarousel />
             <LightsPremiumService />
             <LightsValuableSpeech />
             <LightsOverview />
