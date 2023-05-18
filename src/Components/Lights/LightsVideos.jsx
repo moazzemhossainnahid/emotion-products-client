@@ -16,7 +16,7 @@ const LightsVideos = () => {
                 </div>
 
                 <div className="pt-7 h-96 w-4/5  mx-auto">
-                    <div className="bg-[url('https://i.ibb.co/NnGR08n/Rectangle-37.png')] rounded backdrop-saturate-125 bg-white/30 h-80 w-full bg-cover bg-center">
+                    <div className="bg-[url('https://i.ibb.co/f8cgryG/Rectangle-14.png')] rounded backdrop-saturate-125 bg-white/30 h-80 w-full bg-cover bg-center">
                         <div className="flex flex-col justify-center items-center h-full">
                             <div className="hero-content w-full h-full text-center text-neutral-content">
                                 <label htmlFor="my-modal-5" className="w-full modal-button">
