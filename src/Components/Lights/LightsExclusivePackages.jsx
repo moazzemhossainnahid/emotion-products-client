@@ -95,7 +95,7 @@ const LightsExclusivePackages = () => {
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className="p-5">
-                    <button className='bg-[#00C2FF] btn hover:bg-warning text-gray-700 px-5 py-2 rounded-xl'>View More Work</button>
+                    <button className='bg-[#00C2FF] hover:bg-[#3fabcc] btn text-gray-700 border-0 px-5 py-2 rounded-md'>View More Work</button>
                 </div>
             </section>
 

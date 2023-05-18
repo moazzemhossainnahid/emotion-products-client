@@ -95,7 +95,7 @@ const ExclusivePackages = () => {
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className="p-5">
-                    <button className='bg-[#00C2FF] btn hover:bg-warning text-gray-700 px-5 py-2 rounded-xl'>View More Work</button>
+                    <button className='bg-black text-white hover:bg-transparent hover:text-black btn border rounded-none px-5 py-2'>View More Work</button>
                 </div>
             </section>
 

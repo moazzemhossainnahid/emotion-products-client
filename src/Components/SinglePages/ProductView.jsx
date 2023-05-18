@@ -27,10 +27,9 @@ const ProductView = () => {
                 </div>
                 <div className="space-y-3">
                     <h2 className="text-3xl font-semibold mt-1">Exclusive Massage Chair</h2>
-                    <div className="flex flex-col md:flex-row gap-2 items-center">
+                    <div className="flex w-5/6 md:w-4/5 flex-col md:flex-row justify-between gap-2 items-center">
                         <div className="flex space-x-3">
-                            <p className="line-through">$5000.00 </p>
-                            <p className="text-2xl text-primary font-bold -mt-1.5">$4500.00 </p>
+                            <p className="text-2xl text-gray-500 font-bold -mt-1.5">$4500.00 </p>
                         </div>
                         <div className="flex gap-1 text-sm text-yellow-400">
                             <span>
@@ -60,18 +59,18 @@ const ProductView = () => {
                             </p>
                         </div>
                         <div className="flex gap-3">
-                            <span className="h-8 w-8 border border-gray-400 flex justify-center items-center hover:bg-gray-200  rounded"><FaFacebook /></span>
-                            <span className="h-8 w-8 border border-gray-400 flex justify-center items-center hover:bg-gray-200  rounded"><FaTwitter /></span>
-                            <span className="h-8 w-8 border border-gray-400 flex justify-center items-center hover:bg-gray-200 rounded"><FaInstagram /></span>
-                            <span className="h-8 w-8 border border-gray-400 flex justify-center items-center hover:bg-gray-200 rounded"><FaWhatsapp /></span>
+                            <span className="h-8 w-12 border border-gray-400 flex justify-center items-center hover:bg-gray-200  rounded"><FaFacebook /></span>
+                            <span className="h-8 w-12 border border-gray-400 flex justify-center items-center hover:bg-gray-200  rounded"><FaTwitter /></span>
+                            <span className="h-8 w-12 border border-gray-400 flex justify-center items-center hover:bg-gray-200 rounded"><FaInstagram /></span>
+                            <span className="h-8 w-12 border border-gray-400 flex justify-center items-center hover:bg-gray-200 rounded"><FaWhatsapp /></span>
                         </div>
                         <div className="space-y-3">
                             <div className="flex flex-col space-y-3">
                                 <p className="font-bold">Available Color </p>
                                 <div className="flex gap-3">
-                                <button className="pl-5 w-7 h-7 rounded-full bg-black border-2 border-primary focus:border-black font-medium"></button>
-                                <button className="pl-5 w-7 h-7 rounded-full bg-white border-2 border-primary focus:border-black font-medium"></button>
-                                <button className="pl-5 w-7 h-7 rounded-full bg-[#EE8539] border-2 border-primary focus:border-black font-medium"></button>
+                                    <button className="pl-5 w-7 h-7 rounded-full bg-black border-2 border-primary focus:border-black font-medium"></button>
+                                    <button className="pl-5 w-7 h-7 rounded-full bg-white border-2 border-primary focus:border-black font-medium"></button>
+                                    <button className="pl-5 w-7 h-7 rounded-full bg-[#EE8539] border-2 border-primary focus:border-black font-medium"></button>
                                 </div>
                             </div>
 
@@ -103,23 +102,28 @@ const ProductView = () => {
                             </div>
                             <div className="pt-2">
                                 <span className="font-medium">Quantity</span>
-                                <div class="flex gap-2 p-2 border rounded w-32 justify-center items-center">
-                                    <span className="border-gray-700 cursor-pointer rounded-full w-7 h-7 border px-2 flex justify-center items-center">
-                                        <i class="fa-solid fa-minus"></i>
-                                    </span>
-                                    <input
-                                        class="px-2 font-bold bg-transparent text-center w-8 max-h-8"
-                                        type="text"
-                                        value="1"
-                                    />
-                                    <span className="border-gray-700 bg-primary cursor-pointer rounded-full w-7 h-7 border px-2 flex justify-center items-center">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </span>
-                                </div>
+
                             </div>
-                            <div className="flex pt-4">
-                                <button className="border flex items-center border-gray-400 px-4 py-2 rounded-md bg-primary hover:bg-transparent hover:text-primary font-medium text-black mr-4"> <span className="mr-3">ADD TO CART</span><AiOutlineShoppingCart /></button>
-                                <button className="border flex items-center border-gray-400 px-8 py-2 bg-transparent rounded-md text-black hover:bg-primary hover:text-white font-medium mr-4"> <span className="ml-3">Shop Now</span></button>
+                            <div className="flex gap-3">
+                                <div className="">
+                                    <div class="flex gap-2 p-2 border w-32 justify-center items-center">
+                                        <span className=" cursor-pointer rounded-full w-7 h-7 border px-2 flex justify-center items-center">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </span>
+                                        <input
+                                            class="px-2 font-bold bg-transparent text-center w-8 max-h-8"
+                                            type="text"
+                                            value="1"
+                                        />
+                                        <span className="cursor-pointer rounded-full w-7 h-7 border px-2 flex justify-center items-center">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-gray-800 hover:bg-transparent text-white hover:text-black font-medium mr-4"> <span className="mr-3">ADD TO CART</span><AiOutlineShoppingCart /></button>
+                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-transparent text-black hover:bg-black hover:text-white font-medium mr-4"> <span className="ml-3">SHOP NOW</span></button>
+                                </div>
                             </div>
                         </div>
 
