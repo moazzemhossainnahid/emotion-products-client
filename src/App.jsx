@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl mx-auto">
         <Header />
         <div className="">
           <Routes>
