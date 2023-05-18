@@ -5,7 +5,7 @@ import { ScrollRotate } from 'react-scroll-rotate';
 const CarPortVideos = () => {
     return (
         <div className="w-full h-[90vh] md:h-[95vh] py-7">
-            <div className="bg-gradient-to-r from-[#1E120A] to-[#343434] rounded w-5/6 md:w-4/5 h-96 mx-auto relative">
+            <div data-aos="fade-down" data-aos-duration="1000" className="bg-gradient-to-r from-[#1E120A] to-[#343434] rounded w-5/6 md:w-4/5 h-96 mx-auto relative">
                 <div className="flex w-4/5 mx-auto justify-between items-center gap-3 pt-5">
                     <h3 className="text-xl md:text-2xl font-bold text-white">Premium quality and watch our <br /> hottest carport videos</h3>
                     <div className="md:pr-20">

@@ -11,7 +11,7 @@ import MChairTopBannerCarousel from '../../Components/MassageChair/MChairTopBann
 
 const MassageChair = () => {
     return (
-        <div className=''>
+        <div className='container w-full overflow-hidden'>
             <MChairTopBannerCarousel />
             <MChairPremiumService />
             <MChairValuableSpeech />

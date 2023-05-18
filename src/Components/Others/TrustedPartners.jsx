@@ -45,7 +45,7 @@ const TrustedPartners = () => {
   return (
     <div className="flex justify-center items-center w-full mx-auto bg-white ">
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 max-w-7xl mx-auto py-7">
+      <div data-aos="fade-up" data-aos-duration="1000" className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 max-w-7xl mx-auto py-7">
 
         {/* <Slider className='' {...settings}> */}
           {

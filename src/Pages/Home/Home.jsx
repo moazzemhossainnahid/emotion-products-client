@@ -11,7 +11,7 @@ import TopBannerCarousel from '../../Components/Home/TopBannerCarousel';
 
 const Home = () => {
     return (
-        <div className=''>
+        <div className='container w-full overflow-hidden'>
             <TopBannerCarousel />
             <PremiumService />
             <ValuableSpeech />

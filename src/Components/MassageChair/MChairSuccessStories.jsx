@@ -3,7 +3,7 @@ import SuccessStoriesCarousel from '../Others/SuccessStoriesCarousel';
 
 const MChairSuccessStories = () => {
     return (
-        <div className='w-full p-5'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='w-full p-5'>
             <div className="text-center">
                 <h3 className="text-2xl">Clients Success Stories</h3>
                 <div className="flex justify-center items-center pt-3">

@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const MChairOverview = () => {
     return (
-        <div className='w-full mx-auto'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='w-full mx-auto'>
             <div className="bg-[url('https://i.ibb.co/r0Yv2JF/Rectangle-110.png')] bg-cover py-12">
                 <div className="w-full md:w-5/6 mx-auto grid grid-cols-2 lg:grid-cols-4 gap-7">
                     <div className="text-center">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MChairValuableSpeech = () => {
     return (
-        <div className='bg-white py-10 pt-20'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='bg-white py-10 pt-20'>
             <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row p-5 justify-between items-center gap-5">
                 <div className="w-full md:w-2/5 mx-auto">
                     <img src="https://i.ibb.co/Lpgw2R8/Rectangle-6.png" alt="" className="" />
