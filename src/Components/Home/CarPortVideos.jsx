@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { ScrollRotate } from 'react-scroll-rotate';
 
 const CarPortVideos = () => {
     return (
@@ -8,7 +9,9 @@ const CarPortVideos = () => {
                 <div className="flex w-4/5 mx-auto justify-between items-center gap-3 pt-5">
                     <h3 className="text-xl md:text-2xl font-bold text-white">Premium quality and watch our <br /> hottest carport videos</h3>
                     <div className="md:pr-20">
-                        <img src="https://i.ibb.co/XZvKfRP/Group-75.png" alt="" className="" />
+                        <ScrollRotate from={0} to={360} throttle={0.1} animationDuration={0.3}>
+                            <img src="https://i.ibb.co/XZvKfRP/Group-75.png" alt="" className="" />
+                        </ScrollRotate>
                     </div>
                 </div>
 
