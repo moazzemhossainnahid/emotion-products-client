@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='w-full container sticky top-0 z-50'>
+        <div className='w-full max-w-7xl container sticky top-0 z-50'>
             <div className="bg-base-100 z-50 sticky top-0">
                 <div className="navbar w-full md:w-4/5 mx-auto">
 
