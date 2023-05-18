@@ -25,22 +25,22 @@ const TopBannerCarousel = () => {
 
     const SliderData = [
         {
-            img: 'https://i.ibb.co/b1xjqTb/Rectangle-111.png',
+            img: 'https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg',
             title: 'Protect Your Vehicle',
             desc: 'We make Sure that, to give you a premium Carport service'
         },
         {
-            img: 'https://i.ibb.co/5kYFf7r/Rectangle-111.png',
+            img: 'https://i.ibb.co/9NsVh0c/Whats-App-Image-2023-05-14-afft-19-06-12.jpg',
             title: 'Earning for a Lifetime',
             desc: 'From free online courses to advanced degrees and executive education'
         },
         {
-            img: 'https://i.ibb.co/37G57Y2/Rectangle-111-1.png',
+            img: 'https://i.ibb.co/gW382r3/Whats-App-Image-2023-05-14-at-19-06-1ff2.jpg',
             title: 'Keep Learning',
             desc: 'Hagwart can help you meet your goals for life and professional advancement.'
         },
         {
-            img: 'https://i.ibb.co/h98jKxF/Rectangle-38.png',
+            img: 'https://i.ibb.co/2dR0Dx2/Whats-App-Image-2023-05-ff14-at-19-06-13.jpg',
             title: 'Keep Learning',
             desc: 'Hagwart can help you meet your goals for life and professional advancement.'
         }
