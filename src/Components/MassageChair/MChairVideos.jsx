@@ -48,24 +48,15 @@ const MChairVideos = () => {
                             </div>
                             <input type="checkbox" id="my-modal-5" className="modal-toggle" />
                             <div className="modal">
-                                <div className="modal-box w-11/12 max-w-5xl rounded-lg bg-base-300 p-4">
-                                    {/* <iframe
+                                <div className="modal-box max-w-3xl rounded-lg bg-base-300 p-4">
+                                    <iframe
                                         className="mx-auto w-full lg:h-96 h-48 md:h-96 rounded-lg"
                                         src="https://www.youtube.com/embed/TxbE79-1OSI"
                                         title="YouTube video player"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                    ></iframe> */}
-                                    <Vimeo
-                                        video="https://vimeo.com/226260195"
-                                        autoplay={false}
-                                        loop
-                                        muted={false}
-                                        showPortrait
-                                        background={true}
-                                        controls={true}
-                                    />
+                                    ></iframe>
                                     <div className="modal-action mt-3">
                                         <label htmlFor="my-modal-5" className="btn btn-primary btn-sm text-white">
                                             Close
