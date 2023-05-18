@@ -19,9 +19,10 @@ const MChairValuableSpeech = () => {
                         <p className=""> You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. But keeping my ride safe and secure has always been a bit of a challenge, especially with unpredictable weather and the occasional bird droppings.</p>
                         <p className="">That's where my carport comes in. It may not be the most glamorous thing in the world, but it does the job and it does it well. Rain, hail or shine, my car is protected from the elements and I can sleep easy at night knowing that it's safe and sound.</p>
                     </div>
-                <div className="flex justify-between items-center gap-2 pt-5 w-4/5">
-                    <h3 className="text-xl">Mr. Michel John Doe</h3>
-                    <img src="https://i.ibb.co/F4Ckb1R/Group.png" alt="" className="p-3 pr-7" />
+                    <div className="flex flex-row justify-between items-center gap-2 pt-5 w-5/6 md:w-2/3">
+                    <h3 className="text-md text-gray-500 italic">Edwin Eijsink & Timon Eijsink</h3>
+                    {/* <h3 className="text-md text-gray-500 italic"> & </h3>
+                    <h3 className="text-md text-gray-500 italic">Timon Eijsink</h3> */}
                 </div>
                 </div>
             </div>

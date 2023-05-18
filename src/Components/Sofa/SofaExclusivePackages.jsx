@@ -17,7 +17,7 @@ const SofaExclusivePackages = () => {
             <section className="w-full pt-10">
                 <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-col md:flex-row justify-between py-7 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/Rg6fMk9/Rectangle-131.png" alt="" className="relative w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
+                        <img src="https://i.ibb.co/ZGDsvJG/Whats-App-ddd-Image-2023-05-18-at-15-42-20.jpg" alt="" className="relative shadow-lg w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -38,7 +38,7 @@ const SofaExclusivePackages = () => {
 
                 <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/n0nZVkJ/Rectangle-131-3.png" alt="" className="relative w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
+                        <img src="https://i.ibb.co/Lv8Qsn7/Whats-App-Image-2023-05-18-fdat-15-42-22.jpg" alt="" className="relative shadow-lg w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -59,7 +59,7 @@ const SofaExclusivePackages = () => {
 
                 <div data-aos="fade-right" data-aos-duration="1000" className="flex flex-col md:flex-row justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/Tq40dV2/Rectangle-131-2.png" alt="" className="relative w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
+                        <img src="https://i.ibb.co/VMvrw25/Whats-App-Imagedd-2023-05-18-at-15-42-21.jpg" alt="" className="relative shadow-lg w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -80,7 +80,7 @@ const SofaExclusivePackages = () => {
 
                 <div data-aos="fade-down" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/0YXFvN8/Rectangle-131-1.png" alt="" className="relative w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
+                        <img src="https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg" alt="" className="relative shadow-lg w-full h-64 md:h-80 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
