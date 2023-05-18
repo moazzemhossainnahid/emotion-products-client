@@ -11,7 +11,7 @@ import SofaTopBannerCarousel from '../../Components/Sofa/SofaTopBannerCarousel';
 
 const Sofa = () => {
     return (
-        <div className='container w-full overflow-hidden'>
+        <div className='container w-full max-w-7xl overflow-hidden'>
             <SofaTopBannerCarousel />
             <SofaPremiumService />
             <SofaValuableSpeech />

@@ -11,7 +11,7 @@ import LightsTopBannerCarousel from '../../Components/Lights/LightsTopBannerCaro
 
 const Lights = () => {
     return (
-        <div className='container w-full overflow-hidden'>
+        <div className='container w-full max-w-7xl overflow-hidden'>
             <LightsTopBannerCarousel />
             <LightsPremiumService />
             <LightsValuableSpeech />

@@ -11,7 +11,7 @@ import MChairExclusivePackages from '../../Components/MassageChair/MChairExclusi
 
 const MassageChair = () => {
     return (
-        <div className='container w-full overflow-hidden'>
+        <div className='container w-full max-w-7xl overflow-hidden'>
             <MChairTopBannerCarousel />
             <MChairPremiumService />
             <MChairValuableSpeech />
