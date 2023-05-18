@@ -13,6 +13,7 @@
     "@u-wave/react-vimeo": "^0.9.10",
     "aos": "^3.0.0-beta.6",
     "daisyui": "^2.51.6",
+    "firebase": "^9.22.0",
     "lightbox.js-react": "^0.6.4",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
