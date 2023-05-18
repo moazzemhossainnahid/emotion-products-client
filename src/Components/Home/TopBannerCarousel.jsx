@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 const TopBannerCarousel = () => {
     const settings = {
         dots: true,
+        dotsClass: "slick-dots slick-thumb",
         autoplay: true,
         autoplaySpeed: 5000,
         infinite: true,
@@ -15,11 +16,33 @@ const TopBannerCarousel = () => {
         speed: 500,
         arrows: false,
         adaptiveHeight: true,
-        appendDots: dots => <ul>{dots}</ul>,
-        customPaging: i => (
-            <div className="ft-slick__dots--custom">
-                <div className="loading" />
+        appendDots: dots => (
+            <div
+                className='-mt-32'
+                style={{
+                    marginTop: "-30px",
+                    backgroundColor: "transparent",
+                    borderRadius: "10px",
+                    padding: "10px"
+                }}
+            >
+                <ul className='absolute hidden md:flex text-sm gap-2 items-center left-40' style={{ margin: "-70px" }}> <span className="-mt-4">01</span> {dots}  <span className="-mt-4">04</span> </ul>
             </div>
+        ),
+        customPaging: i => (
+            <div
+                style={{
+                    content: "",
+                    height: "2px",
+                    width: "20px",
+                    background: "#00C2FF",
+                    color: "#00C2FF",
+                    border: "1px blue solid #00C2FF"
+                }}
+            >
+                <span className="text-transparent">{i + 1}</span>
+            </div>
+
         )
     };
 
