@@ -68,7 +68,7 @@ const SuccessStoriesCarousel = () => {
 
 
     return (
-        <div className=" banner w-full max-w-7xl">
+        <div className=" banner w-full max-w-full">
             <section id="slider" class="w-full flex mx-auto justify-center items-center pt-5">
                 <div class="container">
                     <div class="slider">

@@ -6,7 +6,7 @@ const Footer = () => {
 
 
     return (
-        <footer className='container w-full max-w-7xl'>
+        <footer className='container w-full max-w-full'>
             <div className='w-full mx-auto bg-[#353535]'>
                 <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 py-10 ">
                     <div className="w-full md:w-2/5 mx-auto space-y-2 text-center md:text-left">

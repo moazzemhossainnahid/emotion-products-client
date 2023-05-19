@@ -17,7 +17,7 @@ const ExclusivePackages = () => {
             <section className="w-full pt-10">
                 <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-col md:flex-row justify-between py-7 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/XpsNBjd/Rectangle-14.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/XpsNBjd/Rectangle-14.png" alt="" className="relative shadow-lg w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -38,7 +38,7 @@ const ExclusivePackages = () => {
 
                 <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/k3Wc87Y/Rectangle-114.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/k3Wc87Y/Rectangle-114.png" alt="" className="relative shadow-lg w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -59,7 +59,7 @@ const ExclusivePackages = () => {
 
                 <div data-aos="fade-right" data-aos-duration="1000" className="flex flex-col md:flex-row justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/r5Yssd7/Rectangle-114-1.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/r5Yssd7/Rectangle-114-1.png" alt="" className="relative shadow-lg w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -left-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -80,7 +80,7 @@ const ExclusivePackages = () => {
 
                 <div data-aos="fade-down" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/86bfH9k/Rectangle-114-2.png" alt="" className="relative z-10" />
+                        <img src="https://i.ibb.co/86bfH9k/Rectangle-114-2.png" alt="" className="relative shadow-lg w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">

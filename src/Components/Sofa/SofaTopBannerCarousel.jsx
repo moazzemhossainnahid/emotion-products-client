@@ -90,7 +90,7 @@ const SofaTopBannerCarousel = () => {
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
                                     </Slide>
                                     <Slide bottom duration={2500}>
-                                        <button className='bg-[#00C2FF] justify-center btn btn-warning px-7 py-2 text-black rounded'>
+                                        <button className='bg-[#00C2FF] justify-center border-0 btn btn-warning px-7 py-2 text-black rounded'>
                                             <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
                                         </button>
                                     </Slide>
