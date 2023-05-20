@@ -12,10 +12,10 @@ const breakPoints = [
 
 const CarouselSlider = ({ setImage }) => {
 
-  const logo1 = "https://i.ibb.co/DCf6RQn/DSC03614-1.png";
-  const logo2 = "https://i.ibb.co/ngckL8y/Rectangle-160.png";
-  const logo3 = "https://i.ibb.co/JpNfxSh/Rectangle-158.png";
-  const logo4 = "https://i.ibb.co/CMg3hRt/Rectangle-151.png";
+  const shoes1 = "https://i.ibb.co/DCf6RQn/DSC03614-1.png";
+  const shoes2 = "https://www.pngkey.com/png/full/250-2507384_supply-best-massage-chair-treadmill-in-the-world.png";
+  const shoes3 = "https://www.pngkey.com/png/full/870-8705361_fujimedic-kumo-massage-chair-recliner.png";
+  const shoes4 = "https://bodymassagepal.com/wp-content/uploads/2021/09/1-removebg.png";
 
   return (
     <>
@@ -29,32 +29,32 @@ const CarouselSlider = ({ setImage }) => {
           <Item>
             <img
               onClick={() => setImage("first")}
-              className="h-20 w-28 cursor-pointer"
-              src={logo1}
+              className="h-20 w-28 bg-white cursor-pointer"
+              src={shoes1}
               alt=""
             />
           </Item>
           <Item>
             <img
               onClick={() => setImage("second")}
-              className="h-20 w-28 cursor-pointer"
-              src={logo2}
+              className="h-20 w-28 bg-white cursor-pointer"
+              src={shoes2}
               alt=""
             />
           </Item>
           <Item>
             <img
               onClick={() => setImage("third")}
-              className="h-20 w-28 cursor-pointer"
-              src={logo3}
+              className="h-20 w-28 bg-white cursor-pointer"
+              src={shoes3}
               alt=""
             />
           </Item>
           <Item>
             <img
-              onClick={() => setImage("forth")}
-              className="h-20 w-28 cursor-pointer"
-              src={logo4}
+              onClick={() => setImage("fourth")}
+              className="h-20 w-28 bg-white cursor-pointer"
+              src={shoes4}
               alt=""
             />
           </Item>

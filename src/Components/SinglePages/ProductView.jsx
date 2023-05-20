@@ -1,27 +1,132 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
-import { ImArrowLeft } from 'react-icons/im';
-import { FaFacebook, FaFacebookF, FaInstagram, FaRegHeart, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import {
-    AiOutlineHome,
-    AiOutlineRight, AiOutlineShoppingCart
-} from 'react-icons/ai';
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+
 const ProductView = () => {
     const [Image, setImage] = React.useState("first");
 
+    function ImageMagnifier({
+        src,
+        width,
+        height,
+        magnifierHeight = 200,
+        magnifieWidth = 200,
+        zoomLevel = 1.5
+    }) {
+        const [[x, y], setXY] = useState([0, 0]);
+        const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
+        const [showMagnifier, setShowMagnifier] = useState(false);
+        return (
+            <div
+                style={{
+                    position: "relative",
+                    height: height,
+                    width: width
+                }}
+            >
+                <img
+                    src={src}
+                    style={{ height: height, width: width }}
+                    onMouseEnter={(e) => {
+                        // update image size and turn-on magnifier
+                        const elem = e.currentTarget;
+                        const { width, height } = elem.getBoundingClientRect();
+                        setSize([width, height]);
+                        setShowMagnifier(true);
+                    }}
+                    onMouseMove={(e) => {
+                        // update cursor position
+                        const elem = e.currentTarget;
+                        const { top, left } = elem.getBoundingClientRect();
+
+                        // calculate cursor position on the image
+                        const x = e.pageX - left - window.pageXOffset;
+                        const y = e.pageY - top - window.pageYOffset;
+                        setXY([x, y]);
+                    }}
+                    onMouseLeave={() => {
+                        // close magnifier
+                        setShowMagnifier(false);
+                    }}
+                    alt={"img"}
+                />
+
+                <div
+                    style={{
+                        display: showMagnifier ? "" : "none",
+                        position: "absolute",
+
+                        // prevent maginier blocks the mousemove event of img
+                        pointerEvents: "none",
+                        // set size of magnifier
+                        height: `${magnifierHeight}px`,
+                        width: `${magnifieWidth}px`,
+                        // move element center to cursor pos
+                        top: `${y - magnifierHeight / 2}px`,
+                        left: `${x - magnifieWidth / 2}px`,
+                        opacity: "1", // reduce opacity so you can verify position
+                        border: "1px solid lightgray",
+                        backgroundColor: "white",
+                        backgroundImage: `url('${src}')`,
+                        backgroundRepeat: "no-repeat",
+
+                        //calculate zoomed image size
+                        backgroundSize: `${imgWidth * zoomLevel}px ${imgHeight * zoomLevel
+                            }px`,
+
+                        //calculete position of zoomed image.
+                        backgroundPositionX: `${-x * zoomLevel + magnifieWidth / 2}px`,
+                        backgroundPositionY: `${-y * zoomLevel + magnifierHeight / 2}px`
+                    }}
+                ></div>
+            </div>
+        );
+    }
+
     const shoes1 = "https://i.ibb.co/DCf6RQn/DSC03614-1.png";
-    const shoes2 = "https://i.ibb.co/ngckL8y/Rectangle-160.png";
-    const shoes3 = "https://i.ibb.co/JpNfxSh/Rectangle-158.png";
-    const shoes4 = "https://i.ibb.co/CMg3hRt/Rectangle-151.png";
+    const shoes2 = "https://www.pngkey.com/png/full/250-2507384_supply-best-massage-chair-treadmill-in-the-world.png";
+    const shoes3 = "https://www.pngkey.com/png/full/870-8705361_fujimedic-kumo-massage-chair-recliner.png";
+    const shoes4 = "https://bodymassagepal.com/wp-content/uploads/2021/09/1-removebg.png";
+
+    const pdImage = [
+        {
+            id: 1,
+            position: "first",
+            img: shoes1
+        },
+        {
+            id: 2,
+            position: "second",
+            img: shoes2
+        },
+        {
+            id: 3,
+            position: "third",
+            img: shoes3
+        },
+        {
+            id: 4,
+            position: "fourth",
+            img: shoes4
+        },
+    ]
 
     return (
         <div className='p-5'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="bg-gray-100">
-                    {Image === "first" && <img src={shoes1} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
+                    {
+                        pdImage?.map(p => (
+                            <div key={p?.id} className="w-full h-fit flex justify-center items-center mx-auto">
+                                {Image === p?.position && <ImageMagnifier width={450} height={450} src={p?.img} className="py-2 pb-3 h-80 w-4/5 mx-auto rounded" />}
+                            </div>
+                        ))
+                    }
+                    {/* {Image === "first" && <ImageMagnifier src={shoes1} className="py-2 pb-3 h-96 w-width mx-auto rounded" />}
                     {Image === "second" && <img src={shoes2} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
                     {Image === "third" && <img src={shoes3} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
-                    {Image === "forth" && <img src={shoes4} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
+                    {Image === "forth" && <img src={shoes4} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />} */}
 
                     <CarouselSlider setImage={setImage}></CarouselSlider>
                 </div>
