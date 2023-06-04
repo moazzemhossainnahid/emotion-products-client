@@ -8,6 +8,7 @@ import MassageChair from './Pages/MassageChair/MassageChair';
 import Sofa from './Pages/Sofa/Sofa';
 import NotFound from './Pages/NotFound/NotFound';
 import SinglePage from './Pages/SinglePage/SinglePage';
+import Carport from './Pages/CarPort/CarPort';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <div className="">
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/carport' element={<Carport />} />
             <Route path='/lights' element={<Lights />} />
             <Route path='/massagechair' element={<MassageChair />} />
             <Route path='/sofa' element={<Sofa />} />
