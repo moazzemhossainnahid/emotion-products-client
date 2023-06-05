@@ -19,12 +19,12 @@ const Cart = () => {
                                 </div>
                                 <div className="md:flex items-center mt-14 py-8 border-t border-gray-200">
                                     <div className="w-1/4">
-                                        <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller3.png" alt className="w-full h-full object-center object-cover" />
+                                        <img src="https://i.ibb.co/qdbwmF3/Rectangle-168.png" alt className="w-full h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4">
                                         <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
                                         <div className="flex items-center justify-between w-full pt-1">
-                                            <p className="text-base font-black leading-none text-gray-800">North wolf bag</p>
+                                            <p className="text-base font-black leading-none text-gray-800">North wolf Carport</p>
                                             <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
                                                 <option>01</option>
                                                 <option>02</option>
@@ -45,12 +45,12 @@ const Cart = () => {
                                 </div>
                                 <div className="md:flex items-center py-8 border-t border-gray-200">
                                     <div className="w-1/4">
-                                        <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller2.png" alt className="w-full h-full object-center object-cover" />
+                                        <img src="https://i.ibb.co/c3Lrb7M/Rectangle-169.png" alt className="w-full h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4 w-full">
                                         <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
                                         <div className="flex items-center justify-between w-full pt-1">
-                                            <p className="text-base font-black leading-none text-gray-800">Luxe Signature Ring</p>
+                                            <p className="text-base font-black leading-none text-gray-800">Luxe Massage Chair</p>
                                             <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
                                                 <option>01</option>
                                                 <option>02</option>
@@ -71,12 +71,12 @@ const Cart = () => {
                                 </div>
                                 <div className="md:flex items-center py-8 border-t border-b border-gray-200">
                                     <div className="h-full w-1/4">
-                                        <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller1.png" alt className="w-full h-full object-center object-cover" />
+                                        <img src="https://i.ibb.co/ZVXFqsy/Rectangle-171.png" alt className="w-full h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4 w-full">
                                         <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
                                         <div className="flex items-center justify-between w-full pt-1">
-                                            <p className="text-base font-black leading-none text-gray-800">Luxe Signature Shoes</p>
+                                            <p className="text-base font-black leading-none text-gray-800">Exclusive Lights</p>
                                             <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
                                                 <option>01</option>
                                                 <option>02</option>
