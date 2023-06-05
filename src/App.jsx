@@ -9,6 +9,8 @@ import Sofa from './Pages/Sofa/Sofa';
 import NotFound from './Pages/NotFound/NotFound';
 import SinglePage from './Pages/SinglePage/SinglePage';
 import Carport from './Pages/CarPort/CarPort';
+import Cart from './Pages/Cart/Cart';
+import { useState } from 'react';
 
 function App() {
 
@@ -25,9 +27,10 @@ function App() {
             <Route path='/sofa' element={<Sofa />} />
             <Route path='/productdetails/:id' element={<SinglePage />} />
             <Route path='*' element={<NotFound />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
         </div>
-        <Footer />
+        {window.location.pathname !== '/cart' && <Footer />}
       </div>
     </>
   )

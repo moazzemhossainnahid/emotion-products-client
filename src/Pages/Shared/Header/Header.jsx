@@ -37,7 +37,7 @@ const Header = () => {
                             <FaSearch />
                         </div>
                         <div className="mx-3">
-                            <FaCartPlus />
+                            <NavLink reloadDocument to="/cart"><FaCartPlus /></NavLink>
                         </div>
                         <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost">
