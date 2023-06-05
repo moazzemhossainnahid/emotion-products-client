@@ -11,6 +11,8 @@ import SinglePage from './Pages/SinglePage/SinglePage';
 import Carport from './Pages/CarPort/CarPort';
 import Cart from './Pages/Cart/Cart';
 import { useState } from 'react';
+import Checkout from './Pages/Checkout/Checkout';
+import CardPayment from './Pages/Checkout/CardPayment';
 
 function App() {
 
@@ -26,8 +28,9 @@ function App() {
             <Route path='/massagechair' element={<MassageChair />} />
             <Route path='/sofa' element={<Sofa />} />
             <Route path='/productdetails/:id' element={<SinglePage />} />
-            <Route path='*' element={<NotFound />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<CardPayment />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
         {window.location.pathname !== '/cart' && <Footer />}
