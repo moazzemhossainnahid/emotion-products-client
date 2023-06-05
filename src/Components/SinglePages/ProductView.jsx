@@ -10,8 +10,8 @@ const ProductView = () => {
         src,
         width,
         height,
-        magnifierHeight = 200,
-        magnifieWidth = 200,
+        magnifierHeight = 300,
+        magnifieWidth = 300,
         zoomLevel = 1.5
     }) {
         const [[x, y], setXY] = useState([0, 0]);
