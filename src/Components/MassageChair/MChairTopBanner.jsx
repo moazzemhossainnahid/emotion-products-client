@@ -1,15 +1,19 @@
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
 
 const MChairTopBanner = () => {
     return (
-        <div className="bg-[url('https://i.ibb.co/b1xjqTb/Rectangle-111.png')] h-[80vh] relative bg-cover">
-            <div className="w-full text-center absolute bottom-40">
-                <h3 className="text-3xl md:text-5xl text-white">Protect Your Vehicle</h3>
-                <p className="pb-5 text-gray-300 text-sm">We make Sure that, to give you a premium Carport service</p>
-                <button className='bg-[#00C2FF] justify-center btn btn-warning px-7 py-2 text-black rounded'>
-                    <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
-                </button>
+        <div className="container bg-gradient-to-l from-[#2989A8] to-[#0395B5] px-7 mx-auto w-full text-white">
+            <div className='flex flex-col md:flex-row justify-between gap-3 items-center'>
+                <div className='w-full md:w-3/6 p-0 sm:p-5'>
+                    <h2 className='text-center text-2xl sm:text-5xl sm:text-left'>Luxury relaxation</h2>
+                    <p className='text-center text-sm sm:text-left pt-3'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <button className="bg-primary flex justify-center w-1/3 mx-auto md:mx-0 mt-5 px-7 py-2 rounded">Buy Now</button>
+                </div>
+                <div className='w-full md:w-3/6 relative overflow-hidden mx-auto'>
+
+                    <div className='mx-auto hidden md:block bg-[#0BA0CF] z-10 absolute -bottom-28 left-28 rounded-full w-96 h-96'></div>
+                    <img className='w-3/5 p-5 mx-auto z-20 relative' src="https://www.pngkey.com/png/full/250-2507384_supply-best-massage-chair-treadmill-in-the-world.png" alt="" />
+                </div>
             </div>
         </div>
     );
