@@ -9,13 +9,14 @@ import SofaSuccessStories from '../../Components/Sofa/SofaSuccessStories';
 import TrustedPartners from '../../Components/Others/TrustedPartners';
 import SofaTopBannerCarousel from '../../Components/Sofa/SofaTopBannerCarousel';
 import LuxuryRelaxation from '../../Components/Sofa/LuxuryRelaxation';
+import SofaBestMeterials from '../../Components/Sofa/SofaBestMeterials';
 
 const Sofa = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <LuxuryRelaxation />
             <SofaPremiumService />
-            <SofaValuableSpeech />
+            <SofaBestMeterials />
             <SofaOverview />
             <SofaExclusivePackages />
             <SofaVideos />

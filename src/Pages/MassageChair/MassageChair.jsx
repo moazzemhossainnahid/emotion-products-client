@@ -8,13 +8,14 @@ import MChairSuccessStories from '../../Components/MassageChair/MChairSuccessSto
 import TrustedPartners from '../../Components/Others/TrustedPartners';
 import MChairTopBannerCarousel from '../../Components/MassageChair/MChairTopBannerCarousel';
 import MChairExclusivePackages from '../../Components/MassageChair/MChairExclusivePackages';
+import MChairBestMeterials from '../../Components/MassageChair/MChairBestMeterials';
 
 const MassageChair = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <MChairTopBanner />
             <MChairPremiumService />
-            <MChairValuableSpeech />
+            <MChairBestMeterials />
             <MChairOverview />
             <MChairExclusivePackages />
             <MChairVideos />

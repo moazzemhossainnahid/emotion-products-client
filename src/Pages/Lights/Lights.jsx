@@ -8,13 +8,14 @@ import LightsVideos from '../../Components/Lights/LightsVideos';
 import LightsSuccessStories from '../../Components/Lights/LightsSuccessStories';
 import TrustedPartners from '../../Components/Others/TrustedPartners';
 import LightsTopBannerCarousel from '../../Components/Lights/LightsTopBannerCarousel';
+import LightsBestMeterials from '../../Components/Lights/LightsBestMeterials';
 
 const Lights = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <LightsTopBanner />
             <LightsPremiumService />
-            <LightsValuableSpeech />
+            <LightsBestMeterials />
             <LightsOverview />
             <LightsExclusivePackages />
             <LightsVideos />
