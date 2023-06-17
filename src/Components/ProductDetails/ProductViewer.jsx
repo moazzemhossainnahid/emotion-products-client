@@ -214,7 +214,7 @@ const ProductViewer = () => {
                             </div>
                         </div> */}
                         <div className="bg-gray-100 rounded text-center p-5">
-                            <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/login" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
+                            <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/signin" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
                         <h2 className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
                         <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
                         </div>

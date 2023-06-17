@@ -14,6 +14,7 @@ import { useState } from 'react';
 import Checkout from './Pages/Checkout/Checkout';
 import CardPayment from './Pages/Checkout/CardPayment';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
+import Signin from './Pages/Signin/Signin';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<CardPayment />} />
+            <Route path='/signin' element={<Signin />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
