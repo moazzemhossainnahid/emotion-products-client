@@ -96,11 +96,11 @@ const HomeTopBannerCarousel = () => {
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
                                     </Slide>
                                     <Slide bottom duration={2500}>
-                                        <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'>
-                                            <label htmlFor="my-modal-3" className="mx-auto text-white">
+                                        {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
+                                            <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
                                                 <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
                                             </label>
-                                        </button>
+                                        {/* </button> */}
                                     </Slide>
                                 </div>
                             </div>
@@ -111,7 +111,8 @@ const HomeTopBannerCarousel = () => {
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal z-50 h-screen w-full overflow-hidden">
-                <div className="modal-box w-11/12 max-w-5xl bg-[url('https://i.ibb.co/37G57Y2/Rectangle-111-1.png')] bg-cover overflow-hidden relative bg-[#000000] ">
+                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-gray-900 to-gray-700 bg-cover overflow-hidden relative ">
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 mix-blend-overlay h-full object-cover" />
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <div className="text-white">
                         <div className="flex items-center min-h-full p-4 lg:justify-center">
@@ -129,7 +130,7 @@ const HomeTopBannerCarousel = () => {
                                     </div>
                                 </div>
                                 <div className="p-3 bg-transparent md:flex-1">
-                                    <h3 className="my-4 text-3xl font-bold text-yellow-300 text-center ">
+                                    <h3 className="my-4 text-3xl font-bold text-primary text-center ">
                                         Contact Form
                                     </h3>
                                     <form
@@ -263,7 +264,7 @@ const HomeTopBannerCarousel = () => {
 
                                             <button
                                                 type="submit"
-                                                className="w-full px-4 py-2 text-lg font-semibold text-gray-700 transition-colors duration-300 bg-gradient-to-r from-[#bfcc35] to-[#fff30a] rounded-md shadow  hover:bg-gradient-to-l focus:outline-none focus:ring-blue-200 focus:ring-4"
+                                                className="w-full px-4 py-2 text-lg font-semibold transition-colors duration-300 bg-primary text-white rounded-md shadow  hover:bg-white hover:text-black focus:outline-none focus:ring-blue-200 focus:ring-4"
                                             >
                                                 Send
                                             </button>
