@@ -13,6 +13,7 @@ import Cart from './Pages/Cart/Cart';
 import { useState } from 'react';
 import Checkout from './Pages/Checkout/Checkout';
 import CardPayment from './Pages/Checkout/CardPayment';
+import ProductDetails from './Pages/ProductDetails/ProductDetails';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
             <Route path='/lights' element={<Lights />} />
             <Route path='/massagechair' element={<MassageChair />} />
             <Route path='/sofa' element={<Sofa />} />
-            <Route path='/productdetails/:id' element={<SinglePage />} />
+            <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<CardPayment />} />
             <Route path='*' element={<NotFound />} />
