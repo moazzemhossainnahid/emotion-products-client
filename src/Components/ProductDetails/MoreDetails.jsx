@@ -3,6 +3,10 @@ import React from 'react';
 const MoreDetails = () => {
     const data = [
         {
+            "property": "Fabric composition",
+            "value": "20% cotton | 80% polyester"
+        },
+        {
             "property": "Lamp holder",
             "value": "E14"
         },
@@ -42,6 +46,10 @@ const MoreDetails = () => {
             "property": "Indoor/outdoor",
             "value": "Indoor use/dry locations only"
         },
+        {
+            "property": "Shade dimensions",
+            "value": "ø 12.5 x H. 17 cm"
+        },
     ]
     return (
         <div className='w-full flex flex-col md:flex-row gap-5 justify-between pt-7 pb-10 px-5'>
@@ -54,8 +62,8 @@ const MoreDetails = () => {
                             {/* row 1 */}
                             {
                                 data?.map(d => (
-                                    <tr key={d?.property} className='text-sm'>
-                                        <td className='font-semibold'>{d?.property}</td>
+                                    <tr key={d?.property} className='text-sm py-2'>
+                                        <td className='font-semibold p-2'>{d?.property}</td>
                                         <td>{d?.value}</td>
                                     </tr>
                                 ))
