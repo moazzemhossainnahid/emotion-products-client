@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
 import { FaCheck, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const ProductViewer = () => {
     const [Image, setImage] = React.useState("first");
@@ -114,8 +115,8 @@ const ProductViewer = () => {
 
     return (
         <div className='p-5'>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="bg-gray-100">
+            <div className="w-full flex flex-col md:flex-row gap-5">
+                <div className="w-full md:w-3/5">
                     {
                         pdImage?.map(p => (
                             <div key={p?.id} className="w-full h-fit flex justify-center items-center mx-auto">
@@ -130,22 +131,19 @@ const ProductViewer = () => {
 
                     <CarouselSlider setImage={setImage}></CarouselSlider>
                 </div>
-                <div className="space-y-3">
-                    <h2 className="text-xl font-semibold mt-1">Item no 117195</h2>
+                <div className="w-full md:w-2/5 space-y-3">
+                    <h2 className="text-sm font-semibold mt-1">Item no 117195</h2>
                     <h5 className="text-sm text-gray-600">Massage Chair brushed finish | smoke glass</h5>
                     <div className="py-3">
-                        <h3 className=""> <span className="font-bold">CM</span> | INCH </h3>
-                        <h5 className="text-sm font-semibold">ø 116 x H. 153 cm</h5>
+                        <h3 className="text-sm"> <span className="font-bold">CM</span> | INCH </h3>
+                        <h5 className="text-xs font-semibold">ø 116 x H. 153 cm</h5>
                     </div>
                     <div className="space-y-5 mb-5">
                         <div className=''>
-                            <p className=''>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Deserunt aliquid est molestias exercitationem laboriosam, totam
-                                excepturi sunt eaque dolorum, repudiandae distinctio vitae nam
-                                quisquam quasi.
+                            <p className='text-sm'>
+                            Tastefully blending contemporary design with a touch of industrial flair, the Monticello Lantern is an updated classic.
                             </p>
-                            <h4 className="text-sm underline cursor-pointer pt-2 text-gray-400">Read More</h4>
+                            <h4 className="text-xs underline cursor-pointer pt-2 text-gray-500">Read More</h4>
                         </div>
                         {/* <div className="flex gap-3">
                             <span className="h-8 w-12 border border-gray-400 flex justify-center items-center hover:bg-gray-200  rounded"><FaFacebook /></span>
@@ -215,25 +213,22 @@ const ProductViewer = () => {
                                 </div>
                             </div>
                         </div> */}
+                        <div className="bg-gray-100 rounded text-center p-5">
+                            <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/login" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
+                        <h2 className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
+                        <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
+                        </div>
 
-                        <div className="space-y-5 pt-5">
-                            <div className="flex items-center gap-3">
+                        <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
+                            <div className="flex items-center gap-3 tracking-widest">
                                 <FaCheck className='text-primary' />
                                 HANDCRAFTED BY SKILLED ARTISANS
                             </div>
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-3 tracking-widest">
                                 <FaCheck className='text-primary' />
                                 WORLDWIDE SHIPMENT
                             </div>
-                            <div className="flex items-center gap-3">
-                                <FaCheck className='text-primary' />
-                                PERSONAL ADVICE IN OUR SHOWROOM
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <FaCheck className='text-primary' />
-                                WORLDWIDE SHIPMENT
-                            </div>
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-3 tracking-widest">
                                 <FaCheck className='text-primary' />
                                 PERSONAL ADVICE IN OUR SHOWROOM
                             </div>
