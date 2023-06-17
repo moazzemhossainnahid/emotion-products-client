@@ -61,6 +61,14 @@ const Footer = () => {
                             <div className="text-center pt-5">
                                 <p>© 2020 - 2023 carport.com</p>
                             </div>
+                            <div className="w-full flex justify-center gap-3 items-center pt-3">
+                                <img src="https://i.ibb.co/StPWWYS/aexpress.png" alt="" className="w-12" />
+                                <img src="https://i.ibb.co/hDfbhXw/pngimg-com-visa-PNG18.png" alt="" className="w-12" />
+                                <img src="https://i.ibb.co/3FHRYSJ/mcard.png" alt="" className="w-12" />
+                                <img src="https://i.ibb.co/1T5H2r5/gpay.png" alt="" className="w-12 bg-gray-200 px-2 h-8 rounded" />
+                                <img src="https://i.ibb.co/1fGV3N5/Paypal.png" alt="" className="w-12" />
+                                <img src="https://i.ibb.co/ZMdmmqK/ideal.png" alt="" className="w-12" />
+                            </div>
 
                         </div>
                     </div>
