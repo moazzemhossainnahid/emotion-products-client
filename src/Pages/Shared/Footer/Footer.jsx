@@ -59,7 +59,7 @@ const Footer = () => {
                             </div>
                             <hr />
                             <div className="text-center pt-5">
-                                <p>© 2020 - 2023 carport.com</p>
+                                <p>© 2020 - 2023 Carport | All Rights Reserved</p>
                             </div>
                             <div className="w-full flex justify-center gap-3 items-center pt-3">
                                 <img src="https://i.ibb.co/StPWWYS/aexpress.png" alt="" className="w-12" />
