@@ -3,12 +3,12 @@ import { FaCartPlus, FaSearch } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
-import useFirebase from '../../../Hooks/UseFirebase';
+import UseFirebase from '../../../Hooks/UseFirebase';
 import { toast } from 'react-toastify';
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    const { logOut } = useFirebase();
+    const { logOut } = UseFirebase();
 
     const signOut = () => {
         logOut();

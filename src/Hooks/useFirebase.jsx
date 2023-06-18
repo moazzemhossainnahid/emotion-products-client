@@ -6,7 +6,7 @@ import auth from "../../firebase.init";
 import Loader from "../Components/Others/Loader/Loader";
 import { toast } from "react-toastify";
 
-const useFirebase = () => {
+const UseFirebase = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [signInWithGoogle, gLoading] = useSignInWithGoogle(auth);
@@ -43,4 +43,4 @@ const useFirebase = () => {
     };
 };
 
-export default useFirebase;
+export default UseFirebase;
