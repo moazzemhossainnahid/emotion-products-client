@@ -3,8 +3,8 @@ import { FaCartPlus, FaSearch } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
-import UseFirebase from '../../../Hooks/UseFirebase';
 import { toast } from 'react-toastify';
+import UseFirebase from '../../../Hooks/UseFirebase';
 
 const Header = () => {
     const [user] = useAuthState(auth);
