@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEuroSign } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
@@ -17,33 +18,37 @@ const Cart = () => {
                                     </svg>
                                     <p className="text-sm pl-2 leading-none">Back</p>
                                 </div>
-                                <div className="md:flex items-center mt-14 py-8 border-t border-gray-200">
+                                <div className="py-5">
+                                    <div className="flex justify-between gap-3">
+                                        <h3 className="font-semibold"><span className="font-bold">1</span> Item in Order Request</h3>
+                                        <h3 className="font-semibold">Order Request Subtotal: <br /> <p className="text-base flex gap-2 items-center pt-2 justify-end font-black leading-none text-gray-800"><FaEuroSign /> <span className="">6,875.00</span></p> </h3>
+                                    </div>
+
+                                    <div className="w-full flex justify-end pt-3">
+                                        <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                            <p className=" flex tracking-widest gap-2">View and Edit Order Request</p>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="md:flex items-center py-8 border-y border-gray-200">
                                     <div className="w-1/4">
-                                        <img src="https://i.ibb.co/qdbwmF3/Rectangle-168.png" alt className="w-full h-full object-center object-cover" />
+                                        <img src="https://i.ibb.co/qdbwmF3/Rectangle-168.png" alt className="w-20 h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4">
-                                        <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">RF293</p>
-                                        <div className="flex items-center justify-between w-full pt-1">
-                                            <p className="text-base font-black leading-none text-gray-800">North wolf Carport</p>
-                                            <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
-                                                <option>01</option>
-                                                <option>02</option>
-                                                <option>03</option>
-                                            </select>
-                                        </div>
-                                        <p className="text-xs leading-3 text-gray-600 pt-2">Height: 10 inches</p>
-                                        <p className="text-xs leading-3 text-gray-600 py-4">Color: Black</p>
-                                        <p className="w-96 text-xs leading-3 text-gray-600">Composition: 100% calf leather</p>
+                                        <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">North wolf Carport</p>
+
                                         <div className="flex items-center justify-between pt-5 pr-6">
                                             <div className="flex itemms-center">
-                                                {/* <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p> */}
-                                                <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Remove</p>
-                                            </div>
-                                            <p className="text-base font-black leading-none text-gray-800">$9,000</p>
+                                                <select className="py-2 px-1 bg-white mr-6 focus:outline-none">
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                </select>                                            </div>
+                                            <p className="text-base flex gap-2 items-center font-black leading-none text-gray-800"><FaEuroSign /> <span className="">6,875.00</span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="md:flex items-center py-8 border-t border-gray-200">
+                                {/* <div className="md:flex items-center py-8 border-t border-gray-200">
                                     <div className="w-1/4">
                                         <img src="https://i.ibb.co/c3Lrb7M/Rectangle-169.png" alt className="w-full h-full object-center object-cover" />
                                     </div>
@@ -62,7 +67,6 @@ const Cart = () => {
                                         <p className="w-96 text-xs leading-3 text-gray-600">Composition: 100% calf leather</p>
                                         <div className="flex items-center justify-between pt-5 pr-6">
                                             <div className="flex itemms-center">
-                                                {/* <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p> */}
                                                 <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Remove</p>
                                             </div>
                                             <p className="text-base font-black leading-none text-gray-800">$9,000</p>
@@ -88,13 +92,12 @@ const Cart = () => {
                                         <p className="w-96 text-xs leading-3 text-gray-600">Composition: 100% calf leather</p>
                                         <div className="flex items-center justify-between pt-5 pr-6">
                                             <div className="flex itemms-center">
-                                                {/* <p className="text-xs leading-3 underline text-gray-800 cursor-pointer">Add to favorites</p> */}
                                                 <p className="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">Remove</p>
                                             </div>
                                             <p className="text-base font-black leading-none text-gray-800">$9,000</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="md:w-1/3 xl:w-1/4 w-full bg-gray-100 h-full">
                                 <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto">
@@ -102,21 +105,21 @@ const Cart = () => {
                                         <p className="text-4xl font-black leading-9 text-gray-800">Summary</p>
                                         <div className="flex items-center justify-between pt-16">
                                             <p className="text-base leading-none text-gray-800">Subtotal</p>
-                                            <p className="text-base leading-none text-gray-800">$9,000</p>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> 6,875.00</p>
                                         </div>
                                         <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Shipping</p>
-                                            <p className="text-base leading-none text-gray-800">$30</p>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> 30</p>
                                         </div>
                                         <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Tax</p>
-                                            <p className="text-base leading-none text-gray-800">$35</p>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> 35</p>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
                                             <p className="text-2xl leading-normal text-gray-800">Total</p>
-                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800">$10,240</p>
+                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> 6,940.00</p>
                                         </div>
                                         <button onClick={() => navigate(`/checkout`)} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
