@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCartPlus, FaSearch } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
 import useFirebase from '../../../Hooks/UseFirebase';
@@ -21,9 +21,9 @@ const Header = () => {
                 <div className="navbar w-full md:w-4/5 mx-auto">
 
                     <div className="navbar-start">
-                        <a className="btn btn-ghost normal-case text-xl">
-                            <img src="https://i.ibb.co/qNmrrC8/Valetcarport.png" alt="" className="" />
-                        </a>
+                        <Link to="/" className="w-full">
+                            <img src="https://i.ibb.co/qMwTmD7/emotion-products.png" alt="" className="w-32 md:w-40" />
+                        </Link>
                     </div>
                     {/* <div className="navbar-center hidden lg:flex">
                     <ul className="menu gap-2 menu-horizontal px-1">
