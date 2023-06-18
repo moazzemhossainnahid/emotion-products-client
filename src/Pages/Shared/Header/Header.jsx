@@ -4,16 +4,16 @@ import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
 import { toast } from 'react-toastify';
-import UseFirebase from '../../../Hooks/UseFirebase';
+// import UseFirebase from '../../../Hooks/UseFirebase';
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    const { logOut } = UseFirebase();
+    // const { logOut } = UseFirebase();
 
-    const signOut = () => {
-        logOut();
-        toast("User SignOut Successfully !")
-    };
+    // const signOut = () => {
+    //     logOut();
+    //     toast("User SignOut Successfully !")
+    // };
 
     return (
         <div className='w-full max-w-full container sticky top-0 z-50'>
@@ -61,9 +61,9 @@ const Header = () => {
                                 <li><NavLink reloadDocument to="/sofa">Furniture</NavLink></li>
                                 <li><NavLink reloadDocument to="/massagechair">Massage Chair</NavLink></li>
                                 <li><NavLink reloadDocument to="/lights">Lights</NavLink></li>
-                                {
+                                {/* {
                                     user && <li><button onClick={signOut} className="">SignOut</button></li>
-                                }
+                                } */}
 
                                 {/* <div className="form-control">
                                 <input type="text" placeholder="Search" className="input input-sm w-40 mx-auto input-bordered" />
