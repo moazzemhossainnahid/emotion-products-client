@@ -1,12 +1,12 @@
+import { signOut } from 'firebase/auth';
+import React from 'react';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Loader from '../Components/Others/Loader/Loader';
+import auth from '../../firebase.init';
 
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth";
-import { useLocation, useNavigate } from "react-router-dom";
-import auth from "../../firebase.init";
-import Loader from "../Components/Others/Loader/Loader";
-import { toast } from "react-toastify";
-
-const UseFirebase = () => {
+const useSignin = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [signInWithGoogle, gLoading] = useSignInWithGoogle(auth);
@@ -43,4 +43,4 @@ const UseFirebase = () => {
     };
 };
 
-export default UseFirebase;
+export default useSignin;

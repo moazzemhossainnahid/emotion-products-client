@@ -4,16 +4,16 @@ import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
 import { toast } from 'react-toastify';
-// import UseFirebase from '../../../Hooks/UseFirebase';
+import useSignin from '../../../Hooks/useSignin';
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    // const { logOut } = UseFirebase();
+    const { logOut } = useSignin();
 
-    // const signOut = () => {
-    //     logOut();
-    //     toast("User SignOut Successfully !")
-    // };
+    const signOut = () => {
+        logOut();
+        toast("User SignOut Successfully !")
+    };
 
     return (
         <div className='w-full max-w-full container sticky top-0 z-50'>

@@ -1,8 +1,8 @@
 import React from 'react';
-import UseFirebase from '../../Hooks/UseFirebase';
+import useSignin from '../../Hooks/useSignin';
 
 const Signin = () => {
-    const { signInGoogle } = UseFirebase();
+    const { signInGoogle } = useSignin();
 
 
     const signIn = () => {
