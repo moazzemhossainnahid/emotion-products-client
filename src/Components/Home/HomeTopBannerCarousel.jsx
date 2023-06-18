@@ -56,23 +56,23 @@ const HomeTopBannerCarousel = () => {
     const SliderData = [
         {
             img: 'https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg',
-            title: 'Protect Your Vehicle',
-            desc: 'We make Sure that, to give you a premium Carport service'
+            title: 'Luxury relaxation',
+            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
         },
         {
             img: 'https://i.ibb.co/5kYFf7r/Rectangle-111.png',
-            title: 'Earning for a Lifetime',
-            desc: 'From free online courses to advanced degrees and executive education'
+            title: 'Luxury relaxation',
+            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
         },
         {
             img: 'https://i.ibb.co/37G57Y2/Rectangle-111-1.png',
-            title: 'Keep Learning',
-            desc: 'Hagwart can help you meet your goals for life and professional advancement.'
+            title: 'Luxury relaxation',
+            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
         },
         {
             img: 'https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg',
-            title: 'Keep Learning',
-            desc: 'Hagwart can help you meet your goals for life and professional advancement.'
+            title: 'Luxury relaxation',
+            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
         }
     ]
 
@@ -90,18 +90,27 @@ const HomeTopBannerCarousel = () => {
                                 />
                                 <div className="w-full text-center absolute bottom-40 space-y-3">
                                     <Slide top duration={1500}>
-                                        <h3 className="text-3xl md:text-5xl text-white">{data?.title}</h3>
+                                        <h3 style={{ fontFamily: 'Silk Serif' }} className="text-3xl md:text-5xl text-white">{data?.title}</h3>
                                     </Slide>
                                     <Slide bottom duration={2000}>
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
                                     </Slide>
-                                    <Slide bottom duration={2500}>
-                                        {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
+                                    <div className="flex justify-between items-center gap-5">
+                                        <Slide bottom duration={2500}>
+                                            {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
                                             <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                <p className=" flex gap-2">Make An Appointment <FaArrowRight /></p>
+                                                <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
                                             </label>
-                                        {/* </button> */}
-                                    </Slide>
+                                            {/* </button> */}
+                                        </Slide>
+                                        <Slide bottom duration={2500}>
+                                            {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
+                                            <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                                <p className="uppercase flex gap-2">Our Collection <FaArrowRight /></p>
+                                            </label>
+                                            {/* </button> */}
+                                        </Slide>
+                                    </div>
                                 </div>
                             </div>
                         )
