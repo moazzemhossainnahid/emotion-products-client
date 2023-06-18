@@ -13,7 +13,7 @@ const useFirebase = () => {
 
     const signInGoogle = () => {
         signInWithGoogle()
-            .then(() => {
+            .then(() => { 
                 navigate(from, { replace: true });
             })
     };

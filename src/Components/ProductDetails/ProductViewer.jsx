@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
-import { FaCheck, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaCartPlus, FaCheck, FaEuroSign, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const ProductViewer = () => {
     const [Image, setImage] = React.useState("first");
+    const [user] = useAuthState(auth);
 
     function ImageMagnifier({
         src,
@@ -217,11 +220,31 @@ const ProductViewer = () => {
                                 </div>
                             </div>
                         </div> */}
-                        <div className="bg-gray-100 rounded text-center p-5">
-                            <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/signin" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
-                            <h2 style={{ fontFamily: 'Silk Serif' }} className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
-                            <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
-                        </div>
+                        {
+                            user ?
+                                <div className="py-7">
+                                    <h3 className="text-md flex gap-2 items-center font-semibold"><FaEuroSign /> <span className="">4,375.00</span></h3>
+                                    <div className="pt-5 flex flex-col md:flex-row items-end gap-5">
+                                        <div className="flex flex-col font-semibold gap-1">
+                                            Qty
+                                            <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                            </select>
+                                        </div>
+                                        <button className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                        <p className=" flex tracking-widest gap-2">Add to Order Request<FaCartPlus /></p>
+                                        </button>
+                                    </div>
+                                </div>
+                                :
+                                <div className="bg-gray-100 rounded text-center p-5">
+                                    <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/signin" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
+                                    <h2 style={{ fontFamily: 'Silk Serif' }} className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
+                                    <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
+                                </div>
+                        }
 
                         <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
                             <div className="flex items-center gap-3 tracking-widest">
