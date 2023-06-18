@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
 import { FaCartPlus, FaCheck, FaEuroSign, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { useAuthState } from "react-firebase-hooks/auth";
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+// import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
@@ -15,7 +15,7 @@ const ProductViewer = () => {
         src,
         width,
         height,
-        magnifierHeight = 300,
+        magnifierHeight = 300,  
         magnifieWidth = 300,
         zoomLevel = 1.5
     }) {
