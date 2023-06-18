@@ -8,6 +8,7 @@ import DiscoverExclusiveProducts from '../../Components/Home/DiscoverExclusivePr
 import SuccessStories from '../../Components/CarPort/SuccessStories';
 import LuxuryCollection from '../../Components/Home/LuxuryCollection';
 import OurWorkingProcess from '../../Components/Home/OurWorkingProcess';
+import BestInTown from '../../Components/Home/BestInTown';
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <DiscoverExclusiveProducts/>
             {/* <SuccessStories/> */}
             <OurWorkingProcess/>
+            <BestInTown/>
         </div>
     );
 };
