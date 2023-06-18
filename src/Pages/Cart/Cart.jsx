@@ -38,7 +38,8 @@ const Cart = () => {
                                         <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">North wolf Carport</p>
 
                                         <div className="flex items-center justify-between pt-5 pr-6">
-                                            <div className="flex itemms-center">
+                                            <div className="flex gap-1 items-center">
+                                                <h3 className="font-semibold">Qty</h3>
                                                 <select className="py-2 px-1 bg-white mr-6 focus:outline-none">
                                                     <option>01</option>
                                                     <option>02</option>
