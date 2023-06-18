@@ -15,6 +15,9 @@ import Checkout from './Pages/Checkout/Checkout';
 import CardPayment from './Pages/Checkout/CardPayment';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Signin from './Pages/Signin/Signin';
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
 
 function App() {
 
@@ -30,13 +33,14 @@ function App() {
             <Route path='/massagechair' element={<MassageChair />} />
             <Route path='/sofa' element={<Sofa />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/checkout' element={<CardPayment />} />
+            <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
+            <Route path='/checkout' element={<RequireAuth><CardPayment /></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
         {window.location.pathname !== '/cart' && <Footer />}
+        <ToastContainer/>
       </div>
     </>
   )

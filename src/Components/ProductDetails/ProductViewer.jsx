@@ -3,12 +3,13 @@ import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
 import { FaCartPlus, FaCheck, FaEuroSign, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const ProductViewer = () => {
     const [Image, setImage] = React.useState("first");
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     function ImageMagnifier({
         src,
@@ -222,9 +223,9 @@ const ProductViewer = () => {
                         </div> */}
                         {
                             user ?
-                                <div className="py-7">
+                                <div className="py-7 w-full">
                                     <h3 className="text-md flex gap-2 items-center font-semibold"><FaEuroSign /> <span className="">4,375.00</span></h3>
-                                    <div className="pt-5 flex flex-col md:flex-row items-end gap-5">
+                                    <div className="w-full text-left pt-5 flex flex-col md:flex-row justify-start items-end gap-5">
                                         <div className="flex flex-col font-semibold gap-1">
                                             Qty
                                             <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
@@ -233,9 +234,11 @@ const ProductViewer = () => {
                                                 <option>03</option>
                                             </select>
                                         </div>
-                                        <button className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                        <p className=" flex tracking-widest gap-2">Add to Order Request<FaCartPlus /></p>
-                                        </button>
+                                        <div className="">
+                                            <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                                <p className=" flex tracking-widest gap-2">Add to Order Request<FaCartPlus /></p>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 :
