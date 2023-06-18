@@ -115,15 +115,19 @@ const ProductViewer = () => {
 
     return (
         <div className='p-5'>
+            <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl py-7 md:text-5xl font-semibold">Massage Chair brushed finish</h3>
+
             <div className="w-full flex flex-col md:flex-row gap-5">
                 <div className="w-full md:w-3/5">
-                    {
-                        pdImage?.map(p => (
-                            <div key={p?.id} className="w-full h-fit flex justify-center items-center mx-auto">
-                                {Image === p?.position && <ImageMagnifier width={450} height={450} src={p?.img} className="py-2 pb-3 h-80 w-4/5 mx-auto rounded" />}
-                            </div>
-                        ))
-                    }
+                    <div className="">
+                        {
+                            pdImage?.map(p => (
+                                <div key={p?.id} className="w-full h-fit flex justify-center items-center mx-auto">
+                                    {Image === p?.position && <ImageMagnifier width={450} height={450} src={p?.img} className="py-2 pb-3 h-80 w-4/5 mx-auto rounded" />}
+                                </div>
+                            ))
+                        }
+                    </div>
                     {/* {Image === "first" && <ImageMagnifier src={shoes1} className="py-2 pb-3 h-96 w-width mx-auto rounded" />}
                     {Image === "second" && <img src={shoes2} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
                     {Image === "third" && <img src={shoes3} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
@@ -141,7 +145,7 @@ const ProductViewer = () => {
                     <div className="space-y-5 mb-5">
                         <div className=''>
                             <p className='text-sm'>
-                            Tastefully blending contemporary design with a touch of industrial flair, the Monticello Lantern is an updated classic.
+                                Tastefully blending contemporary design with a touch of industrial flair, the Monticello Lantern is an updated classic.
                             </p>
                             <h4 className="text-xs underline cursor-pointer pt-2 text-gray-500">Read More</h4>
                         </div>
@@ -215,8 +219,8 @@ const ProductViewer = () => {
                         </div> */}
                         <div className="bg-gray-100 rounded text-center p-5">
                             <h3 className="text-sm">EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br /> <Link className='underline' to="/signin" >PLEASE LOGIN</Link> TO SEE PRICES AND PLACE AN ORDER.</h3>
-                        <h2 className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
-                        <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
+                            <h2 style={{ fontFamily: 'Silk Serif' }} className="text-xl md:text-2xl font-extralight py-2 font-serif">NOT A BUSINESS CUSTOMER?</h2>
+                            <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">FIND THE NEAREST EICHHOLTZ DEALER →</h2>
                         </div>
 
                         <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">

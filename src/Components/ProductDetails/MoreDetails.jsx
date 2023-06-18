@@ -54,7 +54,7 @@ const MoreDetails = () => {
     return (
         <div className='w-full flex flex-col md:flex-row gap-5 justify-between pt-7 pb-10 px-5'>
             <div className="w-full md:w-3/6">
-                <h3 className="text-2xl uppercase font-extralight font-serif pb-3">SPECIFICATIONS</h3>
+                <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl uppercase font-extralight font-serif pb-3">SPECIFICATIONS</h3>
                 <div className="overflow-x-auto w-full">
                     <table className="table-xs table-zebra w-full">
                         {/* head */}
@@ -74,7 +74,7 @@ const MoreDetails = () => {
                 </div>
             </div>
             <div className="w-full md:w-3/6">
-                <h3 className="text-2xl uppercase font-extralight font-serif pb-3">DESCRIPTION</h3>
+                <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl uppercase font-extralight font-serif pb-3">DESCRIPTION</h3>
                 <p className="text-sm pt-3">Greet guests with a warm glow while also grabbing their glances with the exquisite Saint Roch Chandelier XXL. Crafted with a lightly brushed brass finish, the chandelier's frame features a round silhouette giving way to a six-tier shade made of cascading handmade smoked glass. Elevate your entryway aesthetic the right way with the Saint Roch.</p>
             </div>
         </div>
