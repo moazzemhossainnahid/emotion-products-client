@@ -3,6 +3,7 @@ import { FaArrowRight, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube
 import Slide from 'react-reveal/Slide';
 import Slider from 'react-slick';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-scroll';
 
 const HomeTopBannerCarousel = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -95,21 +96,27 @@ const HomeTopBannerCarousel = () => {
                                     <Slide bottom duration={2000}>
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
                                     </Slide>
-                                    <div className="flex justify-between items-center gap-5">
-                                        <Slide bottom duration={2500}>
-                                            {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
-                                            <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
-                                            </label>
-                                            {/* </button> */}
-                                        </Slide>
-                                        <Slide bottom duration={2500}>
-                                            {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
-                                            <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                <p className="uppercase flex gap-2">Our Collection <FaArrowRight /></p>
-                                            </label>
-                                            {/* </button> */}
-                                        </Slide>
+                                    <div className="w-full lg:w-5/6 xl:w-3/5 mx-auto flex flex-col md:flex-row justify-around items-center gap-5">
+                                        <div className="">
+                                            <Slide bottom duration={2500}>
+                                                {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
+                                                {/* <Link to="abc" smooth={true} duration={500}> */}
+                                                <label className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                                    <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
+                                                </label>
+                                                {/* </Link> */}
+                                                {/* </button> */}
+                                            </Slide>
+                                        </div>
+                                        <div className="">
+                                            <Slide bottom duration={2500}>
+                                                {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
+                                                <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                                    <p className="uppercase flex gap-2">Make an Appointment <FaArrowRight /></p>
+                                                </label>
+                                                {/* </button> */}
+                                            </Slide>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

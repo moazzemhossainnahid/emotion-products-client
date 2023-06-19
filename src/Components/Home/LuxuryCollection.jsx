@@ -11,7 +11,7 @@ const LuxuryCollection = () => {
                     <p className="text-[#8F969C]">looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing</p>
                 </div>
                 <div className="w-full md:w-2/5">
-                    <img src="https://i.ibb.co/c3Gxk31/Rectangle-190.png" alt="" className="w-4/5 mx-auto" />
+                    <img src="https://i.ibb.co/brnp8WC/Screenshot-5.png" alt="" className="w-full p-5 mx-auto" />
                 </div>
             </div>
         </div>

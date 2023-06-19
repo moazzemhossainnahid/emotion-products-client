@@ -19,8 +19,8 @@ const Lights = () => {
             <LightsOverview />
             <LightsExclusivePackages />
             <LightsVideos />
-            <LightsSuccessStories />
-            <TrustedPartners />
+            {/* <LightsSuccessStories /> */}
+            {/* <TrustedPartners /> */}
         </div>
     );
 };

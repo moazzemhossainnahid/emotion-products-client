@@ -20,8 +20,8 @@ const Sofa = () => {
             <SofaOverview />
             <SofaExclusivePackages />
             <SofaVideos />
-            <SofaSuccessStories />
-            <TrustedPartners />
+            {/* <SofaSuccessStories /> */}
+            {/* <TrustedPartners /> */}
         </div>
     );
 };

@@ -19,8 +19,8 @@ const MassageChair = () => {
             <MChairOverview />
             <MChairExclusivePackages />
             <MChairVideos />
-            <MChairSuccessStories />
-            <TrustedPartners />
+            {/* <MChairSuccessStories /> */}
+            {/* <TrustedPartners /> */}
         </div>
     );
 };

@@ -20,8 +20,8 @@ const Carport = () => {
             <Overview />
             <ExclusivePackages />
             <CarPortVideos />
-            <SuccessStories />
-            <TrustedPartners />
+            {/* <SuccessStories /> */}
+            {/* <TrustedPartners /> */}
         </div>
     );
 };
