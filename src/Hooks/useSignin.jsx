@@ -16,7 +16,7 @@ const useSignin = () => {
         signInWithGoogle()
             .then(() => { 
                 navigate(from, { replace: true });
-                toast("User SingIn Successfully !")
+                // toast("User SingIn Successfully !")
             })
     };
 
