@@ -23,7 +23,7 @@ const Header = () => {
 
                     <div className="navbar-start">
                         <Link to="/" className="w-full">
-                            <img src="https://i.ibb.co/qMwTmD7/emotion-products.png" alt="" className="w-32 md:w-40" />
+                            <img src="https://i.ibb.co/4MpVyQG/emotion-products.png" alt="" className="w-32 md:w-40" />
                         </Link>
                     </div>
                     {/* <div className="navbar-center hidden lg:flex">
