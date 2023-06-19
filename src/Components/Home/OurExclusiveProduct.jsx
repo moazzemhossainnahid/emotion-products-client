@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const OurExclusiveProduct = () => {
+    const navigate = useNavigate();
     return (
         <div className='container w-full'>
             <div className="w-full md:w-4/5 mx-auto p-3 py-7">
@@ -53,8 +55,8 @@ const OurExclusiveProduct = () => {
                                 <h5 className="text-sm">It is a long established fact that a reader</h5>
                             </div>
                             <div className="pt-2 gap-5 flex justify-start items-center">
-                                <button className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">View Details </button>
-                                <button className="px-7 py-2 rounded font-semibold flex bg-primary items-center border-2 hover:bg-white group">BUY NOW <FaArrowRight className='pl-2 text-2xl' /> </button>
+                                <button onClick={() => navigate("/productdetails/1")} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">View Details </button>
+                                {/* <button className="px-7 py-2 rounded font-semibold flex bg-primary items-center border-2 hover:bg-white group">BUY NOW <FaArrowRight className='pl-2 text-2xl' /> </button> */}
                             </div>
                         </div>
                     </div>

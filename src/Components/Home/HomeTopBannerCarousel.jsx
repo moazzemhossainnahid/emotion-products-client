@@ -100,11 +100,11 @@ const HomeTopBannerCarousel = () => {
                                         <div className="">
                                             <Slide bottom duration={2500}>
                                                 {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
-                                                {/* <Link to="abc" smooth={true} duration={500}> */}
-                                                <label className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                    <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
-                                                </label>
-                                                {/* </Link> */}
+                                                <Link to="abc" smooth={true} duration={500}>
+                                                    <label className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                                        <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
+                                                    </label>
+                                                </Link>
                                                 {/* </button> */}
                                             </Slide>
                                         </div>
