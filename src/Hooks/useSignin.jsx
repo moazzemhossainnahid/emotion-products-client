@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loader from '../Components/Others/Loader/Loader';
@@ -10,17 +10,19 @@ const useSignin = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [signInWithGoogle, gLoading] = useSignInWithGoogle(auth);
+    const [user] = useAuthState(auth);
     const from = location.state?.from?.pathname || '/productdetails/:id';
 
-    const signInGoogle = () => {
-        signInWithGoogle()
-            .then(() => { 
+    const signInGoogle = async () => {
+        await signInWithGoogle()
+            .then(() => {
                 navigate(from, { replace: true });
-                // toast("User SingIn Successfully !")
+                toast("User SingIn Successfully !")
             })
+
     };
 
-    if ( gLoading) {
+    if (gLoading) {
         return <Loader />;
     }
 
