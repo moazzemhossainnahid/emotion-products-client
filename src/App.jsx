@@ -18,6 +18,7 @@ import Signin from './Pages/Signin/Signin';
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
+import Success from './Pages/Success/Success';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><CardPayment /></RequireAuth>} />
+            <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
             <Route path='*' element={<NotFound />} />
           </Routes>

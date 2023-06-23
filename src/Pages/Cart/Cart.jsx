@@ -47,7 +47,7 @@ const Cart = () => {
   
       // console.log(info);
   
-      axios.post(`https://khadok-server.vercel.app/init`, info)
+      axios.post(`http://localhost:5000/init`, info)
         .then(res => {
           if(res?.data){
             window.location = res?.data
