@@ -1,9 +1,65 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaEuroSign } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import axios from 'axios';
+import { useState } from 'react';
 
 const Cart = () => {
     const navigate = useNavigate();
+    // const [isChecked, setIsChecked] = useState(false);
+    const [user] = useAuthState(auth);
+  
+    const item = {
+        name:"Exclusive Carport",
+        desc:"this is carport in california USA",
+        category:"carport",
+        badge:"top",
+        img:"https://i.ibb.co/qdbwmF3/Rectangle-168.png",
+        price:6875,
+    }
+  
+    // const handleChecked = (event) => {
+    //   if (event.target.checked) {
+    //     setIsChecked(true);
+    //   } else {
+    //     setIsChecked(false);
+    //   }
+    // };
+  
+  
+    const confirmToPay = (event) => {
+  
+      event.preventDefault();
+  
+      const info = {
+        item_name: item?.name,
+        item_desc: item?.desc,
+        item_category: item?.category,
+        item_badge: item?.badge,
+        item_image: item?.img,
+        total_amount: (item?.price + item?.price / 100 * 7 + item?.price / 100 * 5).toFixed(2),
+        cus_name: user?.displayName,
+        cus_email: user?.email
+  
+      }
+  
+      // console.log(info);
+  
+      axios.post(`https://khadok-server.vercel.app/init`, info)
+        .then(res => {
+          if(res?.data){
+            window.location = res?.data
+          }
+        })
+  
+      // if (urlData?.data) {
+      //   window.location.href = urlData?.data
+      // }
+  
+    };
+  
     return (
         <div className='container z-30 w-full'>
             <div>
@@ -122,7 +178,7 @@ const Cart = () => {
                                             <p className="text-2xl leading-normal text-gray-800">Total</p>
                                             <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> 6,940.00</p>
                                         </div>
-                                        <button onClick={() => navigate(`/checkout`)} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
+                                        <button onClick={confirmToPay} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
                                         </button>
                                     </div>
