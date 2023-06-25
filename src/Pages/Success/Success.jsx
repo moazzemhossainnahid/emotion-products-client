@@ -8,7 +8,7 @@ const Success = () => {
     const { id } = useParams();
     const [item, setItem] = useState([]); 
     useEffect(() => {
-        axios.get(`http://localhost:5000/orders/${id}`)
+        axios.get(`https://eproductsserver.vercel.app/orders/${id}`)
             .then(res => setItem(res.data))
     }, [id])
     const validatePayment = () => {
@@ -16,7 +16,7 @@ const Success = () => {
             tran_id: id,
             val_id: item?.val_id
         }
-        axios.post(`http://localhost:5000/validate`, data)
+        axios.post(`https://eproductsserver.vercel.app/validate`, data)
             .then(res => {
                 if (res.data) {
                     alert("Order placed successfully")

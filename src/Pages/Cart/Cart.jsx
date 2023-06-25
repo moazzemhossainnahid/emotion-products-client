@@ -17,7 +17,7 @@ const Cart = () => {
         category:"carport",
         badge:"top",
         img:"https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-        price:6875,
+        price:6895,
     }
   
     // const handleChecked = (event) => {
@@ -47,7 +47,7 @@ const Cart = () => {
   
       // console.log(info);
   
-      axios.post(`http://localhost:5000/init`, info)
+      axios.post(`https://eproductsserver.vercel.app/init`, info)
         .then(res => {
           if(res?.data){
             window.location = res?.data
