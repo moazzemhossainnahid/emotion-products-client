@@ -25,7 +25,7 @@ const Signin = () => {
                     <p tabIndex={0} role="heading" aria-label="Login to your account" className="text-2xl text-center font-semibold tracking-widest leading-6 text-gray-800">
                         Account Sign In
                     </p>
-                    <p className="text-sm mt-10 font-medium leading-none text-gray-500">
+                    <p className="text-sm text-center mt-10 font-medium leading-none text-gray-500">
                         Sign in to your account to access your profile, history, and any private pages you've been granted access to.
                     </p>
                     <div className="space-y-12 w-full h-full mt-10 py-7">
