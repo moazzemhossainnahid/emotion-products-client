@@ -14,11 +14,12 @@ import { useState } from 'react';
 import Checkout from './Pages/Checkout/Checkout';
 import CardPayment from './Pages/Checkout/CardPayment';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
-import Signin from './Pages/Signin/Signin';
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
 import Success from './Pages/Success/Success';
+import Signin from './Pages/Auth/Signin/Signin';
+import Signup from './Pages/Auth/Signup/Signup';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <Route path='/checkout' element={<RequireAuth><CardPayment /></RequireAuth>} />
             <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
+            <Route path='/signup' element={<Signup />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>

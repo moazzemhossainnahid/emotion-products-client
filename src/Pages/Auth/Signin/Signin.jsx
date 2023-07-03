@@ -1,5 +1,5 @@
 import React from 'react';
-import useSignin from '../../Hooks/useSignin';
+import useSignin from '../../../Hooks/useSignin';
 
 const Signin = () => {
     const { signInGoogle } = useSignin();
@@ -25,7 +25,7 @@ const Signin = () => {
 
                 <div className="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-16">
                     <div className="w-full mx-auto py-7">
-                        <img src="https://i.ibb.co/4MpVyQG/emotion-products.png" alt="" className="w-52 mx-auto" />
+                        <img src="https://i.ibb.co/7VySsQR/logo.png" alt="" className="w-52 mx-auto" />
                     </div>
                     <p tabIndex={0} role="heading" aria-label="Login to your account" className="text-2xl text-center font-extrabold leading-6 text-gray-800">
                         Login to your account
