@@ -7,12 +7,13 @@ import auth from '../../../../firebase.init';
 import UseToken from '../../../Hooks/useToken';
 import { GiCancel } from "react-icons/gi";
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Signin = () => {
     const [signInWithEmailAndPassword, suser, sloading, serror] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, errors } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
     const emailRef = useRef()
@@ -52,7 +53,7 @@ const Signin = () => {
         toast.success("Signin User Successfully")
     }
 
-    const handleSigninform = async () => {
+    const handleSigninform = async (data) => {
         const email = data.email;
         const password = data.password;
         await signInWithEmailAndPassword(email, password)
@@ -87,29 +88,60 @@ const Signin = () => {
                     <p className="text-sm text-center mt-10 font-medium leading-none text-gray-500">
                         Sign in to your account to access your profile, history, and any private pages you've been granted access to.
                     </p>
-                    <div className="space-y-12 w-full h-full mt-10 py-7">
-                        <div className="relative z-0 my-2">
+                    <form
+                        onSubmit={handleSubmit(handleSigninform)}
+                        action=""
+                        className="py-3"
+                    >
+                        <div className="space-y-12 w-full h-full mt-10 py-7">
+                            <div className="relative z-0 my-2">
 
-                            <input placeholder=" " required name="email" type="email" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
-                            <label htmlFor="floating_standard" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Email</label>
+                                <input {...register("email", {
+                                    required: { value: true, message: "Email is Required" },
+                                    pattern: { value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, message: "Provide a Valid Email", },
+                                })} placeholder=" " required name="email" type="email" id="floating_standard1" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
+                                <label htmlFor="floating_standard1" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Email</label>
+                            </div>
+                            <label htmlhtmlFor="email">
+                                {errors?.email?.type === "required" && (
+                                    <span className="text-red-700">{errors.email?.message}</span>
+                                )}
+                            </label>
+                            <label htmlhtmlFor="email">
+                                {errors?.email?.type === "pattern" && (
+                                    <span className="text-red-700">{errors.email?.message}</span>
+                                )}
+                            </label>
+                            <div className="relative z-0 my-2">
+
+                                <input {...register("password", {
+                                    required: { value: true, message: "Password is Required" },
+                                    pattern: { value: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/, message: "Provide a Valid Password", },
+                                })} placeholder=" " required name="password" type="password" id="floating_standard2" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
+                                <label htmlFor="floating_standard2" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Password</label>
+                            </div>
+                            <label htmlhtmlFor="password">
+                                {errors?.password?.type === "required" && (
+                                    <span className="text-red-700 text-5xl">{errors.password?.message}</span>
+                                )}
+                            </label>
+                            <label htmlhtmlFor="password">
+                                {errors?.password?.type === "pattern" && (
+                                    <span className="text-red-700 text-5xl">{errors.password?.message}</span>
+                                )}
+                            </label>
                         </div>
-                        <div className="relative z-0 my-2">
-
-                            <input placeholder=" " required name="password" type="password" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
-                            <label htmlFor="floating_standard" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Password</label>
+                        <span className="text-gray-400 hover:text-accent">
+                            <label for="reset-pass-modal" className="btn text-xs modal-button capitalize btn-link btn-xs p-0">
+                                forgot Your Password?
+                            </label>
+                        </span>
+                        <div className="mt-8">
+                            <button type='submit' role="button" aria-label="create my account" className="bg-gray-900 hover:bg-gray-700 btn btn-lg rounded-full font-semibold w-40 mx-auto text-white capitalize flex justify-center">
+                                Sign In
+                            </button>
                         </div>
-                    </div>
-                    <span className="text-gray-400 hover:text-accent">
-                        <label for="reset-pass-modal" className="btn text-xs modal-button capitalize btn-link btn-xs p-0">
-                            forgot Your Password?
-                        </label>
-                    </span>
-                    <div className="mt-8">
-                        <button role="button" aria-label="create my account" className="bg-gray-900 hover:bg-gray-700 btn btn-lg rounded-full font-semibold w-40 mx-auto text-white capitalize flex justify-center">
-                            Sign In
-                        </button>
-                    </div>
-
+                    </form>
                     {
                         someErrorMessages &&
                         <div className="some-error-message p-4 m-4 w-2/3 mx-auto bg-red-100  text-red-600 border rounded-lg text-sm  flex justify-center items-center">
