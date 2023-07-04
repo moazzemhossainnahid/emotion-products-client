@@ -1,18 +1,77 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import useSignin from '../../../Hooks/useSignin';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import Loader from '../../../Components/Others/Loader/Loader';
+import auth from '../../../../firebase.init';
+import UseToken from '../../../Hooks/useToken';
+import { GiCancel } from "react-icons/gi";
+import { useForm } from 'react-hook-form';
 
 const Signin = () => {
-    const { signInGoogle } = useSignin();
+    const [signInWithEmailAndPassword, suser, sloading, serror] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
+    const location = useLocation();
+    const emailRef = useRef()
+    //////////
+    let someErrorMessages;
+    const getFirebaseErrorMessages = (firebaseMessage) => {
+        const messages = firebaseMessage?.split("/")[1].split(")")[0]
+        someErrorMessages = messages;
+    }
 
-    const signIn = () => {
-        signInGoogle();
-    };
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        console.log("click");
-    };
+    if (serror || gerror) {
+
+        if (serror) getFirebaseErrorMessages(serror?.message)
+        if (gerror) getFirebaseErrorMessages(gerror?.message)
+    } else {
+        someErrorMessages = null
+    }
+    ///////
+
+
+    const from = location.state?.from?.pathname || '/';
+
+    const [token] = UseToken();
+
+
+    if (sloading || gloading) {
+        return <Loader />
+    }
+
+    // if (serror || gerror || giterror || ferror) {
+    //     signinError = <p className="text-red-700">{serror?.message || gerror?.message || giterror?.message || ferror?.message}</p>
+    // }
+
+
+    if (token) {
+        navigate(from, { replace: true });
+        toast.success("Signin User Successfully")
+    }
+
+    const handleSigninform = async () => {
+        const email = data.email;
+        const password = data.password;
+        await signInWithEmailAndPassword(email, password)
+            .then(() => {
+                reset();
+            })
+    }
+
+
+    const handleGoogleSignin = async () => {
+        await signInWithGoogle()
+    }
+
+    const handleReset = async () => {
+        const email = emailRef.current.value
+        await sendPasswordResetEmail(email)
+        toast.success(`Email Sent to ${email}!`);
+    }
+
 
 
     return (
@@ -31,20 +90,35 @@ const Signin = () => {
                     <div className="space-y-12 w-full h-full mt-10 py-7">
                         <div className="relative z-0 my-2">
 
-                            <input placeholder=" " required name="email" onChange={handleChange} type="email" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
+                            <input placeholder=" " required name="email" type="email" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
                             <label htmlFor="floating_standard" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Email</label>
                         </div>
                         <div className="relative z-0 my-2">
 
-                            <input placeholder=" " required name="password" onChange={handleChange} type="password" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
+                            <input placeholder=" " required name="password" type="password" id="floating_standard" className="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-700 appearance-none dark:border-gray-600 dark:focus:green-blue-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer" />
                             <label htmlFor="floating_standard" className="absolute text-sm text-left w-full justify-start flex text-gray-700 dark:text-gray-700 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Enter Your Password</label>
                         </div>
                     </div>
+                    <span className="text-gray-400 hover:text-accent">
+                        <label for="reset-pass-modal" className="btn text-xs modal-button capitalize btn-link btn-xs p-0">
+                            forgot Your Password?
+                        </label>
+                    </span>
                     <div className="mt-8">
                         <button role="button" aria-label="create my account" className="bg-gray-900 hover:bg-gray-700 btn btn-lg rounded-full font-semibold w-40 mx-auto text-white capitalize flex justify-center">
                             Sign In
                         </button>
                     </div>
+
+                    {
+                        someErrorMessages &&
+                        <div className="some-error-message p-4 m-4 w-2/3 mx-auto bg-red-100  text-red-600 border rounded-lg text-sm  flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            {someErrorMessages}
+                        </div>
+                    }
                     <div className="py-7 text-center">
                         <p className="text-sm mt-4 font-medium leading-none text-gray-500">
                             Dont have account?{" "}
@@ -60,7 +134,7 @@ const Signin = () => {
                         <hr className="w-full bg-gray-400  " />
                     </div>
 
-                    <button onClick={signIn} aria-label="Continue with google" role="button" className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex justify-center items-center w-2/3 mx-auto text-center mt-10">
+                    <button onClick={handleGoogleSignin} aria-label="Continue with google" role="button" className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex justify-center items-center w-2/3 mx-auto text-center mt-10">
                         <svg width={19} height={20} viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.9892 10.1871C18.9892 9.36767 18.9246 8.76973 18.7847 8.14966H9.68848V11.848H15.0277C14.9201 12.767 14.3388 14.1512 13.047 15.0812L13.0289 15.205L15.905 17.4969L16.1042 17.5173C17.9342 15.7789 18.9892 13.221 18.9892 10.1871Z" fill="#4285F4" />
                             <path d="M9.68813 19.9314C12.3039 19.9314 14.4999 19.0455 16.1039 17.5174L13.0467 15.0813C12.2286 15.6682 11.1306 16.0779 9.68813 16.0779C7.12612 16.0779 4.95165 14.3395 4.17651 11.9366L4.06289 11.9465L1.07231 14.3273L1.0332 14.4391C2.62638 17.6946 5.89889 19.9314 9.68813 19.9314Z" fill="#34A853" />
@@ -72,6 +146,29 @@ const Signin = () => {
 
                 </div>
             </div>
+            <>
+                <input type="checkbox" id="reset-pass-modal" className="modal-toggle" />
+                <div className="modal modal-bottom sm:modal-middle">
+                    <div className="modal-box relative">
+                        <label for="reset-pass-modal" className="absolute right-4 top-4">
+                            <GiCancel className="text-2xl" />
+                        </label>
+                        <h3 className="font-bold text-lg">Reset Your Password</h3>
+                        <div className="form-control">
+                            <input
+                                required
+                                type="email"
+                                name="rsemail"
+                                placeholder="Enter Your Email Address"
+                                className="input input-bordered input-icon text-base mb-1 focus:outline-none mt-4"
+                            />
+                        </div>
+                        <div className="form-control pt-5">
+                            <button onClick={handleReset} className="btn btn-neutral text-white">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </>
         </div>
     );
 };
