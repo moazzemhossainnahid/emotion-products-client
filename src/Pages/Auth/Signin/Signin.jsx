@@ -16,9 +16,9 @@ const Signin = () => {
 
 
     return (
-        <div className="h-full bg-white w-full py-16 px-4">
+        <div className="h-full bg-white w-full px-4">
             <div className="flex flex-col items-center justify-center">
-                <div className="bg-white rounded md:w-2/3 w-full p-10 mt-16">
+                <div className="bg-white rounded md:w-2/3 w-full p-10 ">
                     <div className="w-full mx-auto py-7">
                         <img src="https://i.ibb.co/7VySsQR/logo.png" alt="" className="w-52 mx-auto" />
                     </div>
