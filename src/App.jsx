@@ -20,6 +20,7 @@ import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
 import Success from './Pages/Success/Success';
 import Signin from './Pages/Auth/Signin/Signin';
 import Signup from './Pages/Auth/Signup/Signup';
+import Profile from './Pages/Profile/Profile';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>

@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
 import { toast } from 'react-toastify';
 import useSignin from '../../../Hooks/useSignin';
+import Authentication from './Authentication';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -63,9 +64,9 @@ const Header = () => {
                                 <li><NavLink reloadDocument to="/sofa"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />Furniture</NavLink></li>
                                 <li><NavLink reloadDocument to="/massagechair"><img src="https://i.ibb.co/Csy2jsP/massage-chair-2.png" alt="" className="pr-2 w-7" />Massage Chair</NavLink></li>
                                 <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />Lights</NavLink></li>
-                                {
+                                {/* {
                                     user && <li><button onClick={signOut} className=""> <FaSignOutAlt className='pr-2 w-7' /> SignOut</button></li>
-                                }
+                                } */}
 
                                 {/* <div className="form-control">
                                 <input type="text" placeholder="Search" className="input input-sm w-40 mx-auto input-bordered" />
@@ -73,6 +74,11 @@ const Header = () => {
 
                             </ul>
 
+                        </div>
+                        <div className="">
+                            {
+                                user && <div className="pl-5"><Authentication /></div>
+                            }
                         </div>
                     </div>
                 </div>
