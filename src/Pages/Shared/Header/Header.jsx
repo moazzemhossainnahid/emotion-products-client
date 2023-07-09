@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="navbar w-full md:w-4/5 mx-auto">
 
                     <div className="navbar-start">
-                        <Link to="/" className="w-full">
+                        <Link reloadDocument to="/" className="w-full">
                             <img src="https://i.ibb.co/7VySsQR/logo.png" alt="" className="w-32 md:w-40 py-2" />
                         </Link>
                     </div>
@@ -77,7 +77,7 @@ const Header = () => {
                         </div>
                         <div className="">
                             {
-                                user && <div className="pl-5"><Authentication /></div>
+                                user && <div className="md:pl-5"><Authentication /></div>
                             }
                         </div>
                     </div>

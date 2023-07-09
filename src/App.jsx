@@ -12,7 +12,7 @@ import Carport from './Pages/CarPort/CarPort';
 import Cart from './Pages/Cart/Cart';
 import { useState } from 'react';
 import Checkout from './Pages/Checkout/Checkout';
-import CardPayment from './Pages/Checkout/CardPayment';
+import CardPayment from './Pages/Checkout/CardPayment/CardPayment';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -37,7 +37,7 @@ function App() {
             <Route path='/sofa' element={<Sofa />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
-            <Route path='/checkout' element={<RequireAuth><CardPayment /></RequireAuth>} />
+            <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
             <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
