@@ -30,9 +30,10 @@ const OurExclusiveProduct = () => {
                             </div>
                         </div>
                         <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
-                            <h3 className="text-xl font-semibold text-gray-700 pt-1">Exclusive Massage Chair</h3>
+                            <h3 className="text-xl font-semibold text-gray-700 pt-1">Relax and recharge yourself with our massage chairs </h3>
                             <div className="pt-2 space-y-3">
-                                <p className="text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,</p>
+                                <p className="text-sm">Looking for a chair that gives you a full-body massage and melts all your worries away? Our massage chairs are for you. They offer you the ultimate relaxation and unwinding like never before. Since our state-of-the-art chairs are designed with your comfort in mind, you can soothe your tired feet or relieve tension in your shoulder or neck with our massage chairs.</p>
+                                <p className="text-sm">With a range of massage techniques, they offer a truly therapeutic experience and allow you to customize your message to target specific body regions. Moreover, you can set the chair in any comfortable position. We are dedicated to offering premium quality, sturdy, durable massage chairs. </p>
                             </div>
                             <div className="flex pb-2 items-center gap-3">
                                 <img src="https://i.ibb.co/v4h4JWW/Vector-5.png" alt="" className="w-5 h-5" />
@@ -50,10 +51,10 @@ const OurExclusiveProduct = () => {
                                 <img src="https://i.ibb.co/v4h4JWW/Vector-5.png" alt="" className="w-5 h-5" />
                                 <h5 className="text-sm">fact that a reader will be distracted by the</h5>
                             </div>
-                            <div className="flex pb-2 items-center gap-3">
+                            {/* <div className="flex pb-2 items-center gap-3">
                                 <img src="https://i.ibb.co/v4h4JWW/Vector-5.png" alt="" className="w-5 h-5" />
                                 <h5 className="text-sm">It is a long established fact that a reader</h5>
-                            </div>
+                            </div> */}
                             <div className="pt-2 gap-5 flex justify-start items-center">
                                 <button onClick={() => navigate("/productdetails/1")} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">View Details </button>
                                 {/* <button className="px-7 py-2 rounded font-semibold flex bg-primary items-center border-2 hover:bg-white group">BUY NOW <FaArrowRight className='pl-2 text-2xl' /> </button> */}

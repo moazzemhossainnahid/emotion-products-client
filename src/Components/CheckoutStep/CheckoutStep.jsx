@@ -3,7 +3,7 @@ import Stepper from "./Controls/Stepper";
 import StepperControl from "./Controls/StepperControl";
 import Complete from "./Steps/Complete";
 import CKUserDetails from "./Steps/CKUserDetails";
-import Home from "./Steps/Home";
+import Payment from "./Steps/Payment";
 import Preview from "./Steps/Preview";
 import { UseContextProvider } from "../../Hooks/StepperContext";
 import CKShippingDetails from "./Steps/CKShippingDetails";
@@ -29,7 +29,7 @@ const CheckoutStep = () => {
             case 2:
                 return <CKShippingDetails />;
             case 3:
-                return <CKShippingDetails />;
+                return <Payment />;
             default:
         }
     };

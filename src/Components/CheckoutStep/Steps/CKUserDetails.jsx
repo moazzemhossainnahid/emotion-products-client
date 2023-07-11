@@ -51,7 +51,7 @@ export default function CKUserDetails() {
     return strTime;
   };
   return (
-    <div className="border bg-white px-5 col-span-2 shadow-sm py-5">
+    <div style={{ fontFamily: 'Silk Serif' }} className="border bg-white px-5 col-span-2 shadow-sm py-5">
       <h2 className="py-5 text-3xl text-black text-opacity-75">
         Personal Information
       </h2>
@@ -334,19 +334,19 @@ export default function CKUserDetails() {
                   <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
                     <p>Item Fee</p>
                     <p className="flex items-center justify-end text-end gap-1">
-                      <FaDollarSign /> {item?.price}
+                    <i class="fa fa-eur" aria-hidden="true"></i> {item?.price} 
                     </p>
                   </div>
                   <div className="flex justify-between text-lg text-black text-opacity-90  my-2">
                     <p>Govt.Tax 7%</p>
                     <p className="flex items-center justify-end text-end gap-1">
-                      <FaDollarSign /> {(item?.price / 100 * 7).toFixed(2)}
+                    <i class="fa fa-eur" aria-hidden="true"></i> {(item?.price / 100 * 7).toFixed(2)}
                     </p>
                   </div>
                   <div className="flex flex-row justify-between text-md text-black text-opacity-90  my-2">
                     <p>Service Charge 5%</p>
                     <p className="flex items-center justify-end gap-1">
-                      <FaDollarSign className="text-md font-thin" /> {(item?.price / 100 * 5).toFixed(2)}
+                    <i class="fa fa-eur" aria-hidden="true"></i> {(item?.price / 100 * 5).toFixed(2)}
                     </p>
                   </div>
                   <div className="py-5">
@@ -355,7 +355,7 @@ export default function CKUserDetails() {
                   <div className="flex justify-between text-lg text-black text-opacity-90  my-2 mb-10">
                     <p className="text-xl font-semibold ">Total</p>
                     <p className="text-xl flex items-center justify-end font-semibold ">
-                      = <FaDollarSign /> {(item?.price + item?.price / 100 * 7 + item?.price / 100 * 5).toFixed(2)}
+                      = <i class="fa fa-eur px-2" aria-hidden="true"></i> {(item?.price + item?.price / 100 * 7 + item?.price / 100 * 5).toFixed(2)}
                     </p>
                   </div>
                 </div>
@@ -380,7 +380,7 @@ export default function CKUserDetails() {
           />
           <span className="ml-2">
             I have read and accepted{" "}
-            <a href="!#" className="text-[#009DA6] font-semibold font-sans">
+            <a href="!#" className="text-[#009DA6] font-semibold ">
               Terms & Conditions
             </a>
           </span>

@@ -15,15 +15,15 @@ const ValuableSpeech = () => {
                     </div>
 
                     <div className="space-y-5 w-4/5 pt-3">
-                        <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven - my carport.</p>
-                        <p className=""> You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. But keeping my ride safe and secure has always been a bit of a challenge, especially with unpredictable weather and the occasional bird droppings.</p>
-                        <p className="">That's where my carport comes in. It may not be the most glamorous thing in the world, but it does the job and it does it well. Rain, hail or shine, my car is protected from the elements and I can sleep easy at night knowing that it's safe and sound.</p>
+                        <p className="">Hello fellas! </p>
+                        <p className="">Welcome to our world of comfort and luxury. We're thrilled to offer you a line of beautiful and functional products. My passion for cars and luxury furniture turned into my profession and led me to lay the foundation of this company where you find everything you need to unwind and recharge, from the carport to lighting and luxury furniture to massage chairs. <br /> As the CEO of this company, I believe that luxury is not something related to the price tag but about the experience. That's where our products and services come that reflect my years of experience and dedication to excellence.</p>
+                        <p className="">Our designer, a professional degree holder, ensures that every product is designed with utmost care and detail. </p>
+                        <p className="">Let's embark on a journey to transform your space into a sanctuary of comfort and relaxation.</p>
                     </div>
-                <div className="flex flex-row justify-between items-center gap-2 pt-5 w-5/6 md:w-2/3">
+                    <p className="py-2">Sincerely, </p>
                     <h3 className="text-md text-gray-500 italic">Edwin Eijsink & Timon Eijsink</h3>
                     {/* <h3 className="text-md text-gray-500 italic"> & </h3>
                     <h3 className="text-md text-gray-500 italic">Timon Eijsink</h3> */}
-                </div>
                 </div>
             </div>
         </div>

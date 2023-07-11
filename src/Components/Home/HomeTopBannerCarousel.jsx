@@ -57,23 +57,23 @@ const HomeTopBannerCarousel = () => {
     const SliderData = [
         {
             img: 'https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg',
-            title: 'Luxury relaxation',
-            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
+            title: 'Protect your car in style with our unmatched quality carports',
+            desc: "We specialize in designing and constructing carports that enhance the look of your property and offer ultimate protection."
         },
         {
             img: 'https://i.ibb.co/5kYFf7r/Rectangle-111.png',
-            title: 'Luxury relaxation',
-            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
+            title: 'Experience extraordinary comfort with our exquisite luxury furniture',
+            desc: "Indulge in the comfort of our luxury sofas, designed with top-notch materials to create a statement piece."
         },
         {
             img: 'https://i.ibb.co/37G57Y2/Rectangle-111-1.png',
-            title: 'Luxury relaxation',
-            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
+            title: 'Illuminate your space with our lighting solutions',
+            desc: "Energy-efficient lighting solutions that create a warm and inviting atmosphere."
         },
         {
             img: 'https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg',
-            title: 'Luxury relaxation',
-            desc: "You see, I've always been a bit of a car enthusiast. I love nothing more than tinkering around with engines and getting my hands dirty. "
+            title: 'Relax and de-stress with the ultimate massage experience',
+            desc: "Our high-tech massage chairs offer a soothing massage to provide relaxation."
         }
     ]
 
@@ -83,15 +83,15 @@ const HomeTopBannerCarousel = () => {
                 {
                     SliderData.map((data, idx) => {
                         return (
-                            <div key={idx} className={`bg-gradient-to-tr from-gray-400 to-gray-700 relative h-[60vh] md:h-[85vh] bg-cover bg-center`}>
+                            <div key={idx} className={`bg-gradient-to-tr from-gray-900 to-gray-500 relative h-[60vh] md:h-[85vh] bg-cover bg-center`}>
                                 <img
                                     src={data?.img}
                                     alt=""
                                     className="w-full absolute mix-blend-overlay h-full object-cover"
                                 />
-                                <div className="w-full text-center absolute bottom-40 space-y-3">
+                                <div className="w-full text-center absolute bottom-20 md:bottom-40 space-y-3">
                                     <Slide top duration={1500}>
-                                        <h3 style={{ fontFamily: 'Silk Serif' }} className="text-3xl md:text-5xl text-white">{data?.title}</h3>
+                                        <h3 style={{ fontFamily: 'Silk Serif' }} className="w-full md:w-4/5 mx-auto text-2xl md:text-5xl text-white">{data?.title}</h3>
                                     </Slide>
                                     <Slide bottom duration={2000}>
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
