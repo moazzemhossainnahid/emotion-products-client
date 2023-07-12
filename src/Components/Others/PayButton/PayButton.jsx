@@ -3,12 +3,12 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 
-const PayButton = ({ checkoutItem }) => {
+const PayButton = ({ checkoutItems }) => {
     const [user] = useAuthState(auth);
-    console.log(checkoutItem);
+    console.log(checkoutItems);
     const handleCheckout = () => {
-        axios.post(`http://localhost:5000/create-checkout-session`, {
-            checkoutItem,
+        axios.post(`http://localhost:5000/api/v1/stripe/create-checkout-session`, {
+            checkoutItems,
             user
         }).then(res => {
             if (res.data.url) {
@@ -18,7 +18,7 @@ const PayButton = ({ checkoutItem }) => {
     }
     return (
         <>
-        <button onClick={() => handleCheckout()} className="">Check Out</button>
+        <button onClick={() => handleCheckout()} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Check Out</button>
         </>
     );
 };
