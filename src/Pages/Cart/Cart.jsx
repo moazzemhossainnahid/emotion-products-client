@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import axios from 'axios';
 import { useState } from 'react';
+import PayButton from '../../Components/Others/PayButton/PayButton';
 
 const Cart = () => {
     const navigate = useNavigate();
@@ -178,9 +179,10 @@ const Cart = () => {
                                             <p className="text-2xl leading-normal text-gray-800">Total</p>
                                             <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> 6,940.00</p>
                                         </div>
-                                        <button onClick={() => navigate('/checkout')} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
+                                        {/* <button onClick={() => navigate('/checkout')} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
-                                        </button>
+                                        </button> */}
+                                        <PayButton checkoutItem={item} />
                                     </div>
                                 </div>
                             </div>
