@@ -21,6 +21,7 @@ import Success from './Pages/Success/Success';
 import Signin from './Pages/Auth/Signin/Signin';
 import Signup from './Pages/Auth/Signup/Signup';
 import Profile from './Pages/Profile/Profile';
+import CheckoutSuccess from './Components/Others/CheckoutSuccess/CheckoutSuccess';
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
-            <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} />
+            {/* <Route path="/ssl-payment-success/:id" element={<RequireAuth><Success/></RequireAuth>} /> */}
+            <Route path="/checkout-success" element={<RequireAuth><CheckoutSuccess/></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/profile' element={<Profile />} />
