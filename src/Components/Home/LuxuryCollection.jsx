@@ -12,7 +12,7 @@ const LuxuryCollection = () => {
                     <p className="text-[#8F969C] font-bold">Don't settle for less! Discover our collection and get a perfect piece expressing your style. </p>
                 </div>
                 <div className="w-full md:w-2/5">
-                    <img src="https://i.ibb.co/brnp8WC/Screenshot-5.png" alt="" className="w-full p-5 mx-auto" />
+                    <img src="https://i.ibb.co/Fh0ptGw/Rectangle-192.png" alt="" className="w-full p-5 rounded-2xl mx-auto" />
                 </div>
             </div>
         </div>

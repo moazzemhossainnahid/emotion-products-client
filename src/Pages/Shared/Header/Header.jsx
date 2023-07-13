@@ -24,7 +24,7 @@ const Header = () => {
 
                     <div className="navbar-start">
                         <Link reloadDocument to="/" className="w-full">
-                            <img src="https://i.ibb.co/7VySsQR/logo.png" alt="" className="w-32 md:w-40 py-2" />
+                            <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className="w-32 md:w-40 py-2" />
                         </Link>
                     </div>
                     {/* <div className="navbar-center hidden lg:flex">

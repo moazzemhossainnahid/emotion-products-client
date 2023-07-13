@@ -40,7 +40,7 @@ const Authentication = () => {
                         </label>
                     </div>
                     <ul tabIndex="0" className="mt-3 p-2 gap-1 shadow menu menu-compact dropdown-content text-gray-600 bg-slate-200 rounded-box w-52">
-                        <li> <Link to="/profile" className="justify-between"> Profile <span className="badge">New</span> </Link> </li>
+                        <li> <Link reloadDocument to="/profile" className="justify-between"> Profile <span className="badge">New</span> </Link> </li>
                         <li><button onClick={handleSignOut}>Sign Out</button></li>
                     </ul>
                 </div>

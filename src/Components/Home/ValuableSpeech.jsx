@@ -5,7 +5,7 @@ const ValuableSpeech = () => {
         <div className='bg-white py-10'>
             <div data-aos="fade-up" data-aos-duration="1000" className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row p-5 justify-between items-center gap-5">
                 <div className="w-full md:w-2/5 mx-auto">
-                    <img src="https://i.ibb.co/Lpgw2R8/Rectangle-6.png" alt="" className="" />
+                    <img src="https://i.ibb.co/cwHf0pB/Picture-prive-foto-1.jpg" alt="" className="" />
                 </div>
                 <div className="w-full md:w-3/5 mx-auto md:pl-7">
                     <h3 className="text-2xl font-bold">Valuable Speech From Our <br /> CEO & Founder</h3>

@@ -5,8 +5,8 @@ const BestInTown = () => {
     const navigate = useNavigate();
     return (
         <div className='w-full'>
-            <div className="bg-[#03394A] pt-10 ">
-                <div className="w-4/5 h-full md:h-96 mx-auto overflow-hidden">
+            <div className="bg-[#231E1A] pt-10 ">
+                <div className="w-4/5 h-full md:h-[70vh] mx-auto overflow-hidden">
                     <img src="https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg" alt="" className="h-full w-full rounded-t-3xl object-cover" />
                 </div>
             </div>
