@@ -128,7 +128,7 @@ const HomeTopBannerCarousel = () => {
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal z-50 h-screen w-full overflow-hidden">
                 <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-gray-900 to-gray-700 bg-cover overflow-hidden relative ">
-                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 mix-blend-overlay h-full object-cover" />
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 mix-blend-darken h-full object-cover" />
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <div className="text-white">
                         <div className="flex items-center min-h-full p-4 lg:justify-center">
