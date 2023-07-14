@@ -12,7 +12,7 @@ const OurExclusiveProduct = () => {
                     <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-col md:flex-row justify-between py-7 items-center w-full gap-5">
                         <div className="w-full md:w-3/6 mx-auto relative">
                             <div className="relative w-full mx-auto">
-                                <img src="https://i.ibb.co/BZSKM5W/Rectangle-172.png" alt="" className="relative w-full md:w-5/6" />
+                                <img src="https://i.ibb.co/crm560K/Screenshot-9.png" alt="" className="relative w-full md:w-5/6" />
                                 <div className="absolute bottom-7 bg-gray-200 left-0 flex justify-center px-7 py-2 border-r-4 border-primary items-center gap-3">
                                     <div className="">
                                         <img src="https://i.ibb.co/1Z7Z2n7/Vector-1.png" alt="" className="bg-gray-200 rounded-full h-8 w-8 p-2 text-3xl cursor-pointer hover:scale-110 duration-300" />
