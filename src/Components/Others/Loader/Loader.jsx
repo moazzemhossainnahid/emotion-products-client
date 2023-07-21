@@ -7,6 +7,6 @@ const Loader = () => {
             <GridLoader color="#00C2FF" />
         </div>
     );
-};
+}; 
  
 export default Loader;

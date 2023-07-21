@@ -45,7 +45,7 @@ const Footer = () => {
                                 <a className="link link-hover flex gap-2"> <FaMapMarkerAlt /> 52/2, School Street Road</a>
                                 <a className="link link-hover flex gap-2"> <FaClock /> Mon-Sun 9.00 - 18.00</a>
                                 <a className="link link-hover flex gap-2"> <FaPhoneAlt /> +9978-4578-145</a>
-                                <a className="link link-hover flex gap-2"> <FaEnvelope /> hello@carport.com</a>
+                                <a className="link link-hover flex gap-2"> <FaEnvelope /> hello@emotionproducts.com</a>
                             </div>
                         </footer>
                         <div className="px-10 py-4 bg-transparent text-base-200">

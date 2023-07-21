@@ -1,16 +1,17 @@
 import { toast } from 'react-toastify';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
+import UseAdmin from '../../../Hooks/useAdmin';
 
 
 const Authentication = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
-
+    const [admin] = UseAdmin();
 
     const handleSignOut = async () => {
         await signOut(auth)
@@ -40,7 +41,10 @@ const Authentication = () => {
                         </label>
                     </div>
                     <ul tabIndex="0" className="mt-3 p-2 gap-1 shadow menu menu-compact dropdown-content text-gray-600 bg-slate-200 rounded-box w-52">
-                        <li> <Link reloadDocument to="/profile" className="justify-between"> Profile <span className="badge">New</span> </Link> </li>
+                        <li> <NavLink reloadDocument to="/profile" className="justify-between"> Profile <span className="badge">New</span> </NavLink> </li>
+                        {
+                            (user && admin) && <li> <NavLink reloadDocument className={({ isActive }) => (isActive ? 'text-[#0f52ba] duration-300 border-b-2 border-[#0f52ba]' : 'text-gray-800 duration-100')} to="/cpanel">Control Panel</NavLink></li>
+                        }
                         <li><button onClick={handleSignOut}>Sign Out</button></li>
                     </ul>
                 </div>
