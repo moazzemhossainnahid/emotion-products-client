@@ -10,7 +10,7 @@ const UserDetails = ({ user, index }) => {
 
     const handleMakeAdmin = () => {
         if (admin) {
-            fetch(`https://abc-publications-server-ii.vercel.app/api/v1/users/admin/${email}`, {
+            fetch(`http://localhost:5000/api/v1/users/admin/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',
@@ -31,7 +31,7 @@ const UserDetails = ({ user, index }) => {
 
     const handleRemoveAdmin = () => {
         if (admin) {
-            fetch(`https://abc-publications-server-ii.vercel.app/api/v1/users/admin/remove/${email}`, {
+            fetch(`http://localhost:5000/api/v1/users/admin/remove/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',
@@ -51,7 +51,7 @@ const UserDetails = ({ user, index }) => {
 
     const handleRemoveUser = (id) => {
         if (admin) {
-            fetch(`https://abc-publications-server-ii.vercel.app/api/v1/users/${id}`, {
+            fetch(`http://localhost:5000/api/v1/users/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json',
@@ -75,7 +75,7 @@ const UserDetails = ({ user, index }) => {
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Index</span>
                 {index + 1}
             </td>
-            <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+            <td className="w-full lg:w-auto p-3 text-gray-800 text-center md:text-left border border-b block lg:table-cell relative lg:static">
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
                 {email}
             </td>

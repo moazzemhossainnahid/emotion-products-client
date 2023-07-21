@@ -25,6 +25,7 @@ import CheckoutSuccess from './Components/Others/CheckoutSuccess/CheckoutSuccess
 import RequireAdmin from './Components/Others/RequireAdmin/RequireAdmin';
 import CPanel from './Components/Dashboard/AdminDashboard/Admin/CPanel';
 import AdDashboard from './Components/Dashboard/AdminDashboard/Dashboard/AdDashboard';
+import ManageUsers from './Components/Dashboard/AdminDashboard/ManageUsers/ManageUsers';
 
 function App() {
 
@@ -55,8 +56,8 @@ function App() {
             <Route path="/cpanel" element={<RequireAuth><RequireAdmin><CPanel /></RequireAdmin></RequireAuth>}>
               <Route index element={<AdDashboard />} />
               <Route path="addashboard" element={<AdDashboard />} />
-              {/* <Route path="musers" element={<ManageUsers />} />
-              <Route path="approveposts" element={<ApprovePosts />} />
+              <Route path="musers" element={<ManageUsers />} />
+              {/* <Route path="approveposts" element={<ApprovePosts />} />
               <Route path="unapproveposts" element={<UnapprovePosts />} /> */}
             </Route>
           </Routes>
