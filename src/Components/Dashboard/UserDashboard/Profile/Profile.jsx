@@ -11,7 +11,7 @@ const Profile = () => {
 
     const imageUrlKey = 'e738f1d16de6b265746b7f82cc157644';
 
-    // handle Update Profile
+    // handle Update Profile 
 
     const handleUpdateProfile = async (data) => {
 
@@ -36,7 +36,7 @@ const Profile = () => {
                     }
 
                     // send to database
-                    fetch(`https://abc-publications-server-ii.vercel.app/api/v1/users/${email}`, {
+                    fetch(`http://localhost:5000/api/v1/users/${email}`, {
                         method: 'PUT',
                         headers: {
                             "content-type": "application/json",

@@ -20,12 +20,12 @@ import RequireAuth from './Components/Others/RequireAuth/RequireAuth';
 import Success from './Pages/Success/Success';
 import Signin from './Pages/Auth/Signin/Signin';
 import Signup from './Pages/Auth/Signup/Signup';
-import Profile from './Pages/Profile/Profile';
 import CheckoutSuccess from './Components/Others/CheckoutSuccess/CheckoutSuccess';
 import RequireAdmin from './Components/Others/RequireAdmin/RequireAdmin';
 import CPanel from './Components/Dashboard/AdminDashboard/Admin/CPanel';
 import AdDashboard from './Components/Dashboard/AdminDashboard/Dashboard/AdDashboard';
 import ManageUsers from './Components/Dashboard/AdminDashboard/ManageUsers/ManageUsers';
+import Profile from './Components/Dashboard/UserDashboard/Profile/Profile';
 
 function App() {
 
