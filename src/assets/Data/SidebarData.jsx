@@ -1,4 +1,4 @@
-import { faDashboard, faDraftingCompass, faSignsPost, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faDashboard, faDraftingCompass, faReorder, faShoppingBasket, faShoppingCart, faSignsPost, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const SidebarData = [
     {
@@ -12,13 +12,13 @@ export const SidebarData = [
         icon: faUsers,
     },
     {
-        title: "Manage Publish Post",
-        href: "approveposts",
-        icon: faSignsPost,
+        title: "Manage Products",
+        href: "mproducts",
+        icon: faShoppingCart,
     }, 
     {
-        title: "Manage UnPublish Post",
-        href: "unapproveposts",
-        icon: faDraftingCompass,
+        title: "Manage Orders",
+        href: "morders",
+        icon: faReorder,
     },
 ];

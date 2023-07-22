@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <div className="w-full max-w-full mx-auto">
-        {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/approveposts' && window.location.pathname !== '/cpanel/unapproveposts') && <Header />}
+        {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders') && <Header />}
         {/* <Header /> */}
         <div className="">
           <Routes>
@@ -57,12 +57,12 @@ function App() {
               <Route index element={<AdDashboard />} />
               <Route path="addashboard" element={<AdDashboard />} />
               <Route path="musers" element={<ManageUsers />} />
-              {/* <Route path="approveposts" element={<ApprovePosts />} />
-              <Route path="unapproveposts" element={<UnapprovePosts />} /> */}
+              {/* <Route path="mproducts" element={<ApprovePosts />} />
+              <Route path="morders" element={<UnapprovePosts />} /> */}
             </Route>
           </Routes>
         </div>
-        {(window.location.pathname !== '/cart' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/approveposts' && window.location.pathname !== '/cpanel/unapproveposts') && <Footer />}
+        {(window.location.pathname !== '/cart' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders') && <Footer />}
         <ToastContainer />
       </div>
     </>

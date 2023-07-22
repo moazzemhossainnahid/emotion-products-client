@@ -7,7 +7,8 @@ const DBCards = () => {
 
     const navigate = useNavigate();
     const [users, setUsers] = useState([]);
-    const [posts, setPosts] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/api/v1/users`)
@@ -17,27 +18,16 @@ const DBCards = () => {
 
 
     useEffect(() => {
-        fetch('https://abc-publications-server-ii.vercel.app/api/v1/posts')
+        fetch(`http://localhost:5000/api/v1/products`)
             .then(res => res.json())
-            .then(data => setPosts(data))
+            .then(data => setProducts(data))
     }, [])
 
-    // console.log(posts);
-
-    const approvePosts = posts && posts.filter(p => p.status === "approve");
-    const unapprovePosts = posts && posts.filter(p => p.status === "unapprove");
-
-
-    // const TotalBalance = accounts?.map(a => a.balance)
-    //     .reduce((a, b) => {
-    //         return a + b;
-    //     }, 0);
-
-    // useEffect(() => {
-    //     fetch('https://online-bank-of-bd-server.vercel.app/statements')
-    //         .then(res => res.json())
-    //         .then(data => setTransactions(data))
-    // }, [])
+    useEffect(() => {
+        fetch(`http://localhost:5000/api/v1/orders`)
+            .then(res => res.json())
+            .then(data => setOrders(data))
+    }, [])
 
 
     return (
@@ -48,7 +38,7 @@ const DBCards = () => {
                     <div className="flex items-center justify-between bg-rose-300 p-3 rounded-t-xl">
                         <div className="">
                             <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{users?.length}</h3>
-                            <h3 className="text-md font-bold text-white">Total Registered Users</h3>
+                            <h3 className="text-md font-bold text-white">Total Users</h3>
                         </div>
                         <div className="">
                             <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faUserPlus} />
@@ -62,8 +52,8 @@ const DBCards = () => {
                 <div className="">
                     <div className="flex items-center justify-between bg-[#17A2BB] p-3 rounded-t-xl">
                         <div className="">
-                            <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{approvePosts?.length}</h3>
-                            <h3 className="text-md font-bold text-white">Total Approve Post</h3>
+                            <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{products?.length}</h3>
+                            <h3 className="text-md font-bold text-white">Total Products</h3>
                         </div>
                         <div className="">
                             <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faPenToSquare} />
@@ -77,8 +67,8 @@ const DBCards = () => {
                 <div className="">
                     <div className="flex items-center justify-between bg-[#28A745] p-3 rounded-t-xl">
                         <div className="">
-                            <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{unapprovePosts?.length} </h3>
-                            <h3 className="text-md font-bold text-white">Total UnApprove Post</h3>
+                            <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{orders?.length} </h3>
+                            <h3 className="text-md font-bold text-white">Total Orders</h3>
                         </div>
                         <div className="">
                             <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faRoadLock} />
