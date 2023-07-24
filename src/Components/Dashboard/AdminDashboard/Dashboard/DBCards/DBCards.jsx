@@ -1,4 +1,4 @@
-import { faArrowAltCircleRight, faPenToSquare, faRoadLock, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faCartShopping, faListCheck, faPenToSquare, faRoadLock, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -56,7 +56,7 @@ const DBCards = () => {
                             <h3 className="text-md font-bold text-white">Total Products</h3>
                         </div>
                         <div className="">
-                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faPenToSquare} />
+                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faCartShopping} />
                         </div>
                     </div>
                     <div onClick={() => navigate('/cpanel/approveposts')} className="bg-[#0c93ab] cursor-pointer py-2 text-center rounded-b-xl">
@@ -71,7 +71,7 @@ const DBCards = () => {
                             <h3 className="text-md font-bold text-white">Total Orders</h3>
                         </div>
                         <div className="">
-                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faRoadLock} />
+                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faListCheck} />
                         </div>
                     </div>
                     <div onClick={() => navigate('/cpanel/unapproveposts')} className="bg-[#0f9c30] cursor-pointer py-2 text-center rounded-b-xl">
