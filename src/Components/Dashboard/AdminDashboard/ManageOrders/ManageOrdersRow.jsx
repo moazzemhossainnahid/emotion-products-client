@@ -23,14 +23,14 @@ const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Order Date</span>
                 {createdAt}
             </td>
-            <td className="w-full lg:w-auto p-2 text-sm text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+            <td className="w-full lg:w-auto p-2 font-bold text-green-700 text-sm text-center border border-b block lg:table-cell relative lg:static">
                 <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Payment Status</span>
                 {payment_status}
             </td>
             <td className="w-full lg:w-auto text-xs p-2 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                 <div className="flex justify-between px-3 pb-1 gap-2 items-center">
-                    {payment_status === "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
-                    {/* {payment_status !== "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>} */}
+                    {payment_status !== "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
+                    {payment_status === "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>}
                 </div>
 
             </td>
