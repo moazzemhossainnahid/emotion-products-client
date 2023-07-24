@@ -29,8 +29,8 @@ const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
             </td>
             <td className="w-full lg:w-auto text-xs p-2 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                 <div className="flex justify-between px-3 pb-1 gap-2 items-center">
-                    {payment_status !== "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
-                    {payment_status === "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>}
+                    {payment_status === "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
+                    {/* {payment_status !== "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>} */}
                 </div>
 
             </td>
