@@ -26,6 +26,8 @@ import CPanel from './Components/Dashboard/AdminDashboard/Admin/CPanel';
 import AdDashboard from './Components/Dashboard/AdminDashboard/Dashboard/AdDashboard';
 import ManageUsers from './Components/Dashboard/AdminDashboard/ManageUsers/ManageUsers';
 import Profile from './Components/Dashboard/UserDashboard/Profile/Profile';
+import ManageProducts from './Components/Dashboard/AdminDashboard/ManageProducts/ManageProducts';
+import ManageOrders from './Components/Dashboard/AdminDashboard/ManageOrders/ManageOrders';
 
 function App() {
 
@@ -57,8 +59,8 @@ function App() {
               <Route index element={<AdDashboard />} />
               <Route path="addashboard" element={<AdDashboard />} />
               <Route path="musers" element={<ManageUsers />} />
-              {/* <Route path="mproducts" element={<ApprovePosts />} />
-              <Route path="morders" element={<UnapprovePosts />} /> */}
+              <Route path="mproducts" element={<ManageProducts />} />
+              <Route path="morders" element={<ManageOrders />} />
             </Route>
           </Routes>
         </div>
