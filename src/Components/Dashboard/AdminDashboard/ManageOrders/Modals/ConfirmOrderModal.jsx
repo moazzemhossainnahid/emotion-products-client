@@ -1,19 +1,19 @@
 
 import { toast } from 'react-toastify';
 
-const DeleteOrderModal = ({ deleteOrder, setNumber, number }) => {
+const ConfirmOrderModal = ({ confirmOrder, setNumber, number }) => {
 
-    const { title, authorName, category, _id, cover } = deleteOrder;
+    const { title, authorName, category, _id, cover } = confirmOrder;
 
-    const handleDelete = (id) => {
+    const handleConfirmOrder = (id) => {
         const url = `http://localhost:5000/api/v1/orders/${id}`;
         fetch(url, {
-            method: 'DELETE'
+            method: 'PUT'
         })
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    toast.success(` Order id (${_id}) has been deleted.`);
+                    toast.success(` Order id (${_id}) has been Confirmed.`);
                     setNumber(number + 1);
                 }
             })
@@ -21,11 +21,11 @@ const DeleteOrderModal = ({ deleteOrder, setNumber, number }) => {
 
     return (
         <div>
-            <input type="checkbox" id="delete-order-modal" className="modal-toggle" />
+            <input type="checkbox" id="confirm-order-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <label htmlFor="delete-order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h1 className='mb-4 badge  badge-error text-2xl badge-lg p-4'>Delete Order</h1>
+                    <label htmlFor="confirm-order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h1 className='mb-4 badge badge-error text-2xl badge-lg p-4'>Confirm Order</h1>
                     <div className="w-full flex justify-between items-center gap-3">
                         <div className="w-3/5">
                             <h3 className="font-bold text-lg">{title}</h3>
@@ -37,7 +37,7 @@ const DeleteOrderModal = ({ deleteOrder, setNumber, number }) => {
                         </div>
                     </div>
                     <div className="modal-action">
-                        <label htmlFor="delete-order-modal" onClick={() => handleDelete(_id)} className="btn">Delete</label>
+                        <label htmlFor="confirm-order-modal" onClick={() => handleConfirmOrder(_id)} className="btn">Confirm</label>
                     </div>
                 </div>
             </div>
@@ -46,4 +46,4 @@ const DeleteOrderModal = ({ deleteOrder, setNumber, number }) => {
     );
 };
 
-export default DeleteOrderModal;
+export default ConfirmOrderModal;

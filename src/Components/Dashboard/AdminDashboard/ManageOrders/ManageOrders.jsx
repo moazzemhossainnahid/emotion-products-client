@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import ManageOrdersRow from './ManageOrdersRow';
 import DeleteOrderModal from './Modals/DeleteOrderModal';
+import ConfirmOrderModal from './Modals/ConfirmOrderModal';
 
 const ManageOrders = () => {
     const [number, setNumber] = useState(0);
     const [orders, setOrders] = useState(null);
+    const [confirmOrder, setConfirmOrder] = useState(null);
     const [deleteOrder, setDeleteOrder] = useState(null);
 
 
@@ -25,8 +27,8 @@ const ManageOrders = () => {
                         <thead>
                             <tr className='text-center'>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Index</th>
-                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Products</th>
-                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Category</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Product</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">customerId</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Order Date</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Payment Status</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Action</th>
@@ -42,6 +44,7 @@ const ManageOrders = () => {
                                         order={order}
                                         index={index}
                                         setDeleteOrder={setDeleteOrder}
+                                        setConfirmOrder={setConfirmOrder}
                                     ></ManageOrdersRow>)
                             }
 
@@ -50,6 +53,9 @@ const ManageOrders = () => {
                 </div>
                 {
                     deleteOrder && <DeleteOrderModal deleteOrder={deleteOrder} setNumber={setNumber} number={number} ></DeleteOrderModal>
+                }
+                {
+                    confirmOrder && <ConfirmOrderModal confirmOrder={confirmOrder} setNumber={setNumber} number={number} ></ConfirmOrderModal>
                 }
 
             </div>
