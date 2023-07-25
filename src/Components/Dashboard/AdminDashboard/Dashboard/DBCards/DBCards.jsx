@@ -11,20 +11,20 @@ const DBCards = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/users`)
+        fetch(`https://emotion-products-server.up.railway.app/api/v1/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, []);
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/products`)
+        fetch(`https://emotion-products-server.up.railway.app/api/v1/products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/orders`)
+        fetch(`https://emotion-products-server.up.railway.app/api/v1/orders`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
