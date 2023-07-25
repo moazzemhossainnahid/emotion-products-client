@@ -1,9 +1,8 @@
 import React from 'react';
 
-const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
-    // console.log(order);
+const ManageProductsRow = ({ product, index, setDeleteProduct }) => {
 
-    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = order;
+    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = product;
 
     return (
         <tr className="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
@@ -29,8 +28,7 @@ const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
             </td>
             <td className="w-full lg:w-auto text-xs p-2 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                 <div className="flex justify-between px-3 pb-1 gap-2 items-center">
-                    {payment_status !== "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
-                    {payment_status === "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>}
+                    <label htmlFor="delete-product-modal" onClick={() => setDeleteProduct(product)} className="btn text-white btn-secondary btn-xs">Delete Product</label>
                 </div>
 
             </td>
@@ -38,4 +36,4 @@ const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
     );
 };
 
-export default ManageOrdersRow;
+export default ManageProductsRow;
