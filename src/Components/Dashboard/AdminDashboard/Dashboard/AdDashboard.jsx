@@ -3,7 +3,7 @@ import DBCards from './DBCards/DBCards';
 
 const AdDashboard = () => {
     return (
-        <div>
+        <div className=''>
             <DBCards/>
         </div>
     ); 

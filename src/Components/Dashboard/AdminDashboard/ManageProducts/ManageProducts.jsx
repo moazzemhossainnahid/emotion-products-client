@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ManageProductsRow from './ManageProductsRow';
 import DeleteProductModal from './Modals/DeleteProductModal';
 
