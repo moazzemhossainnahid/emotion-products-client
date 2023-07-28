@@ -3,7 +3,9 @@ import { toast } from 'react-toastify';
 
 const ConfirmOrderModal = ({ confirmOrder, setNumber, number }) => {
 
-    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = confirmOrder;
+    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, total, _id } = confirmOrder;
+
+    // console.log(confirmOrder);
 
     const handleConfirmOrder = (id) => {
         const url = `https://emotion-products-server.up.railway.app/api/v1/orders/${id}`;
@@ -22,25 +24,67 @@ const ConfirmOrderModal = ({ confirmOrder, setNumber, number }) => {
     return (
         <div>
             <input type="checkbox" id="confirm-order-modal" className="modal-toggle" />
-            <div className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box">
+            <div className="modal">
+                <div className="modal-box max-w-5xl relative ">
+                    {
+                        delivery_status !== "confirmed" &&
+                        <div className="absolute bottom-3 left-3">
+                            <img src={products && products[0]?.image} alt="" className="w-32 h-32 rounded-full" />
+                        </div>
+                    }
                     <label htmlFor="confirm-order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h1 className='mb-4 badge badge-error text-2xl badge-lg p-4'>Confirm Order</h1>
-                    <div className="w-full flex flex-col md:flex-row justify-between items-center gap-3">
-                        <div className="w-full md:w-4/5 order-2 md:order-1">
-                            <h3 className="font-bold text-lg">{products && products[0]?.name}</h3>
-                            <p className='my-4'>Customer ID: {customerId}</p>
-                            <p className={` my-4`}>Delivery Status:  <span className={`${delivery_status === "confirmed" ? "text-white badge" : "text-gray-900 badge badge-warning"}`}>{delivery_status}</span></p>
-                            <p className='my-4'>Payment Status: {payment_status}</p>
-                            <p className='my-4'>Payment Intent ID: {paymentIntentId}</p>
+                    <div className="w-full flex gap-5 items-center">
+                        <h1 className='mb-4 badge badge-sm badge-warning text-sm font-bold text-white p-4'>Order History</h1>
+                        <h1 className='mb-4 text-3xl font-bold text-gray-700 p-4'>{products && products[0]?.name}</h1>
+                        {/* <div className="w-full md:w-2/5 justify-end -mt-5 hidden md:block">
+                            <img src={products && products[0]?.image} alt="cover" className="w-20 h-20 rounded-full mx-auto" />
+                        </div> */}
+                    </div>
+                    <div className="w-full flex flex-col md:flex-row justify-between items-start gap-3">
+                        <div className="">
+                            <div className="w-full md:w-4/5 order-2 md:order-1">
+                                <h3 className="text-2xl font-bold pb-3">Product Info-</h3>
+                                <p className='my-4'>Product ID: {customerId}</p>
+                                <p className={` my-4`}>Colour:  Black</p>
+                                <p className='my-4'>Quantity: 5</p>
+                                <p className='my-4'>Total Payment: {total}</p>
+                                <p className='my-4'>Payment Status: {payment_status}</p>
+                                <p className='my-4'>Payment Intent ID: {paymentIntentId}</p>
+                            </div>
                         </div>
-                        <div className="w-full md:w-1/5 order-1 md:order-2">
-                            <img src={products && products[0]?.image} alt="cover" className="w-24 h-24 rounded-full mx-auto" />
+                        <div className="">
+                            <div className="w-full md:w-4/5 order-2 md:order-1">
+                                <h3 className="text-2xl font-bold pb-3">Customer Info-</h3>
+                                <p className='my-4'>Customer ID: {customerId}</p>
+                                <p className='my-4'>Name: {shipping?.name}</p>
+                                <p className='my-4'>Email: {shipping?.email}</p>
+                                <p className='my-4'>Phone: {shipping?.phone}</p>
+                            </div>
+                        </div>
+                        <div className="">
+                            <div className="w-full md:w-4/5 order-2 md:order-1">
+                                <h3 className="text-2xl font-bold pb-3">Shipping Info-</h3>
+                                <p className='my-4'>Uuid: {userId}</p>
+                                <p className={` my-4`}>Delivery Status:  <span className={`${delivery_status === "confirmed" ? "text-white badge" : "text-gray-900 badge badge-warning"}`}>{delivery_status}</span></p>
+                                <p className='my-4 font-bold'>Address</p>
+                                <p className='my-4'>Country: {shipping?.address?.country}</p>
+                                <p className='my-4'>City: {shipping?.address?.city}</p>
+                                <p className='my-4'>State: {shipping?.address?.state}</p>
+                                {
+                                    shipping?.address?.line2 === null ?
+                                        <p className='my-4'>Road: {`${shipping?.address?.line1}`}</p> :
+                                        <p className='my-4'>Road: {`${shipping?.address?.line1}, ${shipping?.address?.line2}`}</p>
+                                }
+                                <p className='my-4'>Postal Code: {shipping?.address?.postal_code}</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="modal-action">
-                        <label htmlFor="confirm-order-modal" onClick={() => handleConfirmOrder(_id)} className="btn">Confirm</label>
-                    </div>
+                    {
+                        delivery_status !== "confirmed" &&
+                        <div className="modal-action">
+                            <label htmlFor="confirm-order-modal" onClick={() => handleConfirmOrder(_id)} className="btn">Confirm</label>
+                        </div>
+                    }
                 </div>
             </div>
 

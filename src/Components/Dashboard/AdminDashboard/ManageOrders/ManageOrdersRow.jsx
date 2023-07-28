@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCheck, FaCheckSquare, FaEye } from 'react-icons/fa';
 
 const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
     // console.log(order);
@@ -30,7 +31,7 @@ const ManageOrdersRow = ({ order, index, setDeleteOrder, setConfirmOrder }) => {
             <td className="w-full lg:w-auto text-xs p-2 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                 <div className="flex justify-between px-3 pb-1 gap-2 items-center">
                     {payment_status !== "paid" && <label htmlFor="delete-order-modal" onClick={() => setDeleteOrder(order)} className="btn text-white btn-secondary btn-xs">Delete Order</label>}
-                    {payment_status === "paid" && <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-secondary btn-xs">Confirm Order</label>}
+                    {(payment_status === "paid" && delivery_status === "pending")  ? <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)} className="btn text-white btn-warning btn-xs">Confirm Order</label> : <span className='text-black items-center flex justify-center gap-2 font-semibold'> <FaCheck className='text-secondary text-md font-bold'/> Order Confirmed <label htmlFor="confirm-order-modal" onClick={() => setConfirmOrder(order)}><FaEye className='text-secondary text-xl cursor-pointer font-bold'/></label></span>}
                 </div>
 
             </td>
