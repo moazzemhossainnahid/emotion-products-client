@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import CarouselSlider from '../Others/CarouselSlide/CarouselSlider';
-import { FaCartPlus, FaCheck, FaEuroSign, FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaCartPlus, FaCheck, FaEuroSign, FaStickyNote } from 'react-icons/fa';
 import { useAuthState } from "react-firebase-hooks/auth";
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const ProductViewer = () => {
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const [Image, setImage] = React.useState("first");
+    const [selectProduct, setSelectProduct] = useState('carport');
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
@@ -15,7 +19,7 @@ const ProductViewer = () => {
         src,
         width,
         height,
-        magnifierHeight = 300,  
+        magnifierHeight = 300,
         magnifieWidth = 300,
         zoomLevel = 1.5
     }) {
@@ -115,7 +119,50 @@ const ProductViewer = () => {
             position: "fourth",
             img: shoes4
         },
-    ]
+    ];
+
+
+    const handleProduct = (e) => {
+
+        const product = e.target.value;
+
+        setSelectProduct(product)
+
+    };
+
+
+    const onSubmit = (data) => {
+        const appointment = {
+            name:data?.name,
+            product:selectProduct,
+            email:data?.email,
+            phone:data?.phone,
+            address:data?.address,
+            message:data?.message,
+        };
+        // console.log(appointment);
+
+        fetch(`https://emotion-products-server.up.railway.app/api/v1/appointments`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+            body: JSON.stringify(appointment),
+            // body: formData,
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.status === "Successful") {
+                    toast.success("Data Added Successfully !");
+                    reset();
+                }
+            });
+    };
+
+
+
 
     return (
         <div className='p-5'>
@@ -234,10 +281,14 @@ const ProductViewer = () => {
                                                 <option>03</option>
                                             </select>
                                         </div>
-                                        <div className="">
-                                            <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                <p className=" flex tracking-widest gap-2">Add to Order Request<FaCartPlus /></p>
+                                        <div className="flex flex-col md:flex-row  gap-3 items-end">
+                                            <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
+                                                <p className=" flex tracking-widest gap-2">Add to Cart<FaCartPlus /></p>
                                             </button>
+
+                                            <label htmlFor="my-modal-3" className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
+                                                <p className=" flex tracking-widest gap-2">Make Appointment <FaStickyNote /></p>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -264,6 +315,208 @@ const ProductViewer = () => {
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+            {/* Put this part before </body> tag */}
+            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+            <div className="modal z-50 h-screen w-full overflow-hidden">
+                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-gray-900 to-gray-700 bg-cover overflow-hidden relative ">
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 mix-blend-darken h-full object-cover" />
+                    <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <div className="text-white">
+                        <div className="flex items-center w-full min-h-full lg:justify-center">
+                            <div className="flex flex-col gap-5 overflow-hidden mx-auto bg-transparent rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md drop-shadow-2xl">
+                                <div className="hidden p-3 text-white text-start bg-transparent md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                                    <h3 className="text-5xl font-bold text-start">Appointment</h3>
+                                    <h3 className="text-2xl font-semibold">We'd Love to Hear from You</h3>
+                                    <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p>
+                                </div>
+                                <div className="p-3 bg-transparent md:flex-1">
+                                    <form
+                                        onSubmit={handleSubmit(onSubmit)}
+                                        action="#"
+                                        className="flex flex-col space-y-2"
+                                    >
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="name"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                placeholder="Name"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                {...register("name", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Name is require",
+                                                    }
+                                                })}
+                                            />
+                                            {/* <label className="label">
+                                                {errors.name?.type === "required" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.name.message}
+                                                    </span>
+                                                )}
+                                                {errors.name?.type === "pattern" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.name.message}
+                                                    </span>
+                                                )}
+                                            </label> */}
+                                        </div>
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="email"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                E-mail
+                                            </label>
+                                            <input
+                                                type="email"
+                                                placeholder="Email"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                {...register("email", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Email is require",
+                                                    },
+                                                    pattern: {
+                                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                        message: "Provide a valid Email",
+                                                    },
+                                                })}
+                                            />
+                                            {/* <label className="label">
+                                                {errors.email?.type === "required" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.email.message}
+                                                    </span>
+                                                )}
+                                                {errors.email?.type === "pattern" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.email.message}
+                                                    </span>
+                                                )}
+                                            </label> */}
+                                        </div>
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="phone"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                Phone Number
+                                            </label>
+                                            <input
+                                                type="phone"
+                                                placeholder="Phone Number"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                {...register("phone", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Phone Number is require",
+                                                    }
+                                                })}
+                                            />
+                                            {/* <label className="label">
+                                                {errors.phone?.type === "required" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.phone.message}
+                                                    </span>
+                                                )}
+                                                {errors.phone?.type === "pattern" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.phone.message}
+                                                    </span>
+                                                )}
+                                            </label> */}
+                                        </div>
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="email"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                Needed Product
+                                            </label>
+
+                                            {/* <label className="label">
+                                                {errors.email?.type === "required" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.email.message}
+                                                    </span>
+                                                )}
+                                                {errors.email?.type === "pattern" && (
+                                                    <span className="label-text-alt text-red-700">
+                                                        {errors.email.message}
+                                                    </span>
+                                                )}
+                                            </label> */}
+                                            <select onChange={handleProduct} className="px-4 py-2 transition duration-300 border border-gray-300 text-gray-200 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200">
+                                                <option disabled selected>Select a Product</option>
+                                                <option value="carport">Carport</option>
+                                                <option value="massagechair">Massage Chair</option>
+                                                <option value="furniture">Furniture</option>
+                                                <option value="lights">Lights</option>
+                                            </select>
+                                        </div>
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="address"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                Address
+                                            </label>
+                                            <textarea
+                                                type="text"
+                                                placeholder="Address"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300  text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                {...register("address", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Please Input Your Address",
+                                                    }
+                                                })}
+                                            />
+
+                                        </div>
+                                        <div className="flex flex-col space-y-1">
+                                            <label
+                                                htmlFor="message"
+                                                className="text-sm font-semibold text-white text-start"
+                                            >
+                                                Message
+                                            </label>
+                                            <textarea
+                                                type="text"
+                                                placeholder="Message"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 h-20 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                {...register("message", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Input Your Message",
+                                                    }
+                                                })}
+                                            />
+
+                                        </div>
+
+                                        <div className="pt-3">
+
+                                            <button
+                                                type="submit"
+                                                className="w-full px-4 py-2 text-lg font-semibold transition-colors duration-300 bg-primary text-white rounded-md shadow  hover:bg-white hover:text-black focus:outline-none focus:ring-blue-200 focus:ring-4"
+                                            >
+                                                Send
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

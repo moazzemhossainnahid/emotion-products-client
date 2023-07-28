@@ -112,7 +112,7 @@ const HomeTopBannerCarousel = () => {
                                             <Slide bottom duration={2500}>
                                                 {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
                                                 <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                    <p className="uppercase flex gap-2">Make an Appointment <FaArrowRight /></p>
+                                                    <p className="uppercase flex gap-2">Contact US <FaArrowRight /></p>
                                                 </label>
                                                 {/* </button> */}
                                             </Slide>

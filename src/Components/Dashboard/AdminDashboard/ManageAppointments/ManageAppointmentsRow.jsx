@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ManageAppointmentsRow = ({ product, index, setDeleteProduct }) => {
+const ManageAppointmentsRow = ({ appointment, index, setDeleteAppointment }) => {
 
-    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = product;
+    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = appointment;
 
     return (
         <tr className="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
@@ -28,7 +28,7 @@ const ManageAppointmentsRow = ({ product, index, setDeleteProduct }) => {
             </td>
             <td className="w-full lg:w-auto text-xs p-2 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                 <div className="flex justify-between px-3 pb-1 gap-2 items-center">
-                    <label htmlFor="delete-product-modal" onClick={() => setDeleteProduct(product)} className="btn text-white btn-secondary btn-xs">Delete Product</label>
+                    <label htmlFor="delete-appointment-modal" onClick={() => setDeleteAppointment(appointment)} className="btn text-white btn-secondary btn-xs">Delete Appointment</label>
                 </div>
 
             </td>

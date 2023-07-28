@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import DeleteProductModal from './Modals/DeleteProductModal';
+import DeleteAppointmentModal from './Modals/DeleteAppointmentModal';
 import ManageAppointmentsRow from './ManageAppointmentsRow';
 
 const ManageAppointments = () => {
 
     const [number, setNumber] = useState(0);
-    const [products, setProducts] = useState(null);
-    const [deleteProduct, setDeleteProduct] = useState(null);
+    const [appointments, setAppointments] = useState(null);
+    const [deleteAppointment, setDeleteAppointment] = useState(null);
 
 
     useEffect(() => {
-        fetch('https://emotion-products-server.up.railway.app/api/v1/products')
+        fetch('https://emotion-products-server.up.railway.app/api/v1/appointments')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setAppointments(data))
     }, [number])
 
 
@@ -21,7 +21,7 @@ const ManageAppointments = () => {
 
             <div className="w-full flex items-center justify-center my-12">
                 <div className="bg-white shadow rounded py-12 px-8 mb-20">
-                    <p className="md:text-3xl text-xl font-bold pb-10 leading-7 text-center text-gray-700">Total Appointments: {products?.length}</p>
+                    <p className="md:text-3xl text-xl font-bold pb-10 leading-7 text-center text-gray-700">Total Appointments: {appointments?.length}</p>
                     <table className="border-collapse w-full bg-slate-200">
                         {/* <!-- head --> */}
                         <thead>
@@ -38,12 +38,12 @@ const ManageAppointments = () => {
                             {/* <!-- row 1 --> */}
 
                             {
-                                products?.map((product, index) =>
+                                appointments?.map((appointment, index) =>
                                     <ManageAppointmentsRow
-                                        key={product?._id}
-                                        product={product}
+                                        key={appointment?._id}
+                                        appointment={appointment}
                                         index={index}
-                                        setDeleteProduct={setDeleteProduct}
+                                        setDeleteAppointment={setDeleteAppointment}
                                     ></ManageAppointmentsRow>)
                             }
 
@@ -51,7 +51,7 @@ const ManageAppointments = () => {
                     </table>
                 </div>
                 {
-                    deleteProduct && <DeleteProductModal deleteProduct={deleteProduct} setNumber={setNumber} number={number} ></DeleteProductModal>
+                    deleteAppointment && <DeleteAppointmentModal deleteAppointment={deleteAppointment} setNumber={setNumber} number={number} ></DeleteAppointmentModal>
                 }
 
             </div>

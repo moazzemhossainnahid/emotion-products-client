@@ -1,20 +1,20 @@
 
 import { toast } from 'react-toastify';
 
-const DeleteProductModal = ({ deleteProduct, setNumber, number }) => {
+const DeleteAppointmentModal = ({ deleteAppointment, setNumber, number }) => {
 
-    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = deleteOrder;
+    const { createdAt, customerId, delivery_status, paymentIntentId, payment_status, products, shipping, userId, _id } = deleteAppointment;
 
 
     const handleDelete = (id) => {
-        const url = `https://emotion-products-server.up.railway.app/api/v1/products/${id}`;
+        const url = `https://emotion-products-server.up.railway.app/api/v1/appointments/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    toast.success(` Order id (${_id}) has been deleted.`);
+                    toast.success(`Appointment id (${_id}) has been deleted.`);
                     setNumber(number + 1);
                 }
             })
@@ -22,11 +22,11 @@ const DeleteProductModal = ({ deleteProduct, setNumber, number }) => {
 
     return (
         <div>
-            <input type="checkbox" id="delete-product-modal" className="modal-toggle" />
+            <input type="checkbox" id="delete-appointment-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <label htmlFor="delete-product-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h1 className='mb-4 badge badge-error text-2xl badge-lg p-4'>Delete Order</h1>
+                    <label htmlFor="delete-appointment-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h1 className='mb-4 badge badge-error text-2xl badge-lg p-4'>Delete Appointment</h1>
                     <div className="w-full flex flex-col md:flex-row justify-between items-center gap-3">
                         <div className="w-full md:w-4/5 order-2 md:order-1">
                             <h3 className="font-bold text-lg">{products && products[0]?.name}</h3>
@@ -40,7 +40,7 @@ const DeleteProductModal = ({ deleteProduct, setNumber, number }) => {
                         </div>
                     </div>
                     <div className="modal-action">
-                        <label htmlFor="delete-product-modal" onClick={() => handleDelete(_id)} className="btn">Delete</label>
+                        <label htmlFor="delete-appointment-modal" onClick={() => handleDelete(_id)} className="btn">Delete</label>
                     </div>
                 </div>
             </div>
@@ -49,4 +49,4 @@ const DeleteProductModal = ({ deleteProduct, setNumber, number }) => {
     );
 };
 
-export default DeleteProductModal;
+export default DeleteAppointmentModal;
