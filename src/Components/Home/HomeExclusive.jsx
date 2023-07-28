@@ -25,7 +25,7 @@ const navigate = useNavigate();
                             <div class="p-4 space-y-3 text-xl text-center group-hover:opacity-100 group-hover:translate-y-0 translate-y-4  transform transition duration-300 ease-in-out">
                                 <div class="font-bold text-2xl md:text-3xl">Our Exclusive Furniture</div>
                                 <p class="opacity-90 text-sm text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                                <button onClick={() => navigate("/sofa")} className='btn btn-primary mx-auto flex items-center gap-2 rounded hover:btn-warning'>Discover More <FaArrowRight /></button>
+                                <button onClick={() => navigate("/furniture")} className='btn btn-primary mx-auto flex items-center gap-2 rounded hover:btn-warning'>Discover More <FaArrowRight /></button>
                             </div>
                         </div>
                     </div>

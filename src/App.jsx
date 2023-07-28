@@ -28,13 +28,14 @@ import ManageUsers from './Components/Dashboard/AdminDashboard/ManageUsers/Manag
 import Profile from './Components/Dashboard/UserDashboard/Profile/Profile';
 import ManageProducts from './Components/Dashboard/AdminDashboard/ManageProducts/ManageProducts';
 import ManageOrders from './Components/Dashboard/AdminDashboard/ManageOrders/ManageOrders';
+import ManageAppointments from './Components/Dashboard/AdminDashboard/ManageAppointments/ManageAppointments';
 
 function App() {
 
   return (
     <>
       <div className="w-full max-w-full mx-auto">
-        {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders') && <Header />}
+        {(window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders' && window.location.pathname !== '/cpanel/mappointments') && <Header />}
         {/* <Header /> */}
         <div className="">
           <Routes>
@@ -42,7 +43,7 @@ function App() {
             <Route path='/carport' element={<Carport />} />
             <Route path='/lights' element={<Lights />} />
             <Route path='/massagechair' element={<MassageChair />} />
-            <Route path='/sofa' element={<Sofa />} />
+            <Route path='/furniture' element={<Sofa />} />
             <Route path='/productdetails/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
@@ -61,10 +62,11 @@ function App() {
               <Route path="musers" element={<ManageUsers />} />
               <Route path="mproducts" element={<ManageProducts />} />
               <Route path="morders" element={<ManageOrders />} />
+              <Route path="mappointments" element={<ManageAppointments />} />
             </Route>
           </Routes>
         </div>
-        {(window.location.pathname !== '/cart' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders') && <Footer />}
+        {(window.location.pathname !== '/cart' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders' && window.location.pathname !== '/cpanel/mappointments') && <Footer />}
         <ToastContainer />
       </div>
     </>

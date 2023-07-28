@@ -14,7 +14,7 @@ export const CompleteCollectionData = [
     {
         id: 3,
         title: "Furniture",
-        href: "sofa",
+        href: "furniture",
         img: "https://i.ibb.co/2Ybnw7x/sofa-1.png",
     },
     {

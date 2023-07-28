@@ -61,7 +61,7 @@ const Header = () => {
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 gap-2 p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><NavLink reloadDocument to="/"><img src="https://i.ibb.co/T4c2Tnz/home-1-1.png" alt="" className="pr-2 w-7" /> Home</NavLink></li>
                                 <li><NavLink reloadDocument to="/carport"><img src="https://i.ibb.co/xG1cvng/parking-1.png" alt="" className="pr-2 w-7" />Carport</NavLink></li>
-                                <li><NavLink reloadDocument to="/sofa"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />Furniture</NavLink></li>
+                                <li><NavLink reloadDocument to="/furniture"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />Furniture</NavLink></li>
                                 <li><NavLink reloadDocument to="/massagechair"><img src="https://i.ibb.co/Csy2jsP/massage-chair-2.png" alt="" className="pr-2 w-7" />Massage Chair</NavLink></li>
                                 <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />Lights</NavLink></li>
                                 {/* {
