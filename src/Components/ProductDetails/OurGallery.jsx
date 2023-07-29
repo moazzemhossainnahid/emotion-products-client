@@ -47,7 +47,7 @@ const OurGallery = () => {
                         </div>
                     </div>
                     <div className="w-full md:w-2/5">
-                        <h3 className="text-white text-3xl md:text-5xl font-semibold text-right pb-5 pr-7">Our Gallery</h3>
+                        <h3 style={{ fontFamily: 'Silk Serif' }} className="text-white text-3xl md:text-5xl font-semibold text-right pb-10 pr-7">Our Gallery</h3>
                         <h3 className="text-white font-semibold pb-5">This is Our Gallery, Check it Out !</h3>
                         <div className="w-full grid grid-cols-3 gap-5 mx-auto pb-7">
                             {
