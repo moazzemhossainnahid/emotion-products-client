@@ -1,6 +1,6 @@
-import { faArrowAltCircleRight, faCartShopping, faListCheck, faPenToSquare, faRoadLock, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faBookAtlas, faCartShopping, faListCheck, faPenToSquare, faRoadLock, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const DBCards = () => {
@@ -9,6 +9,7 @@ const DBCards = () => {
     const [users, setUsers] = useState([]);
     const [products, setProducts] = useState([]);
     const [orders, setOrders] = useState([]);
+    const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
         fetch(`https://emotion-products-server.up.railway.app/api/v1/users`)
@@ -29,22 +30,28 @@ const DBCards = () => {
             .then(data => setOrders(data))
     }, [])
 
+    useEffect(() => {
+        fetch(`https://emotion-products-server.up.railway.app/api/v1/appointments`)
+            .then(res => res.json())
+            .then(data => setAppointments(data))
+    }, [])
+
 
     return (
         <div className=''>
-            <div className="grid grid-cols-1 gap-5 py-10">
+            <div className="grid md:grid-cols-2 gap-5 py-10">
                 {/* Registered Users */}
                 <div className="">
-                    <div className="flex items-center justify-between bg-gray-800 p-3 rounded-t-xl">
+                    <div className="flex items-center justify-between bg-[#252525] p-3 rounded-t-xl">
                         <div className="">
                             <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{users?.length}</h3>
                             <h3 className="text-md font-bold text-white">Total Users</h3>
                         </div>
                         <div className="">
-                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faUserPlus} />
+                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faUsers} />
                         </div>
                     </div>
-                    <div onClick={() => navigate('/cpanel/musers')} className="bg-gray-900 cursor-pointer py-2 text-center rounded-b-xl">
+                    <div onClick={() => navigate('/cpanel/musers')} className="bg-[#1e1e1e] cursor-pointer py-2 text-center rounded-b-xl">
                         <h2 className="text-md text-white">More Info <FontAwesomeIcon className='pl-2' icon={faArrowAltCircleRight} /> </h2>
                     </div>
                 </div>
@@ -75,6 +82,22 @@ const DBCards = () => {
                         </div>
                     </div>
                     <div onClick={() => navigate('/cpanel/morders')} className="bg-[#00A099] cursor-pointer py-2 text-center rounded-b-xl">
+                        <h2 className="text-md text-white">More Info <FontAwesomeIcon className='pl-2' icon={faArrowAltCircleRight} /> </h2>
+                    </div>
+                </div>
+
+                {/* Total Appointments */}
+                <div className="">
+                    <div className="flex items-center justify-between bg-[#219422] p-3 rounded-t-xl">
+                        <div className="">
+                            <h3 className="text-3xl md:text-4xl font-bold py-2 text-white">{appointments?.length}</h3>
+                            <h3 className="text-md font-bold text-white">Total Appointments</h3>
+                        </div>
+                        <div className="">
+                            <FontAwesomeIcon className='text-[#42424281] text-3xl md:text-4xl' icon={faBookAtlas} />
+                        </div>
+                    </div>
+                    <div onClick={() => navigate('/cpanel/mappointments')} className="bg-[#186e1a] cursor-pointer py-2 text-center rounded-b-xl">
                         <h2 className="text-md text-white">More Info <FontAwesomeIcon className='pl-2' icon={faArrowAltCircleRight} /> </h2>
                     </div>
                 </div>

@@ -19,14 +19,14 @@ const ConfirmOrderModal = ({ confirmOrder, setNumber, number }) => {
                     setNumber(number + 1);
                 }
             })
-    }
+    };
 
     return (
         <div>
             <input type="checkbox" id="confirm-order-modal" className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box max-w-5xl relative ">
-                    <div className="absolute top-0 h-full w-full left-0 mix-blend-darken opacity-5">
+                    <div className="hidden md:block absolute top-0 h-full w-full left-0 mix-blend-darken opacity-5">
                         <img src="https://res-console.cloudinary.com/dsigyjfjq/thumbnails/v1/image/upload/v1690616136/TG92ZXBpa19jb20tODMyMzU2ODk1LVRlY2hub2xvZ3lfc2hhZGluZ19ibHVlLXZpb2xldF9ncmFkaWVudF9saW5lX2VsZW1lbnRfZGVzaWduX2I3cWx5cQ==/preview" alt="" className="h-full w-full mix-blend-darken" />
                     </div>
                     {

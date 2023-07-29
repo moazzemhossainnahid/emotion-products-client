@@ -11,11 +11,11 @@ export const SidebarData = [
         href: "musers",
         icon: faUsers,
     },
-    {
-        title: "Manage Products",
-        href: "mproducts",
-        icon: faShoppingCart,
-    },
+    // {
+    //     title: "Manage Products",
+    //     href: "mproducts",
+    //     icon: faShoppingCart,
+    // },
     {
         title: "Manage Orders",
         href: "morders",
