@@ -5,7 +5,7 @@ import OurGallery from '../../Components/ProductDetails/OurGallery';
 
 const ProductDetails = () => {
     return (
-        <div className='w-full'>
+        <div className=''>
             <ProductViewer/>
             <MoreDetails/>
             <OurGallery/>
