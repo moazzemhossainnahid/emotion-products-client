@@ -14,7 +14,11 @@ const ManageOrders = () => {
         fetch('https://emotion-products-server.up.railway.app/api/v1/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [number])
+    }, [number]);
+
+
+        // Sort the array by createdAt in descending order
+        orders?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     return (
         <div className=" text-left h-full w-full">
@@ -29,7 +33,7 @@ const ManageOrders = () => {
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Index</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Product</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">customer Id</th>
-                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Order Date</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Order Date/Time</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Payment Status</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Action</th>
                             </tr>
@@ -38,7 +42,7 @@ const ManageOrders = () => {
                             {/* <!-- row 1 --> */}
 
                             {
-                                orders?.map((order, index) =>
+                                orders?.sort((a, b) => a - b)?.map((order, index) =>
                                     <ManageOrdersRow
                                         key={order._id}
                                         order={order}

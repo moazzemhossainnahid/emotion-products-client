@@ -28,7 +28,7 @@ const ConfirmOrderModal = ({ confirmOrder, setNumber, number }) => {
                 <div className="modal-box max-w-5xl relative ">
                     {
                         delivery_status !== "confirmed" &&
-                        <div className="absolute bottom-3 left-3">
+                        <div className="hidden md:block absolute bottom-3 left-3">
                             <img src={products && products[0]?.image} alt="" className="w-32 h-32 rounded-full" />
                         </div>
                     }

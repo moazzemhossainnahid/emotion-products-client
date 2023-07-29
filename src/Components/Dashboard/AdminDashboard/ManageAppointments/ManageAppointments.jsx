@@ -16,6 +16,9 @@ const ManageAppointments = () => {
     }, [number])
 
 
+    // Sort the array by createdAt in descending order
+    appointments?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
     return (
         <div className=" text-left h-full w-full">
 
@@ -29,7 +32,7 @@ const ManageAppointments = () => {
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Index</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">customer Name</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Product</th>
-                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Appointment Date</th>
+                                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Appointment Date/Time</th>
                                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Action</th>
                             </tr>
                         </thead>
