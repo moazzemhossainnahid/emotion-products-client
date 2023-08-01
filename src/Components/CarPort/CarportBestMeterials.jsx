@@ -2,7 +2,7 @@ import React from 'react';
 
 const CarportBestMeterials = () => {
     return (
-        <div className='container w-full py-10'>
+        <div className='w-full py-20'>
             <div className="w-full md:w-4/5 mx-auto flex flex-col md:flex-row gap-5 items-center justify-between">
                 <div className="w-full md:w-3/5 mx-auto p-3">
                     <h3 className="text-2xl md:text-3xl font-semibold capitalize">we provide you the best <br /> material and quality Products</h3>
@@ -17,7 +17,7 @@ const CarportBestMeterials = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:w-2/5 mx-auto">
+                <div className="w-full md:w-2/5 flex justify-center mx-auto">
                     <img src="https://i.ibb.co/RjCm5S8/Rectangle-187.png" alt="" className="p-5" />
                 </div>
             </div>
