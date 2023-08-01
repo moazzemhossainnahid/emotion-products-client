@@ -263,8 +263,8 @@ const ProductViewer = () => {
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-gray-800 hover:bg-transparent text-gray-300 hover:text-black font-medium mr-4"> <span className="mr-3">ADD TO CART</span><AiOutlineShoppingCart /></button>
-                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-transparent text-black hover:bg-black hover:text-gray-300 font-medium mr-4"> <span className="ml-3">SHOP NOW</span></button>
+                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-gray-800 hover:bg-transparent text-white hover:text-black font-medium mr-4"> <span className="mr-3">ADD TO CART</span><AiOutlineShoppingCart /></button>
+                                    <button className="border flex items-center border-gray-500 px-8 py-2 bg-transparent text-black hover:bg-black hover:text-white font-medium mr-4"> <span className="ml-3">SHOP NOW</span></button>
                                 </div>
                             </div>
                         </div> */}
@@ -282,11 +282,11 @@ const ProductViewer = () => {
                                             </select>
                                         </div>
                                         <div className="flex flex-col md:flex-row  gap-3 items-end">
-                                            <button onClick={() => navigate('/cart')} className=" text-gray-300 bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
+                                            <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
                                                 <p className=" flex tracking-widest gap-2">Add to Cart<FaCartPlus /></p>
                                             </button>
 
-                                            <label htmlFor="my-modal-3" className=" text-gray-300 bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
+                                            <label htmlFor="my-modal-3" className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded">
                                                 <p className=" flex tracking-widest gap-2">Make Appointment <FaStickyNote /></p>
                                             </label>
                                         </div>
@@ -321,14 +321,14 @@ const ProductViewer = () => {
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal z-50 h-screen w-full overflow-hidden">
-                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-[#000000e0] to-[#00000077] bg-cover overflow-hidden relative ">
-                    <img src="https://i.ibb.co/RHG4NNK/131-Plus-White-3-1.jpg" alt="" className="w-full absolute left-0 top-0 h-full mix-blend-overlay object-cover" />
+                <div className="modal-box w-11/12 max-w-5xl bg-cover overflow-hidden relative ">
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 h-full object-cover" />
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <div className="w-full text-gray-300">
+                    <div className="w-full text-white">
                         <div className="flex items-center w-full min-h-full lg:justify-center">
-                            <div className="w-full flex flex-col gap-5 overflow-hidden mx-auto bg-transparent rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md drop-shadow-2xl">
+                            <div className="w-full flex flex-col items-start gap-5 overflow-hidden mx-auto bg-transparent rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md drop-shadow-2xl">
 
-                                <div className="w-5/6 md:w-full mx-auto p-3 bg-gradient-to-tr from-[#000000c8] to-[#00000077] md:flex-1">
+                                <div className="w-5/6 md:w-full mx-auto p-3 bg-[#474747c3] md:flex-1">
                                     <form
                                         onSubmit={handleSubmit(onSubmit)}
                                         action="#"
@@ -337,14 +337,14 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="name"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 Name
                                             </label>
                                             <input
                                                 type="text"
                                                 placeholder="Name"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-gray-300 bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("name", {
                                                     required: {
                                                         value: true,
@@ -368,14 +368,14 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="email"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 E-mail
                                             </label>
                                             <input
                                                 type="email"
                                                 placeholder="Email"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-gray-300 bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("email", {
                                                     required: {
                                                         value: true,
@@ -403,14 +403,14 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="phone"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 Phone Number
                                             </label>
                                             <input
                                                 type="phone"
                                                 placeholder="Phone Number"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-gray-300 bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("phone", {
                                                     required: {
                                                         value: true,
@@ -434,7 +434,7 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="email"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 Needed Product
                                             </label>
@@ -462,14 +462,14 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="address"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 Address
                                             </label>
                                             <textarea
                                                 type="text"
                                                 placeholder="Address"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent text-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("address", {
                                                     required: {
                                                         value: true,
@@ -482,14 +482,14 @@ const ProductViewer = () => {
                                         <div className="flex flex-col space-y-1">
                                             <label
                                                 htmlFor="message"
-                                                className="text-sm font-semibold text-gray-300 text-start"
+                                                className="text-sm font-semibold text-white text-start"
                                             >
                                                 Message
                                             </label>
                                             <textarea
                                                 type="text"
                                                 placeholder="Message"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent h-20 text-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent h-20 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("message", {
                                                     required: {
                                                         value: true,
@@ -511,13 +511,13 @@ const ProductViewer = () => {
                                         </div>
                                     </form>
                                 </div>
-                                <div className="hidden p-3 text-gray-300 text-start bg-transparent md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                                <div className="hidden p-3 space-y-5 text-white bg-transparent text-left md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
                                     <Link reloadDocument to="/" className="w-full bg-blur">
-                                        <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className="-mt-20 w-52 md:w-60 mx-auto py-2" />
+                                        <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className=" w-52 md:w-60 mx-auto py-2" />
                                     </Link>
-                                    <h3 className="text-5xl font-bold text-start">Appointment</h3>
-                                    <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl font-semibold">We'd Love to Hear from You</h3>
-                                    <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p>
+                                    <h3 style={{ fontFamily: 'Silk Serif' }}  className="text-5xl font-bold text-start">Make an Appointment</h3>
+                                    <h3 style={{ fontFamily: 'Serif' }} className="text-xl font-semibold">We'd Love to Hear from You</h3>
+                                    {/* <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p> */}
                                 </div>
                             </div>
                         </div>
