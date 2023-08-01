@@ -7,7 +7,7 @@ const navigate = useNavigate();
     return (
         <div className='w-full'>
             <div class='w-full flex flex-col bg-white md:flex-row items-center justify-between py-10 gap-5'>
-                <div class="h-96 w-full rounded-xl relative group" >
+                <div class="h-full w-full rounded-xl relative group" >
                     <div class="z-30 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute from-primary/50 to-transparent bg-gradient-to-t inset-x-0 bottom-0 text-white flex items-end">
                         <div className='w-4/5 mx-auto'>
                             <div class="p-4 space-y-3 text-xl text-center group-hover:opacity-100 group-hover:translate-y-0 translate-y-4  transform transition duration-300 ease-in-out">
@@ -17,9 +17,9 @@ const navigate = useNavigate();
                             </div>
                         </div>
                     </div>
-                    <img alt="" class="object-cover w-full h-full transition duration-300 ease-in-out" src="https://i.ibb.co/SmFRkTd/Rectangle-197.png" />
+                    <img alt="" class="object-cover w-full h-96 lg:h-[60vh] transition duration-300 ease-in-out" src="https://i.ibb.co/SmFRkTd/Rectangle-197.png" />
                 </div>
-                <div class="h-96 w-full rounded-xl relative group" >
+                <div class="h-full w-full rounded-xl relative group" >
                     <div class="z-30 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute from-primary/50 to-transparent bg-gradient-to-t inset-x-0 bottom-0 text-white flex items-end">
                         <div className='w-4/5 mx-auto'>
                             <div class="p-4 space-y-3 text-xl text-center group-hover:opacity-100 group-hover:translate-y-0 translate-y-4  transform transition duration-300 ease-in-out">
@@ -29,7 +29,7 @@ const navigate = useNavigate();
                             </div>
                         </div>
                     </div>
-                    <img alt="" class="object-cover w-full h-full transition duration-300 ease-in-out" src="https://i.ibb.co/dfH6MFZ/Rectangle-198.png" />
+                    <img alt="" class="object-cover w-full h-96 lg:h-[60vh] transition duration-300 ease-in-out" src="https://i.ibb.co/dfH6MFZ/Rectangle-198.png" />
                 </div>
             </div>
         </div>
