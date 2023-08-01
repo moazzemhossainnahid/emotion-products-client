@@ -133,12 +133,12 @@ const ProductViewer = () => {
 
     const onSubmit = (data) => {
         const appointment = {
-            name:data?.name,
-            product:selectProduct,
-            email:data?.email,
-            phone:data?.phone,
-            address:data?.address,
-            message:data?.message,
+            name: data?.name,
+            product: selectProduct,
+            email: data?.email,
+            phone: data?.phone,
+            address: data?.address,
+            message: data?.message,
         };
         // console.log(appointment);
 
@@ -321,18 +321,14 @@ const ProductViewer = () => {
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal z-50 h-screen w-full overflow-hidden">
-                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-gray-900 to-gray-700 bg-cover overflow-hidden relative ">
-                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 mix-blend-darken h-full object-cover" />
+                <div className="modal-box w-11/12 max-w-5xl bg-cover overflow-hidden relative ">
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 h-full object-cover" />
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <div className="text-white">
+                    <div className="w-full text-white">
                         <div className="flex items-center w-full min-h-full lg:justify-center">
-                            <div className="flex flex-col gap-5 overflow-hidden mx-auto bg-transparent rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md drop-shadow-2xl">
-                                <div className="hidden p-3 text-white text-start bg-transparent md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
-                                    <h3 className="text-5xl font-bold text-start">Appointment</h3>
-                                    <h3 className="text-2xl font-semibold">We'd Love to Hear from You</h3>
-                                    <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p>
-                                </div>
-                                <div className="p-3 bg-transparent md:flex-1">
+                            <div className="w-full flex flex-col gap-5 overflow-hidden mx-auto bg-transparent rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md drop-shadow-2xl">
+
+                                <div className="w-5/6 md:w-full mx-auto p-3 bg-[#474747c3] md:flex-1">
                                     <form
                                         onSubmit={handleSubmit(onSubmit)}
                                         action="#"
@@ -348,7 +344,7 @@ const ProductViewer = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Name"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("name", {
                                                     required: {
                                                         value: true,
@@ -379,7 +375,7 @@ const ProductViewer = () => {
                                             <input
                                                 type="email"
                                                 placeholder="Email"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("email", {
                                                     required: {
                                                         value: true,
@@ -414,7 +410,7 @@ const ProductViewer = () => {
                                             <input
                                                 type="phone"
                                                 placeholder="Phone Number"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("phone", {
                                                     required: {
                                                         value: true,
@@ -455,7 +451,7 @@ const ProductViewer = () => {
                                                     </span>
                                                 )}
                                             </label> */}
-                                            <select onChange={handleProduct} className="px-4 py-2 transition duration-300 border border-gray-300 text-gray-200 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200">
+                                            <select onChange={handleProduct} className="px-4 py-2 transition duration-300 border bg-transparent border-gray-300 text-gray-500 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200">
                                                 <option disabled selected>Select a Product</option>
                                                 <option value="carport">Carport</option>
                                                 <option value="massagechair">Massage Chair</option>
@@ -473,7 +469,7 @@ const ProductViewer = () => {
                                             <textarea
                                                 type="text"
                                                 placeholder="Address"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300  text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("address", {
                                                     required: {
                                                         value: true,
@@ -493,7 +489,7 @@ const ProductViewer = () => {
                                             <textarea
                                                 type="text"
                                                 placeholder="Message"
-                                                className="px-4 py-2 transition duration-300 border border-gray-300 h-20 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                                                className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent h-20 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                                                 {...register("message", {
                                                     required: {
                                                         value: true,
@@ -514,6 +510,14 @@ const ProductViewer = () => {
                                             </button>
                                         </div>
                                     </form>
+                                </div>
+                                <div className="hidden p-3 text-white text-start bg-transparent md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                                    <Link reloadDocument to="/" className="w-full bg-blur">
+                                        <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className="-mt-20 w-52 md:w-60 mx-auto py-2" />
+                                    </Link>
+                                    <h3 className="text-5xl font-bold text-start">Appointment</h3>
+                                    <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl font-semibold">We'd Love to Hear from You</h3>
+                                    <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p>
                                 </div>
                             </div>
                         </div>
