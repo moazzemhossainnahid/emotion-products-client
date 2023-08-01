@@ -321,8 +321,8 @@ const ProductViewer = () => {
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal z-50 h-screen w-full overflow-hidden">
-                <div className="modal-box w-11/12 max-w-5xl bg-cover overflow-hidden relative ">
-                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute left-0 top-0 h-full object-cover" />
+                <div className="modal-box w-11/12 max-w-5xl bg-gradient-to-tr from-[#0a0a0ad8] to-[#0a0a0aa7] bg-cover overflow-hidden relative ">
+                    <img src="https://i.ibb.co/37G57Y2/Rectangle-111-1.png" alt="" className="w-full absolute mix-blend-overlay left-0 top-0 h-full object-cover" />
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <div className="w-full text-white">
                         <div className="flex items-center w-full min-h-full lg:justify-center">
@@ -511,12 +511,14 @@ const ProductViewer = () => {
                                         </div>
                                     </form>
                                 </div>
-                                <div className="hidden p-3 space-y-5 text-white bg-transparent text-left md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
-                                    <Link reloadDocument to="/" className="w-full bg-blur">
-                                        <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className=" w-52 md:w-60 mx-auto py-2" />
-                                    </Link>
-                                    <h3 style={{ fontFamily: 'Silk Serif' }}  className="text-5xl font-bold text-start">Make an Appointment</h3>
-                                    <h3 style={{ fontFamily: 'Serif' }} className="text-xl font-semibold">We'd Love to Hear from You</h3>
+                                <div className="hidden p-3 space-y-5 text-white relative bg-transparent text-left md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                                    <div className="h-full absolute top-72 left-10">
+                                        <Link reloadDocument to="/" className="w-full bg-blur">
+                                            <img src="https://i.ibb.co/Q9fm5vF/emotion-products-logo.png" alt="" className=" w-52 md:w-60 py-2" />
+                                        </Link>
+                                        <h3 style={{ fontFamily: 'Silk Serif' }} className="text-5xl pt-7 font-bold text-start">Make an Appointment</h3>
+                                        <h3 style={{ fontFamily: 'Serif' }} className="text-xl pt-5 font-semibold">We'd Love to Hear from You</h3>
+                                    </div>
                                     {/* <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quo commodi ratione obcaecati dolores quos sunt sed rerum laborum? Vel!</p> */}
                                 </div>
                             </div>
