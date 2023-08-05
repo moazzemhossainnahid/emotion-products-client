@@ -17,7 +17,7 @@ const UseToken = () => {
 
 
         if (email) {
-            fetch(`https://emotion-products-server.up.railway.app/api/v1/users/${email}`, {
+            fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/${email}`,{
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(currentUser)

@@ -142,7 +142,7 @@ const ProductViewer = () => {
         };
         // console.log(appointment);
 
-        fetch(`https://emotion-products-server.up.railway.app/api/v1/appointments`, {
+        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/appointments`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

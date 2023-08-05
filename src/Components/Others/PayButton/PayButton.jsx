@@ -7,7 +7,7 @@ const PayButton = ({ checkoutItems }) => {
     const [user] = useAuthState(auth);
     console.log(checkoutItems);
     const handleCheckout = () => {
-        axios.post(`https://emotion-products-server.up.railway.app/api/v1/stripe/create-checkout-session`, {
+        axios.post(`https://emotion-products-server-iii.vercel.app/api/v1/stripe/create-checkout-session`, {
             checkoutItems,
             user
         }).then(res => {

@@ -10,7 +10,7 @@ const ManageProducts = () => {
 
 
     useEffect(() => {
-        fetch('https://emotion-products-server.up.railway.app/api/v1/products')
+        fetch('https://emotion-products-server-iii.vercel.app/api/v1/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [number])

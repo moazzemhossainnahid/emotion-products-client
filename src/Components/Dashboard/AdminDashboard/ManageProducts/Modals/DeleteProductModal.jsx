@@ -7,7 +7,7 @@ const DeleteProductModal = ({ deleteProduct, setNumber, number }) => {
 
 
     const handleDelete = (id) => {
-        const url = `https://emotion-products-server.up.railway.app/api/v1/products/${id}`;
+        const url = `https://emotion-products-server-iii.vercel.app/api/v1/products/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

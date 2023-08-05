@@ -10,7 +10,7 @@ const ManageAppointments = () => {
 
 
     useEffect(() => {
-        fetch('https://emotion-products-server.up.railway.app/api/v1/appointments')
+        fetch('https://emotion-products-server-iii.vercel.app/api/v1/appointments')
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [number])

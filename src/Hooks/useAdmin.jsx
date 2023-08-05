@@ -10,7 +10,7 @@ const UseAdmin = () => {
 //   console.log(admin);
     useEffect( () => {
         const email = user?.email; 
-        fetch(`https://emotion-products-server.up.railway.app/api/v1/users/isAdmin/${email}`, {
+        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/isAdmin/${email}`, {
             method: 'GET',
             headers: {
                 'content-type' : 'application/json',
