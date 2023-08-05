@@ -6,7 +6,7 @@ const UserDetails = ({ user, index }) => {
     const { _id, email, role } = user;
     const [admin] = UseAdmin();
 
-    console.log(admin);
+    // console.log(admin);
 
     const handleMakeAdmin = () => {
         if (admin) {

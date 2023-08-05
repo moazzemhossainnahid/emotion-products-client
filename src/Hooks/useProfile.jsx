@@ -13,7 +13,7 @@ const useProfile = () => {
             .then(data => setProfile(data))
     }, [email]);
 
-    console.log(profile);
+    // console.log(profile);
 
     return [profile];
 };
