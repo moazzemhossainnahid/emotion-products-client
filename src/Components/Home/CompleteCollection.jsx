@@ -1,12 +1,41 @@
 import React from 'react';
-import { CompleteCollectionData } from '../../assets/Data/CompleteCollectionData';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+
+
+
 const CompleteCollection = () => {
     const navigate = useNavigate();
     const {t} = useTranslation();
+
+    const CompleteCollectionData = [
+        {
+            id: 1,
+            title: t('homeCompleteCollection.r1'),
+            href: "carport",
+            img: "https://i.ibb.co/10hSgpn/image-3.png",
+        },
+        {
+            id: 2,
+            title: t('homeCompleteCollection.r2'),
+            href: "massagechair",
+            img: "https://i.ibb.co/bgbsj69/DSC03614-3.png",
+        },
+        {
+            id: 3,
+            title: t('homeCompleteCollection.r3'),
+            href: "furniture",
+            img: "https://i.ibb.co/2Ybnw7x/sofa-1.png",
+        },
+        {
+            id: 4,
+            title: t('homeCompleteCollection.r4'),
+            href: "lights",
+            img: "https://i.ibb.co/7GbC1ZQ/image-4.png",
+        },
+    ]
     return (
         <div id="abc" className='w-full py-20 text-center p-5'>
             <h3 className="text-2xl md:text-3xl">{t('homeCompleteCollection.title')}</h3>
