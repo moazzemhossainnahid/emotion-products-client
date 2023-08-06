@@ -71,6 +71,41 @@
         "title3": "Work done",
         "desc3": "At Motion Products, we strive to meet our client's expectations. We pride ourselves on our dedicated team, which works to deliver projects on time and within your budget. So, stay calm and let us do all the work for you until your satisfaction."
     },
+    "homeBestInTown": {
+        "title": "Upgrade your vehicle's protection and experience peace of mind with our durable and high-quality carports",
+        "desc1": "Forget checking the weather forecast and constantly worrying about protecting your car in harsh weather conditions. At Motion Products, we offer durable and stylish carports that perfectly shield your vehicle from the elements.",
+        "desc2": "Since your car is your valuable property and deserves the best protection, we ensure your cars get the ultimate protection from harsh weather conditions, sun damage, and strong winds and snow. Furthermore, our carports are constructed from the highest quality materials, ensuring they can withstand any atmospheric conditions and stay in top condition for years.",
+        "desc3": "And that's not all! You can enhance the look of your property with our carports. No matter what design or color you want, you can choose the best that spruces up your space. From traditional to modern styles, we have a range of carports complimenting any architectural style.",
+        "desc4": "Offer your car the best protection. Contact us right away and get your carport now!"
+    },
+    "homeHomeExclusive": {
+        "title1": "Our Exclusive Carport",
+        "desc1": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.",
+        "btn1": "Discover More",
+        "title2": "Our Exclusive Furniture",
+        "desc2": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.",
+        "btn2": "Discover More"
+    },
+    "footer": {
+        "title": "Stay Connected With Us",
+        "desc": "Not only does my new carport look amazing, but it's also added so much value to my home.",
+        "sub": "Subscribe",
+        "aep": "About Emotion Products",
+        "aep_1": "About Us",
+        "aep_2": "Contact Us",
+        "aep_3": "Terms & Conditions",
+        "aep_4": "Privacy Policy",
+        "cs": "Customer Service",
+        "cs_1": "About Your Order",
+        "cs_2": "Wish list",
+        "cs_3": "Comparison List",
+        "cus": "Contact Us",
+        "cus_1": "52/2, School Street Road",
+        "cus_2": "Mon-Sun 9.00 - 18.00",
+        "cus_3": "+9978-4578-145",
+        "cus_4": "hello@emotionproducts.com",
+        "footer_down": "© 2020 - 2023 Carport | All Rights Reserved"
+    },
     "greeting": "Hello, world!",
     "content": "This is a React website.",
     "valueableSpeech": "Valuable Speech From Our CEO & Founder",

@@ -71,6 +71,41 @@
         "title3": "Werk gedaan",
         "desc3": "Bij Motion Products streven we ernaar om aan de verwachtingen van onze klanten te voldoen. We zijn trots op ons toegewijde team, dat werkt om projecten op tijd en binnen uw budget op te leveren. Dus blijf rustig en laat ons al het werk voor je doen tot je tevreden bent."
     },
+    "homeBestInTown": {
+        "title": "Upgrade de bescherming van uw voertuig en ervaar gemoedsrust met onze duurzame en hoogwaardige carports",
+        "desc1": "Vergeet het weerbericht te checken en je constant zorgen te maken over het beschermen van je auto in barre weersomstandigheden. Bij Motion Products bieden we duurzame en stijlvolle carports die uw voertuig perfect beschermen tegen de elementen.",
+        "desc2": "Aangezien uw auto uw waardevolle bezit is en de beste bescherming verdient, zorgen wij ervoor dat uw auto's de ultieme bescherming krijgen tegen barre weersomstandigheden, schade door de zon en harde wind en sneeuw. Bovendien zijn onze carports gemaakt van materialen van de hoogste kwaliteit, waardoor ze bestand zijn tegen alle weersomstandigheden en jarenlang in topconditie blijven.",
+        "desc3": "En dat is niet alles! Met onze carports kunt u de uitstraling van uw woning verbeteren. Het maakt niet uit welk ontwerp of welke kleur je wilt, je kunt het beste kiezen dat je ruimte opfleurt. Van traditionele tot moderne stijlen, we hebben een reeks carports die passen bij elke bouwstijl.",
+        "desc4": "Bied uw auto de beste bescherming. Neem direct contact met ons op en koop nu uw carport!"
+    },
+    "homeHomeExclusive": {
+        "title1": "Onze exclusieve carport",
+        "desc1": "Er zijn veel variaties op passages van Lorem Ipsum beschikbaar, maar de meeste zijn gewijzigd.",
+        "btn1": "Ontdek meer",
+        "title2": "Onze exclusieve meubels",
+        "desc2": "Er zijn veel variaties op passages van Lorem Ipsum beschikbaar, maar de meeste zijn gewijzigd.",
+        "btn2": "Ontdek meer"
+    },
+    "footer": {
+        "title": "Blijf met ons verbonden",
+        "desc": "Mijn nieuwe carport ziet er niet alleen geweldig uit, maar het heeft ook zoveel waarde toegevoegd aan mijn huis.",
+        "sub": "Abonneren",
+        "aep": "Over Emotieproducten",
+        "aep_1": "Over ons",
+        "aep_2": "Contact ons",
+        "aep_3": "algemene voorwaarden",
+        "aep_4": "Privacy beleid",
+        "cs": "Klanten service",
+        "cs_1": "Over uw bestelling",
+        "cs_2": "Wensenlijst",
+        "cs_3": "Vergelijkingslijst",
+        "cus": "Contact Ons",
+        "cus_1": "Schoolstraat 52/2",
+        "cus_2": "Ma-Zo 9.00 - 18.00",
+        "cus_3": "+9978-4578-145",
+        "cus_4": "hello@emotionproducts.com",
+        "footer_down": "© 2020 - 2023 Carpoort | Alle rechten voorbehouden"
+    },
     "greeting": "Hallo, wereld!",
     "content": "Dit is een React-website.",
     "valueableSpeech": "Waardevolle toespraak van onze CEO en oprichter",
