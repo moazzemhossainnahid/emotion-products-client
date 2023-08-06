@@ -18,7 +18,7 @@ i18n
     // init i18next
     .init({
         debug: true,
-        lng: 'nl',
+        lng: 'en',
         supportedLngs: ['en', 'nl'],
         fallbackLng: 'en',
         detection: {
