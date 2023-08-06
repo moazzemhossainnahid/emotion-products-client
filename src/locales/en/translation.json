@@ -55,6 +55,22 @@
         "at": "Autometic",
         "viewD": "View Details"
     },
+    "homeDiscoverExclusiveProducts": {
+        "title": "Shine bright with our stunning lighting collection that illuminates your life",
+        "desc1": "Nothing better than lighting to create the ambience you desire. With a perfect lighting fixture, you can complement your space. We offer a wide range of chandeliers, lanterns and other lighting fixtures that express your style and are as unique as you are.",
+        "desc2": "Whether you are looking for a bohemian or an industrial style, our lighting fixtures are one of a kind. Further, our chandeliers will fit your style so that you can add drama to your dining area or a serene atmosphere to your bedroom.",
+        "desc3": "Our lanterns are equally special, with various shapes and sizes. We promise to deliver the highest quality material so you don't regret buying any item. We design every lighting fixture with sturdy material so it lasts for years to come.",
+        "desc4": "Whether you are looking for a bohemian or an industrial style, our lighting fixtures are one of a kind. Further, our chandeliers will fit your style so that you can add drama to your dining area or a serene atmosphere to your bedroom."
+    },
+    "homeOurWorkingProcess": {
+        "title": "We help you design your dream space in 3 simple steps",
+        "title1": "Consultation",
+        "desc1": "The success of every project lies behind an efficient consultation. We walk through with you at every phase of the project from start to end. Our expert team understands all your queries and works with you to develop a plan that helps you achieve your goals.",
+        "title2": "Choose Design",
+        "desc2": "No matter what your taste, we offer an extensive collection of designs to choose from. In our catalog, you can discover a design that will fit your style. Further, if you don't find a perfect design, you can get a personalized design that caters to your needs.",
+        "title3": "Work done",
+        "desc3": "At Motion Products, we strive to meet our client's expectations. We pride ourselves on our dedicated team, which works to deliver projects on time and within your budget. So, stay calm and let us do all the work for you until your satisfaction."
+    },
     "greeting": "Hello, world!",
     "content": "This is a React website.",
     "valueableSpeech": "Valuable Speech From Our CEO & Founder",

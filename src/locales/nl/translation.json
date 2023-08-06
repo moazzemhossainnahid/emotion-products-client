@@ -55,6 +55,22 @@
         "at": "Automatisch",
         "viewD": "Details bekijken"
     },
+    "homeDiscoverExclusiveProducts": {
+        "title": "Schijn helder met onze verbluffende verlichtingscollectie die je leven verlicht",
+        "desc1": "Niets beter dan verlichting om de sfeer te creëren die u wenst. Met een perfecte verlichtingsarmatuur kunt u uw ruimte aanvullen. We bieden een breed scala aan kroonluchters, lantaarns en andere verlichtingsarmaturen die uw stijl uitdrukken en net zo uniek zijn als u.",
+        "desc2": "Of je nu op zoek bent naar een bohemian of een industriële stijl, onze verlichtingsarmaturen zijn uniek in hun soort. Bovendien passen onze kroonluchters bij uw stijl, zodat u drama kunt toevoegen aan uw eethoek of een serene sfeer aan uw slaapkamer kunt geven.",
+        "desc3": "Onze lantaarns zijn net zo bijzonder, met verschillende soorten en maten. We beloven materiaal van de hoogste kwaliteit te leveren, zodat u geen spijt krijgt van het kopen van een artikel. We ontwerpen elk verlichtingsarmatuur met stevig materiaal zodat het jarenlang meegaat.",
+        "desc4": "Of je nu op zoek bent naar een bohemian of een industriële stijl, onze verlichtingsarmaturen zijn uniek in hun soort. Bovendien passen onze kroonluchters bij uw stijl, zodat u drama kunt toevoegen aan uw eethoek of een serene sfeer aan uw slaapkamer kunt geven."
+    },
+    "homeOurWorkingProcess": {
+        "title": "In 3 eenvoudige stappen helpen wij u bij het ontwerpen van uw droomruimte",
+        "title1": "Overleg",
+        "desc1": "Het succes van elk project ligt aan de basis van efficiënt overleg. We lopen met u mee in elke fase van het project van begin tot eind. Ons deskundig team begrijpt al uw vragen en werkt met u samen om een plan te ontwikkelen dat u helpt uw doelen te bereiken.",
+        "title2": "Kies Ontwerp",
+        "desc2": "Wat uw smaak ook is, wij bieden een uitgebreide collectie ontwerpen om uit te kiezen. In onze catalogus kunt u een ontwerp ontdekken dat bij uw stijl past. Verder, als u geen perfect ontwerp vindt, kunt u een gepersonaliseerd ontwerp krijgen dat aan uw behoeften voldoet.",
+        "title3": "Werk gedaan",
+        "desc3": "Bij Motion Products streven we ernaar om aan de verwachtingen van onze klanten te voldoen. We zijn trots op ons toegewijde team, dat werkt om projecten op tijd en binnen uw budget op te leveren. Dus blijf rustig en laat ons al het werk voor je doen tot je tevreden bent."
+    },
     "greeting": "Hallo, wereld!",
     "content": "Dit is een React-website.",
     "valueableSpeech": "Waardevolle toespraak van onze CEO en oprichter",
