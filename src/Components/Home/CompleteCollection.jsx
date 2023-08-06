@@ -2,13 +2,15 @@ import React from 'react';
 import { CompleteCollectionData } from '../../assets/Data/CompleteCollectionData';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const CompleteCollection = () => {
     const navigate = useNavigate();
+    const {t} = useTranslation();
     return (
         <div id="abc" className='w-full py-20 text-center p-5'>
-            <h3 className="text-2xl md:text-3xl">Our Complete Collection With Luxury</h3>
-            <p className="text-sm pt-2">It is a long established fact that a reader will be distracted by the readable content of a page</p>
+            <h3 className="text-2xl md:text-3xl">{t('homeCompleteCollection.title')}</h3>
+            <p className="text-sm pt-2">{t('homeCompleteCollection.desc')}</p>
 
             <div className="w-full text-left md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 p-3 py-10">
                 {

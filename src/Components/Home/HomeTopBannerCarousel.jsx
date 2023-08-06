@@ -4,9 +4,11 @@ import Slide from 'react-reveal/Slide';
 import Slider from 'react-slick';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 
 const HomeTopBannerCarousel = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const {t} = useTranslation();
 
     const settings = {
         dots: true,
@@ -57,23 +59,23 @@ const HomeTopBannerCarousel = () => {
     const SliderData = [
         {
             img: 'https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg',
-            title: 'Protect your car in style with our unmatched quality carports',
-            desc: "We specialize in designing and constructing carports that enhance the look of your property and offer ultimate protection."
+            title: t('homeSlider.title1'),
+            desc: t('homeSlider.desc1'),
         },
         {
             img: 'https://i.ibb.co/5kYFf7r/Rectangle-111.png',
-            title: 'Experience extraordinary comfort with our exquisite luxury furniture',
-            desc: "Indulge in the comfort of our luxury sofas, designed with top-notch materials to create a statement piece."
+            title: t('homeSlider.title2'),
+            desc: t('homeSlider.desc2'),
         },
         {
             img: 'https://i.ibb.co/37G57Y2/Rectangle-111-1.png',
-            title: 'Illuminate your space with our lighting solutions',
-            desc: "Energy-efficient lighting solutions that create a warm and inviting atmosphere."
+            title: t('homeSlider.title3'),
+            desc: t('homeSlider.desc3'),
         },
         {
             img: 'https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg',
-            title: 'Relax and de-stress with the ultimate massage experience',
-            desc: "Our high-tech massage chairs offer a soothing massage to provide relaxation."
+            title: t('homeSlider.title4'),
+            desc: t('homeSlider.desc4'),
         }
     ]
 
@@ -102,7 +104,7 @@ const HomeTopBannerCarousel = () => {
                                                 {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
                                                 <Link to="abc" smooth={true} duration={500}>
                                                     <label className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                        <p className="uppercase flex gap-2">About US <FaArrowRight /></p>
+                                                        <p className="uppercase flex gap-2">{t('homeSlider.aboutUS')} <FaArrowRight /></p>
                                                     </label>
                                                 </Link>
                                                 {/* </button> */}
@@ -112,7 +114,7 @@ const HomeTopBannerCarousel = () => {
                                             <Slide bottom duration={2500}>
                                                 {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
                                                 <label htmlFor="my-modal-3" className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                                    <p className="uppercase flex gap-2">Contact US <FaArrowRight /></p>
+                                                    <p className="uppercase flex gap-2">{t('homeSlider.contactUS')} <FaArrowRight /></p>
                                                 </label>
                                                 {/* </button> */}
                                             </Slide>

@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const HomeExclusive = () => {
 const navigate = useNavigate();
+const {t} = useTranslation();
     return (
         <div className='w-full'>
             <div class='w-full flex flex-col bg-white md:flex-row items-center justify-between py-10 gap-5'>

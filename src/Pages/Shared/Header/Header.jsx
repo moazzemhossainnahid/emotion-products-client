@@ -36,9 +36,9 @@ const Header = ({ currentLanguageCode, languages }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="mx-3">
+                        {/* <div className="mx-3">
                             <FaSearch />
-                        </div>
+                        </div> */}
                         <div className="mx-3">
                             <NavLink reloadDocument to="/cart"><FaCartPlus /></NavLink>
                         </div>

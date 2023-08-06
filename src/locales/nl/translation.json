@@ -6,6 +6,55 @@
         "massagechair": "Massage stoel",
         "lights": "Lichten"
     },
+    "homeSlider": {
+        "title1": "Bescherm uw auto in stijl met onze ongeëvenaarde kwaliteitscarports",
+        "desc1": "Wij zijn gespecialiseerd in het ontwerpen en bouwen van carports die de uitstraling van uw woning versterken en ultieme bescherming bieden.",
+        "title2": "Ervaar buitengewoon comfort met onze prachtige luxe meubelen",
+        "desc2": "Geniet van het comfort van onze luxe banken, ontworpen met eersteklas materialen om een statement te maken.",
+        "title3": "Verlicht uw ruimte met onze verlichtingsoplossingen",
+        "desc3": "Energiezuinige verlichtingsoplossingen die een warme en uitnodigende sfeer creëren.",
+        "title4": "Ontspan en ontstress met de ultieme massage-ervaring",
+        "desc4": "Onze hightech massagestoelen bieden een rustgevende massage om te ontspannen.",
+        "aboutUS": "Over Ons",
+        "contactUS": "Contact Ons"
+    },
+    "homeValueAbleSpeech": {
+        "title": "Valuable Speech From Our CEO & Founder",
+        "desc1": "Hallo jongens!",
+        "desc2": "Welkom in onze wereld van comfort en luxe. We zijn verheugd om u een lijn van mooie en functionele producten aan te bieden. Mijn passie voor auto's en luxe meubels werd mijn beroep en bracht me ertoe de basis te leggen van dit bedrijf waar je alles vindt om tot rust te komen en op te laden, van de carport tot verlichting en van luxe meubels tot massagestoelen.",
+        "desc3": "Als CEO van dit bedrijf geloof ik dat luxe niet iets is dat te maken heeft met het prijskaartje, maar met de ervaring. Dat is waar onze producten en diensten vandaan komen die mijn jarenlange ervaring en toewijding aan uitmuntendheid weerspiegelen.",
+        "desc4": "Onze ontwerper, houder van een beroepsdiploma, zorgt ervoor dat elk product met de grootste zorg en detail wordt ontworpen.",
+        "desc5": "Laten we op reis gaan om uw ruimte om te vormen tot een toevluchtsoord van comfort en ontspanning.",
+        "desc6": "Eerlijk,"
+    },
+    "homeCompleteCollection": {
+        "title": "Onze Complete Collectie Met Luxe",
+        "desc": "Het is al lang een vaststaand feit dat een lezer wordt afgeleid door de leesbare inhoud van een pagina",
+        "r1": "Carport",
+        "r2": "Massage stoel",
+        "r3": "Meubilair",
+        "r4": "Lichten"
+    },
+    "homeLuxuryCollection": {
+        "title": "Verhoog uw ruimte met meubels die uw stijl weerspiegelen",
+        "desc1": "Een kwaliteitsmeubel weerspiegelt uw persoonlijkheid, smaak en het leven dat u wilt leven. Dus waarom zou u niet in stijl en comfort leven met onze reeks bankencollecties? Onze passie voor design en toewijding aan kwaliteit vind je terug in onze collectie stukken. Van de strakke lijnen van moderne banken tot warme tinten van tafels en statement-stukken tot alle items, we hebben voor elk wat wils.",
+        "desc2": "Omdat het juiste meubelstuk leven in uw ruimte kan brengen, hebben we een gevarieerde collectie samengesteld om aan de behoeften van onze klanten te voldoen. Verder hoef je je geen zorgen te maken over het materiaal van de meubels; wij zorgen voor eersteklas materialen en vakmanschap. Elk detail is zorgvuldig gefocust om ervoor te zorgen dat het jarenlang meegaat, van de mooiste woorden tot de pluchen kussens van onze banken.",
+        "desc3": "Neem geen genoegen met minder! Ontdek onze collectie en krijg een perfect stuk dat jouw stijl uitdrukt."
+    },
+    "homeExclusiveProduct": {
+        "lfttitle": "Ons exclusieve product",
+        "title": "Ontspan en laad jezelf op met onze massagestoelen",
+        "desc1": "Op zoek naar een stoel die je een volledige lichaamsmassage geeft en al je zorgen wegsmelt? Onze massagestoelen zijn voor jou. Ze bieden u de ultieme ontspanning en ontspanning als nooit tevoren. Omdat onze ultramoderne stoelen zijn ontworpen met uw comfort in gedachten, kunt u uw vermoeide voeten kalmeren of de spanning in uw schouder of nek verlichten met onze massagestoelen.",
+        "desc2": "Met een scala aan massagetechnieken bieden ze een echt therapeutische ervaring en stellen ze je in staat om je boodschap aan te passen aan specifieke lichaamsregio's. Bovendien kun je de stoel in elke comfortabele positie zetten. We zijn toegewijd aan het aanbieden van hoogwaardige, stevige, duurzame massagestoelen.",
+        "p1": "Het is een lang vaststaand feit dat een lezer",
+        "p2": "een al lang vaststaand feit dat een lezer zal worden afgeleid",
+        "p3": "vaststaand feit dat een lezer wordt afgeleid",
+        "p4": "feit dat een lezer zal worden afgeleid door de",
+        "ex": "Exclusief",
+        "cm": "Comfort",
+        "at": "Automatisch",
+        "viewD": "Details bekijken"
+    },
     "greeting": "Hallo, wereld!",
     "content": "Dit is een React-website.",
     "valueableSpeech": "Waardevolle toespraak van onze CEO en oprichter",
