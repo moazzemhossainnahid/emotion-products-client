@@ -5,10 +5,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
 import Authentication from './Authentication';
 import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Header = ({ currentLanguageCode, languages }) => {
     const [user] = useAuthState(auth);
-
+    const { t } = useTranslation();
     return (
         <div className='w-full max-w-full container sticky top-0 z-50'>
             <div className="bg-base-100 z-50 sticky top-0">
@@ -46,11 +47,11 @@ const Header = ({ currentLanguageCode, languages }) => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 gap-2 p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><NavLink reloadDocument to="/"><img src="https://i.ibb.co/T4c2Tnz/home-1-1.png" alt="" className="pr-2 w-7" /> Home</NavLink></li>
-                                <li><NavLink reloadDocument to="/carport"><img src="https://i.ibb.co/xG1cvng/parking-1.png" alt="" className="pr-2 w-7" />Carport</NavLink></li>
-                                <li><NavLink reloadDocument to="/furniture"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />Furniture</NavLink></li>
-                                <li><NavLink reloadDocument to="/massagechair"><img src="https://i.ibb.co/Csy2jsP/massage-chair-2.png" alt="" className="pr-2 w-7" />Massage Chair</NavLink></li>
-                                <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />Lights</NavLink></li>
+                                <li><NavLink reloadDocument to="/"><img src="https://i.ibb.co/T4c2Tnz/home-1-1.png" alt="" className="pr-2 w-7" /> {t('navbar.home')}</NavLink></li>
+                                <li><NavLink reloadDocument to="/carport"><img src="https://i.ibb.co/xG1cvng/parking-1.png" alt="" className="pr-2 w-7" />{t('navbar.carport')}</NavLink></li>
+                                <li><NavLink reloadDocument to="/furniture"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />{t('navbar.furniture')}</NavLink></li>
+                                <li><NavLink reloadDocument to="/massagechair"><img src="https://i.ibb.co/Csy2jsP/massage-chair-2.png" alt="" className="pr-2 w-7" />{t('navbar.massagechair')}</NavLink></li>
+                                <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />{t('navbar.lights')}</NavLink></li>
                                 {/* {
                                     user && <li><button onClick={signOut} className=""> <FaSignOutAlt className='pr-2 w-7' /> SignOut</button></li>
                                 } */}

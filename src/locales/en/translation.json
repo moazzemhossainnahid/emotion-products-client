@@ -1,4 +1,11 @@
 {
+    "navbar": {
+        "home": "Home",
+        "carport": "Carport",
+        "furniture": "Furniture",
+        "massagechair": "Massage Chair",
+        "lights": "Lights"
+    },
     "greeting": "Hello, world!",
     "content": "This is a React website.",
     "valueableSpeech": "Valuable Speech From Our CEO & Founder",

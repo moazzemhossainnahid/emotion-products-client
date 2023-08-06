@@ -11,7 +11,7 @@ import './i18n.jsx';
 AOS.init();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Suspense fallback="translations">
+  <Suspense fallback="..loading translations">
     <React.StrictMode>
       <BrowserRouter>
         <App />

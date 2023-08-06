@@ -1,4 +1,11 @@
 {
+    "navbar": {
+        "home": "Thuis",
+        "carport": "Carport",
+        "furniture": "Meubilair",
+        "massagechair": "Massage stoel",
+        "lights": "Lichten"
+    },
     "greeting": "Hallo, wereld!",
     "content": "Dit is een React-website.",
     "valueableSpeech": "Waardevolle toespraak van onze CEO en oprichter",

@@ -30,7 +30,6 @@ import ManageOrders from './Components/Dashboard/AdminDashboard/ManageOrders/Man
 import ManageAppointments from './Components/Dashboard/AdminDashboard/ManageAppointments/ManageAppointments';
 import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie';
-import './i18n';
 
 const languages = [
   {
@@ -50,7 +49,6 @@ function App() {
 
   const currentLanguageCode = cookies.get('i18next') || 'en';
   const { t } = useTranslation();
-
 
   return (
     <>
