@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCartPlus, FaSearch } from 'react-icons/fa';
+import { FaCartPlus, FaGlobeAsia, FaSearch } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
@@ -15,31 +15,26 @@ const Header = ({ currentLanguageCode, languages }) => {
                 <div className="navbar w-full md:w-4/5 mx-auto">
 
                     <div className="navbar-start">
-                        <Link reloadDocument to="/" className="w-full">
+                        <Link reloadDocument to="/" className="w-2/3 md:w-1/3">
                             <img src="https://i.ibb.co/8NNvYfT/emotion.png" alt="" className="w-32 md:w-40 py-2" />
                         </Link>
                     </div>
-                    {/* <div className="navbar-center hidden lg:flex">
-                    <ul className="menu gap-2 menu-horizontal px-1">
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li tabIndex={0}>
-                            <NavLink to="/lifestyle">
-                                Lyfestyle
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                            </NavLink>
-                            <ul className="p-2 bg-white gap-2 z-50">
-                                <li><NavLink to="/fashion">Fashion</NavLink></li>
-                                <li><NavLink to="/fitness">Fitness</NavLink></li>
-                                <li><NavLink to="/photography">Photography</NavLink></li>
-                            </ul>
-                        </li>
-                        <li><NavLink to="/food">Food</NavLink></li>
-                        <li><NavLink to="/videos">Videos</NavLink></li>
-                        <li><NavLink to="/features">Features</NavLink></li>
-                    </ul>
-                    
-                </div> */}
                     <div className="navbar-end">
+                        <div className="">
+
+                            <div className="dropdown dropdown-end p-0">
+                                <label tabIndex={0} className="btn bg-transparent outline-none border-none text-black focus:bg-transparent hover:bg-transparent btn-sm"><FaGlobeAsia /></label>
+                                <ul tabIndex={0} className="dropdown-content text-sm z-[1] menu p-1 shadow bg-base-100 rounded">
+                                    {languages.map(({ code, name, flag }) => (
+                                        <li className='p-1' key={code} >
+                                            <button className={`${code === currentLanguageCode && 'bg-primary'} p-2`} onClick={() => { i18next.changeLanguage(code) }}
+                                                disabled={code === currentLanguageCode} > <span className={`fi fi-${flag}`}></span>{name} 
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                         <div className="mx-3">
                             <FaSearch />
                         </div>
@@ -67,23 +62,7 @@ const Header = ({ currentLanguageCode, languages }) => {
                             </ul>
 
                         </div>
-                        <div className="">
 
-                            <div className="dropdown">
-                                <label tabIndex={0} className="btn m-1">Click</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    {languages.map(({ code, flag }) => (
-                                        <li key={code} >
-                                            <button onClick={() => { i18next.changeLanguage(code) }}
-                                                disabled={code === currentLanguageCode} > {flag}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-
-                        </div>
                         <div className="">
                             {
                                 user && <div className="md:pl-5"><Authentication /></div>

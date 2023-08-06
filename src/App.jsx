@@ -35,11 +35,13 @@ import './i18n';
 const languages = [
   {
     code: 'en',
-    flag: '🇺🇸'
+    name: 'English',
+    flag: 'us'
   },
   {
     code: 'nl',
-    flag: '🇩🇪'
+    name: 'Dutch',
+    flag: 'nl'
   }
 
 ]
