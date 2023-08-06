@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import React from 'react';
 
 const ValuableSpeech = () => {
@@ -8,7 +9,7 @@ const ValuableSpeech = () => {
                     <img src="https://i.ibb.co/cwHf0pB/Picture-prive-foto-1.jpg" alt="" className="" />
                 </div>
                 <div className="w-full md:w-3/5 mx-auto md:pl-7">
-                    <h3 className="text-2xl font-bold">Valuable Speech From Our <br /> CEO & Founder</h3>
+                    <h3 className="text-2xl font-bold">{t('valueableSpeech')}</h3>
                     <div className="flex items-center pt-3">
                         <p className="h-1 bg-[#00C2FF] w-32"></p>
                         <p className="border-b border-[#00C2FF] w-20"></p>

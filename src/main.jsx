@@ -5,8 +5,8 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import './i18n.jsx';
+
 // ..
 AOS.init();
 // const translationNl = NetherlandTranslations;
@@ -22,11 +22,11 @@ AOS.init();
 // });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      {/* <Suspense fallback="..loading translations"> */}
+  <Suspense fallback="..loading translations">
+    <React.StrictMode>
+      <BrowserRouter>
         <App />
-      {/* </Suspense> */}
-    </BrowserRouter>
-  </React.StrictMode>,
+      </BrowserRouter>
+    </React.StrictMode>,
+  </Suspense>
 )

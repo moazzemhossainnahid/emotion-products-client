@@ -1,21 +1,13 @@
 import React from 'react';
-import { FaCartPlus, FaSearch, FaSignOutAlt } from 'react-icons/fa';
+import { FaCartPlus, FaSearch } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from '../../../../firebase.init';
-import { toast } from 'react-toastify';
-import useSignin from '../../../Hooks/useSignin';
 import Authentication from './Authentication';
+import i18next from 'i18next';
 
-const Header = () => {
+const Header = ({ currentLanguageCode, languages }) => {
     const [user] = useAuthState(auth);
-    const { logOut } = useSignin();
-
-    const signOut = () => {
-        logOut();
-        toast("User SignOut Successfully !")
-    };
-
 
     return (
         <div className='w-full max-w-full container sticky top-0 z-50'>
@@ -73,6 +65,23 @@ const Header = () => {
                             </div> */}
 
                             </ul>
+
+                        </div>
+                        <div className="">
+
+                            <div className="dropdown">
+                                <label tabIndex={0} className="btn m-1">Click</label>
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    {languages.map(({ code, flag }) => (
+                                        <li key={code} >
+                                            <button onClick={() => { i18next.changeLanguage(code) }}
+                                                disabled={code === currentLanguageCode} > {flag}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
 
                         </div>
                         <div className="">
