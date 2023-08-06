@@ -7,15 +7,15 @@ import tEn from './locales/en/translation.json';
 import tNl from './locales/nl/translation.json';
 
 i18n
+    // use backend
     .use(Backend)
+    // pass backend httpapi
     .use(HttpApi)
     // detect user language
-    // learn more: https://github.com/i18next/i18next-browser-languageDetector
     .use(LanguageDetector)
     // pass the i18n instance to react-i18next.
     .use(initReactI18next)
     // init i18next
-    // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         debug: true,
         lng: 'nl',

@@ -9,24 +9,13 @@ import './i18n.jsx';
 
 // ..
 AOS.init();
-// const translationNl = NetherlandTranslations;
-// const translationEn = EnglishTranslations;
-// i18n.use(initReactI18next).init({
-//   resources: {
-//     en: { translation: translationEn },
-//     nl: { translation: translationNl },
-//   },
-//   lng: "en",
-//   fallbacking: "en",
-//   interpolation: { escapeValue: false },
-// });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Suspense fallback="..loading translations">
+  <Suspense fallback="translations">
     <React.StrictMode>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>,
+    </React.StrictMode>
   </Suspense>
 )
