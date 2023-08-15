@@ -21,7 +21,16 @@ const Cart = () => {
             badge: "top",
             image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
             price: 6895,
-        }
+        },
+        // {
+        //     id: 456,
+        //     name: "Exclusive Massage Chair",
+        //     description: "this is Massage Chair in california USA",
+        //     category: "massagechair",
+        //     badge: "top",
+        //     image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
+        //     price: 5570,
+        // }
     ]
 
     return (
