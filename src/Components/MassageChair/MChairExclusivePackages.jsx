@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const MChairExclusivePackages = () => {
     const navigate = useNavigate();
     return (
-        <div className='w-full md:w-5/6 mx-auto bg-white py-10 p-5'>
+        <div className='w-full md:w-5/6 mx-auto mt-20 bg-white py-10 p-5'>
             <div className="w-full">
                 <h3 className="text-2xl font-semibold">Take A Look On Our exclusive <br /> Projects.</h3>
                 <div className="flex items-center pt-3">

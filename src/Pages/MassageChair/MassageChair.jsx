@@ -9,6 +9,7 @@ import TrustedPartners from '../../Components/Others/TrustedPartners';
 import MChairTopBannerCarousel from '../../Components/MassageChair/MChairTopBannerCarousel';
 import MChairExclusivePackages from '../../Components/MassageChair/MChairExclusivePackages';
 import MChairBestMeterials from '../../Components/MassageChair/MChairBestMeterials';
+import MChairUses from '../../Components/MassageChair/MChairUses';
 
 const MassageChair = () => {
     return (
@@ -16,8 +17,9 @@ const MassageChair = () => {
             <MChairTopBanner />
             <MChairPremiumService />
             <MChairBestMeterials />
-            <MChairOverview />
+            <MChairUses/>
             <MChairExclusivePackages />
+            {/* <MChairOverview /> */}
             <MChairVideos />
             {/* <MChairSuccessStories /> */}
             {/* <TrustedPartners /> */}

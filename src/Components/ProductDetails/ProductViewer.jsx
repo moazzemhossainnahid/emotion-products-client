@@ -613,22 +613,22 @@ const ProductViewer = () => {
 
       {/* new design */}
 
-      <div className="modal z-50 h-screen w-full overflow-hidden">
-        <div className="modal-box max-w-6xl  overflow-hidden flex relative rounded-none p-0 ">
+      <div className="modal z-50 h-full w-full">
+        <div className="modal-box max-w-6xl flex relative rounded-none p-0 ">
           <label
             htmlFor="my-modal-3"
             className="btn btn-sm btn-circle absolute right-2 top-2 bg-[#353535]"
           >
             ✕
           </label>
-          <div className="bg-[#00ABE1] w-1/2 p-20 text-white flex flex-col justify-center gap-8">
+          <div className="bg-[#00ABE1] w-full h-full md:w-1/2 p-2 md:p-16 text-white flex flex-col justify-center gap-8">
             <h1 className="text-3xl">Make an appointment</h1>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-3">
               <div className="flex items-center gap-4">
                 <img src={modal_img_1} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="leading-5">
+                  <p className="text-sm">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -638,7 +638,7 @@ const ProductViewer = () => {
                 <img src={modal_img_2} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="leading-5">
+                  <p className="text-sm">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -648,7 +648,7 @@ const ProductViewer = () => {
                 <img src={modal_img_3} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="leading-5">
+                  <p className="text-sm">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -658,7 +658,7 @@ const ProductViewer = () => {
                 <img src={modal_img_4} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="leading-5">
+                  <p className="text-sm">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -666,7 +666,7 @@ const ProductViewer = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 bg-[#2B2B2B]">
+          <div className="w-full md:w-1/2 h-full bg-[#2B2B2B] pb-2">
             <div className="w-3/4 mx-auto py-8 text-[#90A4AA]">
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -683,7 +683,7 @@ const ProductViewer = () => {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    className="px-4 py-2 input input-bordered input-sm transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     {...register("name", {
                       required: {
                         value: true,
@@ -691,18 +691,25 @@ const ProductViewer = () => {
                       },
                     })}
                   />
-                  <label className="label p-1">
-                    {errors.name?.type === "required" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.name.message}
-                      </span>
-                    )}
-                    {errors.name?.type === "pattern" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.name.message}
-                      </span>
-                    )}
+                </div>
+                <div className="flex flex-col space-y-1">
+                  <label
+                    htmlFor="phone"
+                    className="text-sm font-semibold text-start"
+                  >
+                    Contact
                   </label>
+                  <input
+                    type="phone"
+                    placeholder="Enter Contact Number"
+                    className="px-4 input input-bordered input-sm py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    {...register("phone", {
+                      required: {
+                        value: true,
+                        message: "Phone Number is require",
+                      },
+                    })}
+                  />
                 </div>
                 <div className="flex flex-col space-y-1">
                   <label
@@ -714,7 +721,7 @@ const ProductViewer = () => {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="px-4 py-2 transition duration-300 border border-gray-300 bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    className="px-4 py-2 input input-bordered input-sm transition duration-300 border border-gray-300 bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     {...register("email", {
                       required: {
                         value: true,
@@ -726,73 +733,18 @@ const ProductViewer = () => {
                       },
                     })}
                   />
-                  <label className="label p-1">
-                    {errors.email?.type === "required" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.email.message}
-                      </span>
-                    )}
-                    {errors.email?.type === "pattern" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.email.message}
-                      </span>
-                    )}
-                  </label>
                 </div>
-                <div className="flex flex-col space-y-1">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-semibold text-start"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="phone"
-                    placeholder="Phone Number"
-                    className="px-4 py-2 transition duration-300 border border-gray-300 text-white bg-transparent rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
-                    {...register("phone", {
-                      required: {
-                        value: true,
-                        message: "Phone Number is require",
-                      },
-                    })}
-                  />
-                  <label className="label p-1">
-                    {errors.phone?.type === "required" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.phone.message}
-                      </span>
-                    )}
-                    {errors.phone?.type === "pattern" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.phone.message}
-                      </span>
-                    )}
-                  </label>
-                </div>
+
                 <div className="flex flex-col">
                   <label
-                    htmlFor="email"
+                    htmlFor="product"
                     className="text-sm font-semibold text-start"
                   >
-                    Needed Product
-                  </label>
-
-                  <label className="label p-1">
-                    {errors.email?.type === "required" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.email.message}
-                      </span>
-                    )}
-                    {errors.email?.type === "pattern" && (
-                      <span className="label-text-alt text-red-700">
-                        {errors.email.message}
-                      </span>
-                    )}
+                    Select Desire Product
                   </label>
                   <select
                     onChange={handleProduct}
-                    className="px-4 py-2 transition duration-300 border bg-transparent border-gray-300 text-gray-500 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    className="px-4 input input-bordered input-sm py-2 transition duration-300 border bg-transparent border-gray-300 text-gray-500 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   >
                     <option disabled selected>
                       Select a Product
@@ -813,7 +765,7 @@ const ProductViewer = () => {
                   <textarea
                     type="text"
                     placeholder="Address"
-                    className="px-4 py-2 resize-none transition duration-300 border border-gray-300 bg-transparent text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    className="px-4 py-2 h-12 resize-none transition duration-300 border border-gray-300 bg-transparent text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     {...register("address", {
                       required: {
                         value: true,
@@ -832,7 +784,7 @@ const ProductViewer = () => {
                   <textarea
                     type="text"
                     placeholder="Message"
-                    className="px-4 py-2 resize-none transition duration-300 border border-gray-300 bg-transparent h-20 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                    className="px-4 py-2 resize-none transition duration-300 border border-gray-300 bg-transparent h-16 text-white rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                     {...register("message", {
                       required: {
                         value: true,
