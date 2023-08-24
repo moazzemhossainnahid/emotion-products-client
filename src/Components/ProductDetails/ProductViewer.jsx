@@ -614,14 +614,14 @@ const ProductViewer = () => {
       {/* new design */}
 
       <div className="modal z-50 h-full w-full">
-        <div className="modal-box max-w-6xl flex relative rounded-none p-0 ">
+        <div className="modal-box max-w-6xl flex bg-[#2B2B2B] relative rounded-none p-0 ">
           <label
             htmlFor="my-modal-3"
             className="btn btn-sm btn-circle absolute right-2 top-2 bg-[#353535]"
           >
             ✕
           </label>
-          <div className="bg-[#00ABE1] w-full h-full md:w-1/2 p-2 md:p-16 text-white flex flex-col justify-center gap-8">
+          <div className="bg-[#00ABE1] w-full hidden md:flex h-full md:w-1/2 p-2 md:p-16 text-white flex-col justify-center gap-8">
             <h1 className="text-3xl">Make an appointment</h1>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-4">
