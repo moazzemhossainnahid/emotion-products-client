@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MChairPremiumService = () => {
+
     return (
         <div className='w-full h-full lg:h-[80vh] bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">

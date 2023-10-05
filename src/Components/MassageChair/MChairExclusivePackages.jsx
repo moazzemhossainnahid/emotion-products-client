@@ -1,13 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const MChairExclusivePackages = () => {
     const navigate = useNavigate();
+    const {t} = useTranslation();
+
     return (
         <div className='w-full md:w-5/6 mx-auto bg-white py-10 p-5'>
             <div className="w-full">
-                <h3 className="text-2xl font-semibold">Take A Look On Our exclusive <br /> Projects.</h3>
+                <h3 className="text-2xl font-semibold">{t('mchair.exclusivePackages.title')}</h3>
                 <div className="flex items-center pt-3">
                     <p className="h-1 bg-[#00C2FF] w-32"></p>
                     <p className="border-b border-[#00C2FF] w-20"></p>
@@ -22,12 +25,12 @@ const MChairExclusivePackages = () => {
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
                         <h5 className="text-md text-gray-400">Project 01</h5>
-                        <h3 className="text-xl font-semibold text-gray-700 pt-1">Take the first step to a more comfortable life, and order your massage chair right now!</h3>
+                        <h3 className="text-xl font-semibold text-gray-700 pt-1">{t('mchair.exclusivePackages.prd1.title')}</h3>
                         <div className="pt-5 space-y-3">
-                            <p className="">It's time to make the best investment for yourself with this massage chair. You can contact us today and order the massage chair to get the best experience without denting your wallet!</p>
+                            <p className="">{t('mchair.exclusivePackages.prd1.desc')}</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">{t('mchair.exclusivePackages.prd1.btn')} <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>

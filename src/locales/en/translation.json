@@ -135,30 +135,16 @@
       "d4": "If you want to adjust the settings to your liking without having to get up, its side panel is for you. It allows you to access all of the chair's features while staying in the perfect position for relaxation."
     },
     "exclusivePackages": {
+      "title":"Take A Look On Our exclusive Projects.",
       "prd1": {
         "title": "Take the first step to a more comfortable life, and order your massage chair right now!",
         "desc": "It's time to make the best investment for yourself with this massage chair. You can contact us today and order the massage chair to get the best experience without denting your wallet!",
         "btn": "Project Details"
       }
     },
-
-    "sdf": "Not only does my new carport look amazing, but it's also added so much value to my home.",
-    "sub": "Subscribe",
-    "aep": "About Emotion Products",
-    "aep_1": "About Us",
-    "aep_2": "Contact Us",
-    "aep_3": "Terms & Conditions",
-    "aep_4": "Privacy Policy",
-    "cs": "Customer Service",
-    "cs_1": "About Your Order",
-    "cs_2": "Wish list",
-    "cs_3": "Comparison List",
-    "cus": "Contact Us",
-    "cus_1": "52/2, School Street Road",
-    "cus_2": "Mon-Sun 9.00 - 18.00",
-    "cus_3": "+9978-4578-145",
-    "cus_4": "hello@emotionproducts.com",
-    "footer_down": "© 2020 - 2023 Carport | All Rights Reserved"
+    "vdo":{
+      "title":"Premium quality and watch our hottest carport videos"
+    }
   },
   "greeting": "Hello, world!",
   "content": "This is a React website.",
