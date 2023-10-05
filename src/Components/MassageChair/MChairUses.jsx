@@ -5,7 +5,7 @@ const MChairUses = () => {
         <div className='bg-[#ffffff] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
                 <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6  mx-auto relative">
-                    <img src="https://i.ibb.co/qJm7dDg/Screenshot-8.png" alt="" className="w-5/6 absolute left-5 -top-44 flex justify-center mx-auto" />
+                    <img src="https://i.ibb.co/qJm7dDg/Screenshot-8.png" alt="" className="w-5/6 relative md:absolute md:left-5 md:-top-44 flex justify-center items-center mx-auto" />
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className="w-full md:w-4/6 mx-auto p-5">
                     <h3 className="text-2xl font-bold text-dark md:w-2/3">We make Sure that, to give you a premium service</h3>

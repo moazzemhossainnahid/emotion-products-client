@@ -15,9 +15,9 @@ const MassageChair = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <MChairTopBanner />
-            <MChairPremiumService />
-            <MChairBestMeterials />
             <MChairUses/>
+            {/* <MChairPremiumService /> */}
+            <MChairBestMeterials />
             <MChairExclusivePackages />
             {/* <MChairOverview /> */}
             <MChairVideos />

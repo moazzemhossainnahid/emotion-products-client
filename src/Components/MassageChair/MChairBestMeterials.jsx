@@ -2,7 +2,7 @@ import React from 'react';
 
 const MChairBestMeterials = () => {
     return (
-        <div className='w-full py-20'>
+        <div className='w-full pt-20'>
             <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row gap-5 items-center justify-between py-10">
                 <div className="w-full md:w-4/6 mx-auto p-3">
                     <h3 className="text-2xl md:text-3xl font-semibold capitalize pb-5">we provide you the best material and <br /> quality Products</h3>
