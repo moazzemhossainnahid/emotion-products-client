@@ -2,7 +2,7 @@ import React from 'react';
 
 const MChairPremiumService = () => {
     return (
-        <div className='bg-[#222222] py-7'>
+        <div className='w-full h-full lg:h-[80vh] bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
                 <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6 mx-auto relative">
                     <img src="https://i.ibb.co/qJm7dDg/Screenshot-8.png" alt="" className="md:absolute md:-top-44 p-16" />

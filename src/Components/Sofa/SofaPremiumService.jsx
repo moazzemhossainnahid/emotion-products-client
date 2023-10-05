@@ -2,12 +2,12 @@ import React from 'react';
 
 const SofaPremiumService = () => {
     return (
-        <div className='w-full h-full lg:h-[70vh] bg-[#222222] py-7'>
+        <div className='w-full h-full lg:h-[80vh] bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
                 <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6 mx-auto relative">
                     <img src="https://i.ibb.co/rQ5RhXv/Rectangle-77.png" alt="" className="w-full 2xl:w-4/5 mx-auto flex justify-center p-7" />
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" className="w-full md:w-4/6 mx-auto p-5">
+                <div data-aos="fade-up" data-aos-duration="1000" className="w-full md:w-4/6 mx-auto p-5 pb-10">
                     <h3 className="text-2xl font-bold text-white md:w-2/3">We make Sure that, to give you a premium Carport service</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-7">
                         <div className="space-y-2">

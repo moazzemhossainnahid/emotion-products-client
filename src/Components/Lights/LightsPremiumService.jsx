@@ -2,7 +2,7 @@ import React from 'react';
 
 const LightsPremiumService = () => {
     return (
-        <div className='w-full h-full lg:h-[70vh] bg-[#222222] py-7'>
+        <div className='w-full h-full lg:h-[80vh] bg-[#222222] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
                 <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6 mx-auto relative">
                     <img src="https://i.ibb.co/bgWfnw0/Rectangle-5.png" alt="" className="w-full 2xl:w-4/5 mx-auto flex justify-center p-7" />
