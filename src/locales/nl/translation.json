@@ -135,7 +135,7 @@
       "d4": "Als je de instellingen naar wens wilt aanpassen zonder dat je hoeft op te staan, dan is het zijpaneel iets voor jou. Hierdoor heeft u toegang tot alle functies van de stoel terwijl u in de perfecte positie blijft om te ontspannen."
     },
     "exclusivePackages": {
-      "title":"Neem een kijkje op onze exclusieve projecten.",
+      "title": "Neem een kijkje op onze exclusieve projecten.",
       "prd1": {
         "title": "Zet de eerste stap naar een comfortabeler leven en bestel nu meteen uw massagestoel!",
         "desc": "Het is tijd om de beste investering voor jezelf te maken met deze massagestoel. U kunt vandaag nog contact met ons opnemen en de massagestoel bestellen om de beste ervaring te krijgen zonder uw portemonnee te deuken!",
@@ -145,6 +145,11 @@
     "vdo": {
       "title": "Premium kwaliteit en let op onze populairste carportvideo's"
     }
+  },
+  "ourGallery": {
+    "title": "Onze galerij",
+    "sTitle": "Dit is onze galerij, kijk eens !",
+    "btn": "Bekijk alles"
   },
   "greeting": "Hallo, wereld!",
   "content": "Dit is een React-website.",

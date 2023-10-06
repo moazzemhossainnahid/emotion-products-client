@@ -146,6 +146,11 @@
       "title":"Premium quality and watch our hottest carport videos"
     }
   },
+  "ourGallery":{
+    "title":"Our Gallery",
+    "sTitle":"This is Our Gallery, Check it Out !",
+    "btn":"View All"
+  },
   "greeting": "Hello, world!",
   "content": "This is a React website.",
   "valueableSpeech": "Valuable Speech From Our CEO & Founder",
