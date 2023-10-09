@@ -114,14 +114,14 @@
     },
     "uses": {
       "title": "We make Sure that, to give you a premium service",
-      "t1": "Office",
-      "d1": "That's where my carport comes in. It may not be the most glamorous thing in the world.",
-      "t2": "Home",
-      "d2": "That's where my carport comes in. It may not be the most glamorous thing in the world.",
-      "t3": "Gym",
-      "d3": "That's where my carport comes in. It may not be the most glamorous thing in the world.",
-      "t4": "Airport",
-      "d4": "That's where my carport comes in. It may not be the most glamorous thing in the world."
+      "t1": "Unwind in Our Office Massage Chair and Boost Your Productivity",
+      "d1": "Enhance office wellness and conquer strict deadlines while rejuvenating your body with our office massage chair. Since it is designed ergonomically, you'll feel refreshed with this massage chair. Add this massage chair to your cart and discover relaxation like never before!",
+      "t2": "Elevate your Home Comfort, Relax and Rejuvenate with our Home Chair ",
+      "d2": "Transform your home into a serene haven with our cutting-edge massage chair. Featuring high-quality material and boasting an array of features, this massage chair is designed to alleviate tension and relax your body. this home massage chair right away to indulge in the epitome of comfort! ",
+      "t3": "State-of-the-Art Gym Massage Chair to Maximize Your Gym Sessions ",
+      "d3": "What's better than a massage chair that speeds up your workout recovery? With our gym massage chair, you can enhance your fitness journey without getting fatigued. Contact us to order our gym massage chair and experience ultimate relaxation! ",
+      "t4": "Wave Goodbye to Tiredness with Our Airport Massage Chair! ",
+      "d4": "Don't let the delayed flights and long layovers stress you. Better yet, de-stress with our airport massage chair and find solace amidst the chaos of flights.Get this airport massage chair and relax while you wait! "
     },
     "bestMeterials": {
       "title": "We Provide You The Best Material And Quality Products",
@@ -135,21 +135,21 @@
       "d4": "If you want to adjust the settings to your liking without having to get up, its side panel is for you. It allows you to access all of the chair's features while staying in the perfect position for relaxation."
     },
     "exclusivePackages": {
-      "title":"Take A Look On Our exclusive Projects.",
+      "title": "Take A Look On Our exclusive Projects.",
       "prd1": {
         "title": "Take the first step to a more comfortable life, and order your massage chair right now!",
         "desc": "It's time to make the best investment for yourself with this massage chair. You can contact us today and order the massage chair to get the best experience without denting your wallet!",
         "btn": "Project Details"
       }
     },
-    "vdo":{
-      "title":"Premium quality and watch our hottest carport videos"
+    "vdo": {
+      "title": "Premium quality and watch our hottest carport videos"
     }
   },
-  "ourGallery":{
-    "title":"Our Gallery",
-    "sTitle":"This is Our Gallery, Check it Out !",
-    "btn":"View All"
+  "ourGallery": {
+    "title": "Our Gallery",
+    "sTitle": "This is Our Gallery, Check it Out !",
+    "btn": "View All"
   },
   "greeting": "Hello, world!",
   "content": "This is a React website.",
