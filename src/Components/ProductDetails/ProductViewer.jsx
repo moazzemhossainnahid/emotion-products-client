@@ -12,6 +12,11 @@ import modal_img_2 from "../../assets/images/appoint-modal-img-2.png";
 import modal_img_3 from "../../assets/images/appoint-modal-img-3.png";
 import modal_img_4 from "../../assets/images/appoint-modal-img-4.png";
 
+// https://i.ibb.co/8b1XWNQ/DSC03611.jpg
+// https://i.ibb.co/0M2WPDm/DSC03635.jpg
+// https://i.ibb.co/FDtBZ8H/DSC03640.jpg
+// https://i.ibb.co/BrrN1wd/DSC03643.jpg
+
 const ProductViewer = () => {
   const {
     register,
@@ -103,34 +108,32 @@ const ProductViewer = () => {
     );
   }
 
-  const shoes1 = "https://i.ibb.co/DCf6RQn/DSC03614-1.png";
-  const shoes2 =
-    "https://www.pngkey.com/png/full/250-2507384_supply-best-massage-chair-treadmill-in-the-world.png";
-  const shoes3 =
-    "https://www.pngkey.com/png/full/870-8705361_fujimedic-kumo-massage-chair-recliner.png";
-  const shoes4 =
-    "https://bodymassagepal.com/wp-content/uploads/2021/09/1-removebg.png";
+  
+  const mc1 = "https://i.ibb.co/8b1XWNQ/DSC03611.jpg";
+  const mc2 = "https://i.ibb.co/0M2WPDm/DSC03635.jpg";
+  const mc3 = "https://i.ibb.co/FDtBZ8H/DSC03640.jpg";
+  const mc4 = "https://i.ibb.co/BrrN1wd/DSC03643.jpg";
 
   const pdImage = [
     {
       id: 1,
       position: "first",
-      img: shoes1,
+      img: mc1,
     },
     {
       id: 2,
       position: "second",
-      img: shoes2,
+      img: mc2,
     },
     {
       id: 3,
       position: "third",
-      img: shoes3,
+      img: mc3,
     },
     {
       id: 4,
       position: "fourth",
-      img: shoes4,
+      img: mc4,
     },
   ];
 
@@ -184,7 +187,7 @@ const ProductViewer = () => {
 
       <div className="w-full flex flex-col md:flex-row gap-5">
         <div className="w-full md:w-3/5">
-          <div className="">
+          <div className="pb-3">
             {pdImage?.map((p) => (
               <div
                 key={p?.id}
@@ -192,10 +195,10 @@ const ProductViewer = () => {
               >
                 {Image === p?.position && (
                   <ImageMagnifier
-                    width={450}
+                    width={550}
                     height={450}
                     src={p?.img}
-                    className="py-2 pb-3 h-80 w-4/5 mx-auto rounded"
+                    className="py-2 pb-5 h-80 w-5/6 mx-auto rounded"
                   />
                 )}
               </div>
@@ -211,7 +214,7 @@ const ProductViewer = () => {
         <div className="w-full md:w-2/5 space-y-3">
           <h2 className="text-sm font-semibold mt-1">Item no 117195</h2>
           <h5 className="text-sm text-gray-600">
-          MS-131 PLUS Massage Chair | Touch Screen
+            MS-131 PLUS Massage Chair | Touch Screen
           </h5>
           <div className="py-3">
             <h3 className="text-sm">
@@ -357,8 +360,7 @@ const ProductViewer = () => {
 
             <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
               <div className="flex items-center gap-3 tracking-widest">
-                <FaCheck className="text-primary" />
-                2 YEARS WARRANTY
+                <FaCheck className="text-primary" />2 YEARS WARRANTY
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />

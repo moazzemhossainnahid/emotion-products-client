@@ -12,10 +12,10 @@ const breakPoints = [
 
 const CarouselSlider = ({ setImage }) => {
 
-  const shoes1 = "https://i.ibb.co/DCf6RQn/DSC03614-1.png";
-  const shoes2 = "https://www.pngkey.com/png/full/250-2507384_supply-best-massage-chair-treadmill-in-the-world.png";
-  const shoes3 = "https://www.pngkey.com/png/full/870-8705361_fujimedic-kumo-massage-chair-recliner.png";
-  const shoes4 = "https://bodymassagepal.com/wp-content/uploads/2021/09/1-removebg.png";
+  const mc1 = "https://i.ibb.co/8b1XWNQ/DSC03611.jpg";
+  const mc2 = "https://i.ibb.co/0M2WPDm/DSC03635.jpg";
+  const mc3 = "https://i.ibb.co/FDtBZ8H/DSC03640.jpg";
+  const mc4 = "https://i.ibb.co/BrrN1wd/DSC03643.jpg";
 
   return (
     <>
@@ -30,7 +30,7 @@ const CarouselSlider = ({ setImage }) => {
             <img
               onClick={() => setImage("first")}
               className="h-20 w-28 bg-white cursor-pointer"
-              src={shoes1}
+              src={mc1}
               alt=""
             />
           </Item>
@@ -38,7 +38,7 @@ const CarouselSlider = ({ setImage }) => {
             <img
               onClick={() => setImage("second")}
               className="h-20 w-28 bg-white cursor-pointer"
-              src={shoes2}
+              src={mc2}
               alt=""
             />
           </Item>
@@ -46,7 +46,7 @@ const CarouselSlider = ({ setImage }) => {
             <img
               onClick={() => setImage("third")}
               className="h-20 w-28 bg-white cursor-pointer"
-              src={shoes3}
+              src={mc3}
               alt=""
             />
           </Item>
@@ -54,7 +54,7 @@ const CarouselSlider = ({ setImage }) => {
             <img
               onClick={() => setImage("fourth")}
               className="h-20 w-28 bg-white cursor-pointer"
-              src={shoes4}
+              src={mc4}
               alt=""
             />
           </Item>

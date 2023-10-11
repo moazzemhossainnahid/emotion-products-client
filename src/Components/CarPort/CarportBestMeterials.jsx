@@ -18,7 +18,7 @@ const CarportBestMeterials = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-2/5 flex justify-center mx-auto">
-                    <img src="https://i.ibb.co/RjCm5S8/Rectangle-187.png" alt="" className="p-5" />
+                    <img src="https://i.ibb.co/W0C2WY8/Screenshot-11.png" alt="" className="rounded md:h-96" />
                 </div>
             </div>
         </div>
