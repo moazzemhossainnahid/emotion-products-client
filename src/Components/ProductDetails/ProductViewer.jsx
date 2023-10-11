@@ -11,11 +11,8 @@ import modal_img_1 from "../../assets/images/appoint-modal-img-1.png";
 import modal_img_2 from "../../assets/images/appoint-modal-img-2.png";
 import modal_img_3 from "../../assets/images/appoint-modal-img-3.png";
 import modal_img_4 from "../../assets/images/appoint-modal-img-4.png";
+import { useTranslation } from "react-i18next";
 
-// https://i.ibb.co/8b1XWNQ/DSC03611.jpg
-// https://i.ibb.co/0M2WPDm/DSC03635.jpg
-// https://i.ibb.co/FDtBZ8H/DSC03640.jpg
-// https://i.ibb.co/BrrN1wd/DSC03643.jpg
 
 const ProductViewer = () => {
   const {
@@ -28,6 +25,7 @@ const ProductViewer = () => {
   const [selectProduct, setSelectProduct] = useState("carport");
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   function ImageMagnifier({
     src,
@@ -182,7 +180,7 @@ const ProductViewer = () => {
         style={{ fontFamily: "Silk Serif" }}
         className="text-2xl py-7 md:text-5xl font-semibold"
       >
-        MS-131 PLUS Massage Chair
+        {t('mchair.singleMChar.title')}
       </h3>
 
       <div className="w-full flex flex-col md:flex-row gap-5">
@@ -212,9 +210,9 @@ const ProductViewer = () => {
           <CarouselSlider setImage={setImage}></CarouselSlider>
         </div>
         <div className="w-full md:w-2/5 space-y-3">
-          <h2 className="text-sm font-semibold mt-1">Item no 117195</h2>
+          <h2 className="text-sm font-semibold mt-1">{t('mchair.singleMChar.itemNo')}</h2>
           <h5 className="text-sm text-gray-600">
-            MS-131 PLUS Massage Chair | Touch Screen
+          {t('mchair.singleMChar.itemName')}
           </h5>
           <div className="py-3">
             <h3 className="text-sm">
@@ -226,11 +224,10 @@ const ProductViewer = () => {
           <div className="space-y-5 mb-5">
             <div className="">
               <p className="text-sm">
-                Tastefully blending contemporary design with a touch of
-                industrial flair, the Monticello Lantern is an updated classic.
+              {t('mchair.singleMChar.shortDesc')}
               </p>
               <h4 className="text-xs underline cursor-pointer pt-2 text-gray-500">
-                Read More
+              {t('mchair.singleMChar.rdm')}
               </h4>
             </div>
             {/* <div className="flex gap-3">
@@ -340,39 +337,39 @@ const ProductViewer = () => {
             ) : (
               <div className="bg-gray-100 rounded text-center p-5">
                 <h3 className="text-sm">
-                  EICHHOLTZ IS A BUSINESS TO BUSINESS WHOLESALE STORE, <br />{" "}
+                {t('mchair.singleMChar.wholStore')} <br />{" "}
                   <Link className="underline" to="/signin">
-                    PLEASE LOGIN
+                  {t('mchair.singleMChar.pLogin')}
                   </Link>{" "}
-                  TO SEE PRICES AND PLACE AN ORDER.
+                  {t('mchair.singleMChar.tcpOrder')}
                 </h3>
                 <h2
                   style={{ fontFamily: "Silk Serif" }}
                   className="text-xl md:text-2xl font-extralight py-2 font-serif"
                 >
-                  NOT A BUSINESS CUSTOMER?
+                  {t('mchair.singleMChar.bsCus')}
                 </h2>
                 <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">
-                  FIND THE NEAREST EICHHOLTZ DEALER →
+                {t('mchair.singleMChar.findDealer')} →
                 </h2>
               </div>
             )}
 
             <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
               <div className="flex items-center gap-3 tracking-widest">
-                <FaCheck className="text-primary" />2 YEARS WARRANTY
+                <FaCheck className="text-primary" />{t('mchair.singleMChar.addInfo.t1')}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                INNOVATIVE DESIGN
+                {t('mchair.singleMChar.addInfo.t2')}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                WORLDWIDE SHIPMENT
+                {t('mchair.singleMChar.addInfo.t3')}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                PERSONAL ADVICE IN OUR SHOWROOM
+                {t('mchair.singleMChar.addInfo.t4')}
               </div>
             </div>
           </div>

@@ -30,14 +30,14 @@ const MChairUses = () => {
                         </div>
                         <div className="space-y-2">
                             <div className="w-12 h-12 bg-[#22363C] p-3 rounded-full">
-                                <img src="https://i.ibb.co/92fkF9g/Vector-2.png" alt="" className="w-full h-full flex justify-center items-center" />
+                                <img src="https://i.ibb.co/xznr85F/69840.png" alt="" className="w-full h-full flex justify-center items-center" />
                             </div>
                             <h3 className="text-xl text-dark font-bold">{t('mchair.uses.t3')}</h3>
                             <p className="text-gray-500 text-sm md:pr-10">{t('mchair.uses.d3')}</p>
                         </div>
                         <div className="space-y-2">
                             <div className="w-12 h-12 bg-[#22363C] p-3 rounded-full">
-                                <img src="https://i.ibb.co/fqS9XLf/Vector-3.png" alt="" className="w-full h-full flex justify-center items-center" />
+                                <img src="https://i.ibb.co/BVY5Q54/4327360.png" alt="" className="w-full h-full flex justify-center items-center" />
                             </div>
                             <h3 className="text-xl text-dark font-bold">{t('mchair.uses.t4')}</h3>
                             <p className="text-gray-500 text-sm md:pr-10">{t('mchair.uses.d4')}</p>

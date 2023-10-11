@@ -1,38 +1,41 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const MoreDetails = () => {
+  const {t} = useTranslation();
+
   const data = [
     {
-      property: "Airbag",
-      value: "Yes",
+      property: t('mchair.singleMChar.specifications.key1'),
+      value: t('mchair.singleMChar.specifications.val1'),
     },
     {
-      property: "Footrest ",
-      value: "Yes",
+      property: t('mchair.singleMChar.specifications.key2'),
+      value: t('mchair.singleMChar.specifications.val2'),
     },
     {
-      property: "Remote control",
-      value: "Yes",
+      property: t('mchair.singleMChar.specifications.key3'),
+      value: t('mchair.singleMChar.specifications.val3'),
     },
     {
-      property: "Bluetooth speakers ",
-      value: "Touch screen ",
+      property: t('mchair.singleMChar.specifications.key4'),
+      value: t('mchair.singleMChar.specifications.val4'),
     },
     {
-      property: "Weight massage chair",
-      value: "Main Body: N.W.: 128 Kg, G.W.: 146 K",
+      property: t('mchair.singleMChar.specifications.key5'),
+      value: t('mchair.singleMChar.specifications.val5'),
     },
     {
-      property: "Foot",
-      value: "N.W.: 25 Kg, G.W.: 28 Kg ",
+      property: t('mchair.singleMChar.specifications.key6'),
+      value: t('mchair.singleMChar.specifications.val6'),
     },
     {
-      property: "Dimensions  (L×H×W)",
-      value: "1460×846×1245 mm",
+      property: t('mchair.singleMChar.specifications.key7'),
+      value: t('mchair.singleMChar.specifications.val7'),
     },
     {
-      property: "Power Supply and wattage",
-      value: "110-240V~ and 200 W",
+      property: t('mchair.singleMChar.specifications.key8'),
+      value: t('mchair.singleMChar.specifications.val8'),
     },
   ];
   return (
@@ -42,7 +45,7 @@ const MoreDetails = () => {
           style={{ fontFamily: "Silk Serif" }}
           className="text-2xl uppercase font-extralight font-serif pb-3"
         >
-          SPECIFICATIONS
+          {t('mchair.singleMChar.specifications.title')}
         </h3>
         <div className="overflow-x-auto w-full">
           <table className="table-xs table-zebra w-full">
@@ -64,26 +67,16 @@ const MoreDetails = () => {
           style={{ fontFamily: "Silk Serif" }}
           className="text-2xl uppercase font-extralight font-serif pb-3"
         >
-          DESCRIPTION
+          {t('mchair.singleMChar.descriptions.title')}
         </h3>
         <p className="text-sm pt-3">
-          Have you been waiting for the day when you get the ultimate relaxation
-          after a long tiring day of work? With MS-131 PLUS Massage Chair, we
-          have got you covered! It helps relax your tensed muscles and reduce
-          fatigue.
+        {t('mchair.singleMChar.descriptions.desc1')}
         </p>
         <p className="text-sm pt-3">
-          This massage chair is packed with tons of advanced features. It comes
-          with an adjustable footrest and leg rest that allows you to be in a
-          relaxing position. Designed with high-quality materials and entails
-          the latest technology to offer you optimal comfort. You can listen to
-          your favorite music or podcasts while being in a perfect position of
-          relaxation. It offers a perfect combo of comfort and design.
+        {t('mchair.singleMChar.descriptions.desc2')}
         </p>
         <p className="text-sm pt-3">
-          Featuring a touchscreen remote control that makes everything intuitive
-          and simple. You can choose any massage mode, connect smartphones via
-          Bluetooth and access all functions with just a single touch.
+        {t('mchair.singleMChar.descriptions.desc3')}
         </p>
       </div>
     </div>
