@@ -618,21 +618,21 @@ const ProductViewer = () => {
       {/* new design */}
 
       <div className="modal z-50 h-full w-full">
-        <div className="modal-box max-w-6xl flex bg-[#2B2B2B] relative rounded-none p-0 ">
+        <div className="modal-box max-w-6xl h-fit md:overflow-hidden flex bg-[#2B2B2B] relative rounded-none p-0 ">
           <label
             htmlFor="my-modal-3"
             className="btn btn-sm btn-circle absolute right-2 top-2 bg-[#353535]"
           >
             ✕
           </label>
-          <div className="bg-[#00ABE1] w-full hidden md:flex h-full md:w-1/2 p-2 md:p-16 text-white flex-col justify-center gap-8">
+          <div className="bg-[#00ABE1] w-full hidden md:flex h-full md:w-1/2 p-2 md:p-24 text-white flex-col justify-center gap-8">
             <h1 className="text-3xl">Make an appointment</h1>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-4">
                 <img src={modal_img_1} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="text-sm">
+                  <p className="text-xs">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -642,7 +642,7 @@ const ProductViewer = () => {
                 <img src={modal_img_2} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="text-sm">
+                  <p className="text-xs">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -652,7 +652,7 @@ const ProductViewer = () => {
                 <img src={modal_img_3} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="text-sm">
+                  <p className="text-xs">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -662,7 +662,7 @@ const ProductViewer = () => {
                 <img src={modal_img_4} className="w-16" alt="modal_img_1" />
                 <div>
                   <h5 className="text-xl pb-2">Our Exclusive Furniture</h5>
-                  <p className="text-sm">
+                  <p className="text-xs">
                     That's Where My Carpet Comes I. It May Not Be the Most
                     Glamorous Things In.
                   </p>
@@ -675,9 +675,9 @@ const ProductViewer = () => {
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 action="#"
-                className="flex flex-col "
+                className="flex flex-col space-y-2"
               >
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label
                     htmlFor="name"
                     className="text-sm font-semibold  text-start"
@@ -696,7 +696,7 @@ const ProductViewer = () => {
                     })}
                   />
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label
                     htmlFor="phone"
                     className="text-sm font-semibold text-start"
@@ -715,7 +715,7 @@ const ProductViewer = () => {
                     })}
                   />
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   <label
                     htmlFor="email"
                     className="text-sm font-semibold text-start"
@@ -759,7 +759,7 @@ const ProductViewer = () => {
                     <option value="lights">Lights</option>
                   </select>
                 </div>
-                <div className="flex flex-col space-y-1 mt-3">
+                <div className="flex flex-col space-y-2 mt-3">
                   <label
                     htmlFor="address"
                     className="text-sm font-semibold text-start"
