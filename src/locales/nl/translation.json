@@ -144,6 +144,43 @@
     },
     "vdo": {
       "title": "Premium kwaliteit en let op onze populairste carportvideo's"
+    },
+    "singleMChar": {
+      "title": "MS-131 PLUS massagestoel",
+      "itemNo": "Artikel nr. 117195",
+      "itemName": "MS-131 PLUS Massagestoel | Touch screen",
+      "shortDesc": "De Monticello Lantern combineert op smaakvolle wijze modern design met een vleugje industriële flair en is een vernieuwde klassieker.",
+      "addInfo": {
+        "t1": "2 JAAR GARANTIE",
+        "t2": "INNOVATIEF ONTWERP",
+        "t3": "WERELDWIJDE VERZENDING",
+        "t4": "PERSOONLIJK ADVIES IN ONZE SHOWROOM"
+      },
+      "specifications": {
+        "title": "SPECIFICATIES",
+        "key1": "Airbag",
+        "val1": "Ja",
+        "key2": "Voetensteun",
+        "val2": "Ja",
+        "key3": "Afstandsbediening",
+        "val3": "Ja",
+        "key4": "Bluetooth-luidsprekers",
+        "val4": "Touch screen",
+        "key5": "Gewicht massagestoel",
+        "val5": "Hoofdgedeelte: N.W.: 128 kg, G.W.: 146 K",
+        "key6": "Voet",
+        "val6": "N.W.: 25 Kg, G.W.: 28 Kg",
+        "key7": "Afmetingen (L×H×B)",
+        "val7": "1460×846×1245 mm",
+        "key8": "Voeding en wattage",
+        "val8": "110-240V~ en 200 W"
+      },
+      "descriptions": {
+        "title": "BESCHRIJVING",
+        "desc1": "Heeft u gewacht op de dag waarop u de ultieme ontspanning krijgt na een lange, vermoeiende werkdag? Met de MS-131 PLUS massagestoel hebben wij de oplossing voor u! Het helpt uw gespannen spieren te ontspannen en vermoeidheid te verminderen.",
+        "desc2": "Deze massagestoel zit boordevol geavanceerde functies. Hij wordt geleverd met een verstelbare voeten- en beensteun, zodat u in een ontspannen houding kunt zitten. Ontworpen met hoogwaardige materialen en voorzien van de nieuwste technologie om u optimaal comfort te bieden. U kunt naar uw favoriete muziek of podcasts luisteren terwijl u zich in een perfecte ontspanningspositie bevindt. Het biedt een perfecte combinatie van comfort en design.",
+        "desc3": "Met een afstandsbediening met touchscreen die alles intuïtief en eenvoudig maakt. U kunt elke massagemodus kiezen, smartphones aansluiten via Bluetooth en met slechts één aanraking toegang krijgen tot alle functies."
+      }
     }
   },
   "ourGallery": {

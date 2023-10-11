@@ -144,6 +144,43 @@
     },
     "vdo": {
       "title": "Premium quality and watch our hottest carport videos"
+    },
+    "singleMChar": {
+      "title": "MS-131 PLUS Massage Chair",
+      "itemNo": "Item no 117195",
+      "itemName": "MS-131 PLUS Massage Chair | Touch Screen",
+      "shortDesc": "Tastefully blending contemporary design with a touch of industrial flair, the Monticello Lantern is an updated classic.",
+      "addInfo": {
+        "t1": "2 YEARS WARRANTY",
+        "t2": "INNOVATIVE DESIGN",
+        "t3": "WORLDWIDE SHIPMENT",
+        "t4": "PERSONAL ADVICE IN OUR SHOWROOM"
+      },
+      "specifications": {
+        "title": "SPECIFICATIONS",
+        "key1": "Airbag",
+        "val1": "Yes",
+        "key2": "Footrest",
+        "val2": "Yes",
+        "key3": "Remote control",
+        "val3": "Yes",
+        "key4": "Bluetooth speakers",
+        "val4": "Touch screen",
+        "key5": "Weight massage chair",
+        "val5": "Main Body: N.W.: 128 Kg, G.W.: 146 K",
+        "key6": "Foot",
+        "val6": "N.W.: 25 Kg, G.W.: 28 Kg",
+        "key7": "Dimensions (L×H×W)",
+        "val7": "1460×846×1245 mm",
+        "key8": "Power Supply and wattage",
+        "val8": "110-240V~ and 200 W"
+      },
+      "descriptions": {
+        "title": "DESCRIPTION",
+        "desc1": "Have you been waiting for the day when you get the ultimate relaxation after a long tiring day of work? With MS-131 PLUS Massage Chair, we have got you covered! It helps relax your tensed muscles and reduce fatigue.",
+        "desc2": "This massage chair is packed with tons of advanced features. It comes with an adjustable footrest and leg rest that allows you to be in a relaxing position. Designed with high-quality materials and entails the latest technology to offer you optimal comfort. You can listen to your favorite music or podcasts while being in a perfect position of relaxation. It offers a perfect combo of comfort and design.",
+        "desc3": "Featuring a touchscreen remote control that makes everything intuitive and simple. You can choose any massage mode, connect smartphones via Bluetooth and access all functions with just a single touch."
+      }
     }
   },
   "ourGallery": {
