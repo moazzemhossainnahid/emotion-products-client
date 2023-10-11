@@ -1,84 +1,93 @@
-import React from 'react';
+import React from "react";
 
 const MoreDetails = () => {
-    const data = [
-        {
-            "property": "Fabric composition",
-            "value": "20% cotton | 80% polyester"
-        },
-        {
-            "property": "Lamp holder",
-            "value": "E14"
-        },
-        {
-            "property": "Lamp holder qty	",
-            "value": "35"
-        },
-        {
-            "property": "Light bulbs included",
-            "value": "Not included"
-        },
-        {
-            "property": "Max wattage",
-            "value": "40 Watt"
-        },
-        {
-            "property": "Max voltage",
-            "value": "220 - 240 Volt"
-        },
-        {
-            "property": "Plug type",
-            "value": "Not applicable"
-        },
-        {
-            "property": "Hanging Method",
-            "value": "Chain"
-        },
-        {
-            "property": "Length hanging method in cm",
-            "value": "150"
-        },
-        {
-            "property": "Length hanging method in inch",
-            "value": "59,06"
-        },
-        {
-            "property": "Indoor/outdoor",
-            "value": "Indoor use/dry locations only"
-        },
-        {
-            "property": "Shade dimensions",
-            "value": "ø 12.5 x H. 17 cm"
-        },
-    ]
-    return (
-        <div className='w-full flex flex-col md:flex-row gap-5 justify-between pt-7 pb-10 px-5'>
-            <div className="w-full md:w-3/6">
-                <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl uppercase font-extralight font-serif pb-3">SPECIFICATIONS</h3>
-                <div className="overflow-x-auto w-full">
-                    <table className="table-xs table-zebra w-full">
-                        {/* head */}
-                        <tbody className='w-full'>
-                            {/* row 1 */}
-                            {
-                                data?.map(d => (
-                                    <tr key={d?.property} className='text-sm py-2'>
-                                        <td className='font-semibold p-2'>{d?.property}</td>
-                                        <td>{d?.value}</td>
-                                    </tr>
-                                ))
-                            }
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div className="w-full md:w-3/6">
-                <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl uppercase font-extralight font-serif pb-3">DESCRIPTION</h3>
-                <p className="text-sm pt-3">Greet guests with a warm glow while also grabbing their glances with the exquisite Saint Roch Chandelier XXL. Crafted with a lightly brushed brass finish, the chandelier's frame features a round silhouette giving way to a six-tier shade made of cascading handmade smoked glass. Elevate your entryway aesthetic the right way with the Saint Roch.</p>
-            </div>
+  const data = [
+    {
+      property: "Airbag",
+      value: "Yes",
+    },
+    {
+      property: "Footrest ",
+      value: "Yes",
+    },
+    {
+      property: "Remote control",
+      value: "Yes",
+    },
+    {
+      property: "Bluetooth speakers ",
+      value: "Touch screen ",
+    },
+    {
+      property: "Weight massage chair",
+      value: "Main Body: N.W.: 128 Kg, G.W.: 146 K",
+    },
+    {
+      property: "Foot",
+      value: "N.W.: 25 Kg, G.W.: 28 Kg ",
+    },
+    {
+      property: "Dimensions  (L×H×W)",
+      value: "1460×846×1245 mm",
+    },
+    {
+      property: "Power Supply and wattage",
+      value: "110-240V~ and 200 W",
+    },
+  ];
+  return (
+    <div className="w-full flex flex-col md:flex-row gap-5 justify-between pt-7 pb-10 px-5">
+      <div className="w-full md:w-3/6">
+        <h3
+          style={{ fontFamily: "Silk Serif" }}
+          className="text-2xl uppercase font-extralight font-serif pb-3"
+        >
+          SPECIFICATIONS
+        </h3>
+        <div className="overflow-x-auto w-full">
+          <table className="table-xs table-zebra w-full">
+            {/* head */}
+            <tbody className="w-full">
+              {/* row 1 */}
+              {data?.map((d) => (
+                <tr key={d?.property} className="text-sm py-2">
+                  <td className="font-semibold p-2">{d?.property}</td>
+                  <td>{d?.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-    );
+      </div>
+      <div className="w-full md:w-3/6">
+        <h3
+          style={{ fontFamily: "Silk Serif" }}
+          className="text-2xl uppercase font-extralight font-serif pb-3"
+        >
+          DESCRIPTION
+        </h3>
+        <p className="text-sm pt-3">
+          Have you been waiting for the day when you get the ultimate relaxation
+          after a long tiring day of work? With MS-131 PLUS Massage Chair, we
+          have got you covered! It helps relax your tensed muscles and reduce
+          fatigue.
+        </p>
+        <p className="text-sm pt-3">
+          This massage chair is packed with tons of advanced features. It comes
+          with an adjustable footrest and leg rest that allows you to be in a
+          relaxing position. Designed with high-quality materials and entails
+          the latest technology to offer you optimal comfort. You can listen to
+          your favorite music or podcasts while being in a perfect position of
+          relaxation. It offers a perfect combo of comfort and design.
+        </p>
+        <p className="text-sm pt-3">
+          Featuring a touchscreen remote control that makes everything intuitive
+          and simple. You can choose any massage mode, connect smartphones via
+          Bluetooth and access all functions with just a single touch.
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default MoreDetails;

@@ -179,7 +179,7 @@ const ProductViewer = () => {
         style={{ fontFamily: "Silk Serif" }}
         className="text-2xl py-7 md:text-5xl font-semibold"
       >
-        Massage Chair brushed finish
+        MS-131 PLUS Massage Chair
       </h3>
 
       <div className="w-full flex flex-col md:flex-row gap-5">
@@ -211,14 +211,14 @@ const ProductViewer = () => {
         <div className="w-full md:w-2/5 space-y-3">
           <h2 className="text-sm font-semibold mt-1">Item no 117195</h2>
           <h5 className="text-sm text-gray-600">
-            Massage Chair brushed finish | smoke glass
+          MS-131 PLUS Massage Chair | Touch Screen
           </h5>
           <div className="py-3">
             <h3 className="text-sm">
               {" "}
               <span className="font-bold">CM</span> | INCH{" "}
             </h3>
-            <h5 className="text-xs font-semibold">ø 116 x H. 153 cm</h5>
+            <h5 className="text-xs font-semibold">1460×846×1245 mm</h5>
           </div>
           <div className="space-y-5 mb-5">
             <div className="">
@@ -301,17 +301,17 @@ const ProductViewer = () => {
             {user ? (
               <div className="py-7 w-full">
                 <h3 className="text-md flex gap-2 items-center font-semibold">
-                  <FaEuroSign /> <span className="">4,375.00</span>
+                  <FaEuroSign /> <span className="">6,500.00</span>
                 </h3>
                 <div className="w-full text-left pt-5 flex flex-col md:flex-row justify-start items-end gap-5">
-                  <div className="flex flex-col font-semibold gap-1">
+                  {/* <div className="flex flex-col font-semibold gap-1">
                     Qty
                     <select className="py-2 px-1 border bg-white border-gray-200 mr-6 focus:outline-none">
                       <option>01</option>
                       <option>02</option>
                       <option>03</option>
                     </select>
-                  </div>
+                  </div> */}
                   <div className="flex flex-col md:flex-row  gap-3 items-end">
                     <button
                       onClick={() => navigate("/cart")}
@@ -358,7 +358,11 @@ const ProductViewer = () => {
             <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                HANDCRAFTED BY SKILLED ARTISANS
+                2 YEARS WARRANTY
+              </div>
+              <div className="flex items-center gap-3 tracking-widest">
+                <FaCheck className="text-primary" />
+                INNOVATIVE DESIGN
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
