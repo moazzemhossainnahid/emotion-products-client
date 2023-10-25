@@ -301,7 +301,7 @@ const ProductViewer = () => {
             {user ? (
               <div className="py-7 w-full">
                 <h3 className="text-md flex gap-2 items-center font-semibold">
-                  <FaEuroSign /> <span className="">6,500.00</span>
+                  <FaEuroSign /> <span className="">6,000.00</span>
                 </h3>
                 <div className="w-full text-left pt-5 flex flex-col md:flex-row justify-start items-end gap-5">
                   {/* <div className="flex flex-col font-semibold gap-1">
