@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaCross, FaPlus } from 'react-icons/fa';
+import { GiCancel } from 'react-icons/gi';
 import ReactPlayer from 'react-player';
 import { ScrollRotate } from 'react-scroll-rotate';
 
@@ -47,21 +49,23 @@ const CarPortVideos = () => {
                             </div>
                             <input type="checkbox" id="my-modal-5" className="modal-toggle" />
                             <div className="modal">
-                                <div className="modal-box max-w-3xl rounded-lg bg-base-300 p-4">
-                                    <iframe
+                                <div className="modal-box max-w-3xl rounded-lg bg-base-300">
+                                    <div className="modal-action mb-3 -mt-3">
+                                        <label htmlFor="my-modal-5" className="btn btn-dark btn-sm text-white">
+                                            <GiCancel className='text-2xl'/>
+                                        </label>
+
+                                    </div>
+                                    {/* <iframe
                                         className="mx-auto w-full lg:h-96 h-48 md:h-96 rounded-lg"
-                                        src="https://www.youtube.com/embed/TxbE79-1OSI"
+                                        src="https://www.youtube.com/embed/AA6HHocIl4w?si=rlWbGIng5wiEpSuj"
                                         title="YouTube video player"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                    ></iframe>
-                                    <div className="modal-action mt-3">
-                                        <label htmlFor="my-modal-5" className="btn btn-primary btn-sm text-white">
-                                            Close
-                                        </label>
+                                    ></iframe> */}
+                                    <iframe title="vimeo-player" className="mx-auto w-full lg:h-96 h-48 md:h-96 rounded-lg" src="https://player.vimeo.com/video/880421988?h=5a1dbacb75?autoplay=1&loop=1&background=0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>

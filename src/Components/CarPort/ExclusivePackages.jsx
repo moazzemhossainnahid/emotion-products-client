@@ -38,7 +38,7 @@ const ExclusivePackages = () => {
 
                 <div data-aos="fade-left" data-aos-duration="1000" className="flex flex-col md:flex-row-reverse justify-between py-10 items-center w-full gap-5">
                     <div className="w-full md:w-3/6 mx-auto relative">
-                        <img src="https://i.ibb.co/k3Wc87Y/Rectangle-114.png" alt="" className="relative shadow-lg w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
+                        <img src="https://i.ibb.co/PZp84FJ/Screenshot-10.png" alt="" className="relative shadow-xl w-full h-64 md:h-80 lg:h-96 rounded-2xl object-cover z-10" />
                         <img src="https://i.ibb.co/n1JZQLF/dotted-circle-02-2.png" alt="" className="absolute z-0 p-5 -right-20 -bottom-20" />
                     </div>
                     <div className="w-full md:w-3/6 mx-auto p-5 space-y-3">
@@ -48,7 +48,7 @@ const ExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
+                            <button onClick={() => navigate(`/productdetails/2`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ const ExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
+                            <button onClick={() => navigate(`/productdetails/3`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const ExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
+                            <button onClick={() => navigate(`/productdetails/4`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300' /></button>
                         </div>
                     </div>
                 </div>
