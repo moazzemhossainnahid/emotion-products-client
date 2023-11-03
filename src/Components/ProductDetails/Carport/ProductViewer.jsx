@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import CarouselSlider from "../Others/CarouselSlide/CarouselSlider";
+import CarouselSlider from "../../Others/CarouselSlide/CarouselSlider";
 import { FaCartPlus, FaCheck, FaEuroSign, FaStickyNote } from "react-icons/fa";
 import { useAuthState } from "react-firebase-hooks/auth";
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../../firebase.init";
+import auth from "../../../../firebase.init";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import modal_img_1 from "../../assets/images/appoint-modal-img-1.png";
-import modal_img_2 from "../../assets/images/appoint-modal-img-2.png";
-import modal_img_3 from "../../assets/images/appoint-modal-img-3.png";
-import modal_img_4 from "../../assets/images/appoint-modal-img-4.png";
+import modal_img_1 from "../../../assets/images/appoint-modal-img-1.png";
+import modal_img_2 from "../../../assets/images/appoint-modal-img-2.png";
+import modal_img_3 from "../../../assets/images/appoint-modal-img-3.png";
+import modal_img_4 from "../../../assets/images/appoint-modal-img-4.png";
 import { useTranslation } from "react-i18next";
 
 
@@ -301,7 +301,7 @@ const ProductViewer = () => {
             {user ? (
               <div className="py-7 w-full">
                 <h3 className="text-md flex gap-2 items-center font-semibold">
-                  <FaEuroSign /> <span className="">6,000.00</span>
+                  <FaEuroSign /> <span className="">7,700.00</span>
                 </h3>
                 <div className="w-full text-left pt-5 flex flex-col md:flex-row justify-start items-end gap-5">
                   {/* <div className="flex flex-col font-semibold gap-1">
@@ -314,7 +314,7 @@ const ProductViewer = () => {
                   </div> */}
                   <div className="flex flex-col md:flex-row  gap-3 items-end">
                     <button
-                      onClick={() => navigate("/cart")}
+                      onClick={() => navigate(`/checkout/${id}`)}
                       className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">

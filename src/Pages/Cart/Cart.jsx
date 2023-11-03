@@ -3,8 +3,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaEuroSign } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import axios from 'axios';
-import { useState } from 'react';
 import PayButton from '../../Components/Others/PayButton/PayButton';
 
 const Cart = () => {
@@ -13,24 +11,24 @@ const Cart = () => {
     const [user] = useAuthState(auth);
 
     const item = [
-        {
-            id: 123,
-            name: "Exclusive Carport",
-            description: "this is carport in california USA",
-            category: "carport",
-            badge: "top",
-            image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-            price: 6895,
-        },
         // {
-        //     id: 456,
-        //     name: "Exclusive Massage Chair",
-        //     description: "this is Massage Chair in california USA",
-        //     category: "massagechair",
+        //     id: 123,
+        //     name: "Exclusive Carport",
+        //     description: "this is carport in california USA",
+        //     category: "carport",
         //     badge: "top",
         //     image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-        //     price: 5570,
-        // }
+        //     price: 6000,
+        // },
+        {
+            id: 456,
+            name: "Exclusive Massage Chair",
+            description: "this is Massage Chair in california USA",
+            category: "massagechair",
+            badge: "top",
+            image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
+            price: 6000,
+        }
     ]
 
     return (
@@ -67,14 +65,14 @@ const Cart = () => {
                                         <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">North wolf Carport</p>
 
                                         <div className="flex items-center justify-between pt-5 pr-6">
-                                            {/* <div className="flex gap-1 items-center">
+                                            <div className="flex gap-1 items-center">
                                                 <h3 className="font-semibold">Qty</h3>
                                                 <select className="py-2 px-1 bg-white mr-6 focus:outline-none">
                                                     <option>01</option>
                                                     <option>02</option>
                                                     <option>03</option>
                                                 </select>
-                                            </div> */}
+                                            </div>
                                             <p className="text-base flex gap-2 items-center font-black leading-none text-gray-800"><FaEuroSign /> <span className="">{item[0]?.price}.00</span></p>
                                         </div>
                                     </div>

@@ -27,7 +27,7 @@ const SofaExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/furniture/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const SofaExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/furniture/2`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ const SofaExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/furniture/3`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const SofaExclusivePackages = () => {
                             <p className="">Hey there folks, thanks for taking the time to come out and listen to me today. I just want to take a moment to talk about my little slice of heaven. I just want to take a moment to talk my slice of heaven - my carport.</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/furniture/4`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">Project Details <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>

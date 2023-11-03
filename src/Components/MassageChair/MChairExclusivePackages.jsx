@@ -7,6 +7,15 @@ const MChairExclusivePackages = () => {
     const navigate = useNavigate();
     const {t} = useTranslation();
 
+
+    const mchair=[
+        {
+            id:"ms-131plus",
+            title:"MS-131 PLUS Massage Chair",
+            
+        }
+    ]
+
     return (
         <div className='w-full md:w-5/6 mx-auto bg-white py-10 p-5'>
             <div className="w-full">
@@ -30,7 +39,7 @@ const MChairExclusivePackages = () => {
                             <p className="">{t('mchair.exclusivePackages.prd1.desc')}</p>
                         </div>
                         <div className="pt-2">
-                            <button onClick={() => navigate(`/productdetails/1`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">{t('mchair.exclusivePackages.prd1.btn')} <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
+                            <button onClick={() => navigate(`/productdetails/massagechair/ms-131plus`)} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">{t('mchair.exclusivePackages.prd1.btn')} <FaArrowRight className='pl-3 text-2xl group-hover:translate-x-3 duration-300'/></button>
                         </div>
                     </div>
                 </div>

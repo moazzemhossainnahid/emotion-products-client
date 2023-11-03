@@ -12,7 +12,7 @@ const CardPayment = () => {
                     <img src="https://i.ibb.co/8zS5W9j/Avatar-PNG-Picture.png" alt="user-img" className='h-20 w-20 object-cover rounded-full my-4 border-2 border-white'/>
                     <h2 className='text-xl from-accent-focus mb-4'>Customer Name</h2>
                 </div>
-                <div className='Card-info bg-white md:py-12 py-6 md:px-8 px-4   md:rounded-l-md rounded-b-md flex flex-col items-center'>
+                <div className='Card-info bg-white md:py-12 py-6 md:px-8 px-4 md:rounded-l-md rounded-b-md flex flex-col items-center'>
                     <h3 className='text-xl from-accent-content text-gray-600 my-4'>Enter The Card Number</h3>
                     <div className='md:w-2/3 mx-auto w-full'>
                         <Elements stripe={stripePromise}>
