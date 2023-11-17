@@ -7,9 +7,12 @@ const PayButton = ({ checkoutItems }) => {
     const [user] = useAuthState(auth);
     console.log(checkoutItems);
     const handleCheckout = () => {
+
         axios.post(`https://emotion-products-server-iii.vercel.app/api/v1/stripe/create-checkout-session`, {
             checkoutItems,
             user
+        }, {
+            headers: { 'Content-Type': 'application/json' }
         }).then(res => {
             if (res.data.url) {
                 window.location.href = res.data.url
@@ -18,7 +21,7 @@ const PayButton = ({ checkoutItems }) => {
     }
     return (
         <>
-        <button onClick={() => handleCheckout()} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Check Out</button>
+            <button onClick={() => handleCheckout()} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Check Out</button>
         </>
     );
 };
