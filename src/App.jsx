@@ -69,7 +69,7 @@ function App() {
             <Route path='/productdetails/massagechair/:id' element={<ProductDetailsMC />} />
             <Route path='/productdetails/furniture/:id' element={<ProductDetailsFurniture />} />
             <Route path='/productdetails/light/:id' element={<ProductDetailsLights />} />
-            <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
+            <Route path='/cart/:id' element={<RequireAuth><Cart /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
             <Route path="/checkout-success" element={<RequireAuth><CheckoutSuccess /></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />

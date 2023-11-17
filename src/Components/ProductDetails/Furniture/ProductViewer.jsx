@@ -314,7 +314,7 @@ const ProductViewer = () => {
                   </div> */}
                   <div className="flex flex-col md:flex-row  gap-3 items-end">
                     <button
-                      onClick={() => navigate(`/checkout/${id}`)}
+                      onClick={() => navigate(`/cart/1`)}
                       className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">

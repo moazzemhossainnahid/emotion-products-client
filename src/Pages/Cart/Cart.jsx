@@ -21,7 +21,7 @@ const Cart = () => {
         //     price: 6000,
         // },
         {
-            id: 456,
+            id: 1,
             name: "Exclusive Massage Chair",
             description: "this is Massage Chair in california USA",
             category: "massagechair",
@@ -53,7 +53,7 @@ const Cart = () => {
 
                                     <div className="w-full flex justify-end pt-3">
                                         <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
-                                            <p className=" flex tracking-widest gap-2">View and Edit Order Request</p>
+                                            <p onClick={() => navigate(-1)} className="flex tracking-widest gap-2">View and Edit Order Request</p>
                                         </button>
                                     </div>
                                 </div>
