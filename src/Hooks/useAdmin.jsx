@@ -4,27 +4,27 @@ import auth from '../../firebase.init';
 
 const UseAdmin = () => {
     const [user] = useAuthState(auth);
-    const [admin , setAdmin] = useState(false);
-    const [adminLoading , setAdminLoading] = useState(true);
+    const [admin, setAdmin] = useState(false);
+    const [adminLoading, setAdminLoading] = useState(true);
 
-//   console.log(admin);
-    useEffect( () => {
-        const email = user?.email; 
+    //   console.log(admin);
+    useEffect(() => {
+        const email = user?.email;
         fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/isAdmin/${email}`, {
             method: 'GET',
             headers: {
-                'content-type' : 'application/json',
-                authorization : `Bearer ${localStorage.getItem('accessToken')}`
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            setAdmin(data?.role === true);
-            setAdminLoading(false);
-        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setAdmin(data?.role === true);
+                setAdminLoading(false);
+            })
 
-    },[user]);
+    }, [user]);
 
 
     return [admin, adminLoading];

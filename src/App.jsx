@@ -89,7 +89,7 @@ function App() {
             </Route>
           </Routes>
         </div>
-        {(window.location.pathname !== '/cart' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders' && window.location.pathname !== '/cpanel/mappointments') && <Footer />}
+        {(window.location.pathname !== '/cart/:id' && window.location.pathname !== '/cpanel' && window.location.pathname !== '/cpanel/addashboard' && window.location.pathname !== '/cpanel/musers' && window.location.pathname !== '/cpanel/mproducts' && window.location.pathname !== '/cpanel/morders' && window.location.pathname !== '/cpanel/mappointments') && <Footer />}
         <ToastContainer />
       </div>
     </>

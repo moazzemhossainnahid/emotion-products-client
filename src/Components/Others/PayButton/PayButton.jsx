@@ -10,9 +10,13 @@ const PayButton = ({ checkoutItems }) => {
 
         axios.post(`https://emotion-products-server-iii.vercel.app/api/v1/stripe/create-checkout-session`, {
             checkoutItems,
-            user
+            user,
         }, {
-            headers: { 'Content-Type': 'application/json' }
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         }).then(res => {
             if (res.data.url) {
                 window.location.href = res.data.url

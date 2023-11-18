@@ -8,7 +8,13 @@ const useProfile = () => {
     const email = user?.email;
 
     useEffect(() => {
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/${email}`)
+        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/${email}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setProfile(data))
     }, [email]);
