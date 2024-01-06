@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const MoreDetails = () => {
+const MoreDetails = ({chair}) => {
   const {t} = useTranslation();
+
 
   const data = [
     {
@@ -52,7 +53,7 @@ const MoreDetails = () => {
             {/* head */}
             <tbody className="w-full">
               {/* row 1 */}
-              {data?.map((d) => (
+              {chair?.specifications?.map((d) => (
                 <tr key={d?.property} className="text-sm py-2">
                   <td className="font-semibold p-2">{d?.property}</td>
                   <td>{d?.value}</td>
@@ -70,13 +71,13 @@ const MoreDetails = () => {
           {t('mchair.singleMChar.descriptions.title')}
         </h3>
         <p className="text-sm pt-3">
-        {t('mchair.singleMChar.descriptions.desc1')}
+        {chair?.descriptions?.desc1}
         </p>
         <p className="text-sm pt-3">
-        {t('mchair.singleMChar.descriptions.desc2')}
+        {chair?.descriptions?.desc2}
         </p>
         <p className="text-sm pt-3">
-        {t('mchair.singleMChar.descriptions.desc3')}
+        {chair?.descriptions?.desc3}
         </p>
       </div>
     </div>

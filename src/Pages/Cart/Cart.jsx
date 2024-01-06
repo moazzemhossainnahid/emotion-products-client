@@ -1,35 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaEuroSign } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import PayButton from '../../Components/Others/PayButton/PayButton';
+import UseMChair from '../../Hooks/useMChair';
 
 const Cart = () => {
+    const { id } = useParams();
+    const [chairs] = UseMChair();
     const navigate = useNavigate();
     // const [isChecked, setIsChecked] = useState(false);
     const [user] = useAuthState(auth);
+    const chair = chairs && chairs?.find(c => c?.id === id);
+    const [quantity, setQuantity] = useState(1); // Initialize quantity to 1
+    const [totalPrice, setTotalPrice] = useState(chair?.price); // Initialize quantity to 1
+
+
+    useEffect(() => {
+        const newPrice = parseInt((chair?.price * quantity) + (chair?.price * 0.02) * quantity);
+        setTotalPrice(newPrice);
+    }, [chair, quantity])
+
 
     const item = [
-        // {
-        //     id: 123,
-        //     name: "Exclusive Carport",
-        //     description: "this is carport in california USA",
-        //     category: "carport",
-        //     badge: "top",
-        //     image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-        //     price: 6000,
-        // },
         {
-            id: 1,
-            name: "Exclusive Massage Chair",
-            description: "this is Massage Chair in california USA",
-            category: "massagechair",
+            id: chair?.id,
+            name: chair?.title,
+            description: chair?.mainDesc,
+            category: chair?.category,
             badge: "top",
-            image: "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-            price: 6000,
+            image: chair?.images?.banner,
+            quantity: quantity,
+            price: totalPrice,
         }
-    ]
+    ];
+
+    const handleQuantityChange = (event) => {
+        const newQuantity = parseInt(event.target.value, 10);
+        setQuantity(newQuantity);
+    };
+
+    console.log("item", item);
 
     return (
         <div className='container z-30 w-full'>
@@ -48,32 +60,38 @@ const Cart = () => {
                                 <div className="py-5">
                                     <div className="flex justify-between gap-3">
                                         <h3 className="font-semibold"><span className="font-bold">1</span> Item in Order Request</h3>
-                                        <h3 className="font-semibold">Order Request Subtotal: <br /> <p className="text-base flex gap-2 items-center pt-2 justify-end font-black leading-none text-gray-800"><FaEuroSign /> <span className="">{item[0]?.price}.00</span></p> </h3>
+                                        <h3 className="font-semibold">Order Request Subtotal: <br /> <p className="text-base flex gap-2 items-center pt-2 justify-end font-black leading-none text-gray-800"><FaEuroSign /> <span className="">{chair?.price}.00</span></p> </h3>
                                     </div>
 
                                     <div className="w-full flex justify-end pt-3">
-                                        <button onClick={() => navigate('/cart')} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
+                                        <button onClick={() => navigate(`/cart/${id}`)} className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
                                             <p onClick={() => navigate(-1)} className="flex tracking-widest gap-2">View and Edit Order Request</p>
                                         </button>
                                     </div>
                                 </div>
                                 <div className="md:flex items-center py-8 border-y border-gray-200">
                                     <div className="w-1/4">
-                                        <img src="https://i.ibb.co/qdbwmF3/Rectangle-168.png" alt className="w-20 h-full object-center object-cover" />
+                                        <img src={item[0]?.image} alt className="w-20 h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4">
-                                        <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">North wolf Carport</p>
+                                        <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">{item[0]?.name}</p>
 
                                         <div className="flex items-center justify-between pt-5 pr-6">
                                             <div className="flex gap-1 items-center">
                                                 <h3 className="font-semibold">Qty</h3>
-                                                <select className="py-2 px-1 bg-white mr-6 focus:outline-none">
-                                                    <option>01</option>
-                                                    <option>02</option>
-                                                    <option>03</option>
+                                                <select
+                                                    value={quantity}
+                                                    onChange={handleQuantityChange}
+                                                    className="py-2 px-1 bg-white mr-6 focus:outline-none"
+                                                >
+                                                    <option value={1}>01</option>
+                                                    <option value={2}>02</option>
+                                                    <option value={3}>03</option>
+                                                    <option value={4}>04</option>
+                                                    <option value={5}>05</option>
                                                 </select>
                                             </div>
-                                            <p className="text-base flex gap-2 items-center font-black leading-none text-gray-800"><FaEuroSign /> <span className="">{item[0]?.price}.00</span></p>
+                                            <p className="text-base flex gap-2 items-center font-black leading-none text-gray-800"><FaEuroSign /> <span className="">{(chair?.price * quantity)?.toFixed(2)}</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,21 +103,21 @@ const Cart = () => {
                                         <p className="text-4xl font-black leading-9 text-gray-800">Summary</p>
                                         <div className="flex items-center justify-between pt-16">
                                             <p className="text-base leading-none text-gray-800">Subtotal</p>
-                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(item[0]?.price).toFixed(2)}</p>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(chair?.price * quantity)?.toFixed(2)}</p>
                                         </div>
                                         <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Shipping</p>
-                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> 30</p>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * 0.02) * quantity)?.toFixed(2)}</p>
                                         </div>
-                                        <div className="flex items-center justify-between pt-5">
+                                        {/* <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Tax</p>
-                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(item[0]?.price * 2 / 100).toFixed(2)}</p>
-                                        </div>
+                                            <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(chair?.price * 2 / 100).toFixed(2)}</p>
+                                        </div> */}
                                     </div>
                                     <div>
                                         <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
                                             <p className="text-2xl leading-normal text-gray-800">Total</p>
-                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(item[0]?.price + 30 + (item[0]?.price * 2 / 100)).toFixed(2)}</p>
+                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * quantity) + (chair?.price * 0.02) * quantity)?.toFixed(2)}</p>
                                         </div>
                                         {/* <button onClick={() => navigate('/checkout')} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
