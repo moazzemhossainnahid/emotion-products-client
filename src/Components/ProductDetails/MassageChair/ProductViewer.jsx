@@ -158,7 +158,7 @@ const ProductViewer = ({ chair }) => {
     // console.log(appointment);
 
     fetch(
-      `http://localhost:5000/api/v1/appointments`,
+      `https://emotion-products-server-iii.vercel.app/api/v1/appointments`,
       {
         method: "POST",
         headers: {

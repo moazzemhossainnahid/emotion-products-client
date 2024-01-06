@@ -36,7 +36,7 @@ const Profile = () => {
                     }
 
                     // send to database
-                    fetch(`http://localhost:5000/api/v1/users/${email}`, {
+                    fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users/${email}`, {
                         method: 'PUT',
                         headers: {
                             "content-type": "application/json",

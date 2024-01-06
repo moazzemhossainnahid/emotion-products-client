@@ -6,7 +6,7 @@ const DeleteAppointmentModal = ({ deleteAppointment, setNumber, number }) => {
     const { createdAt, name, product, email, phone, address, message, _id } = deleteAppointment;
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/api/v1/appointments/${id}`;
+        const url = `https://emotion-products-server-iii.vercel.app/api/v1/appointments/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
