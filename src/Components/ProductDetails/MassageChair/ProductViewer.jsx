@@ -178,12 +178,12 @@ const ProductViewer = ({ chair }) => {
         }
       });
   };
-    // Format the number with commas and two decimal places
-    const formattedPrice = chair?.price?.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  
+  // Format the number with commas and two decimal places
+  const formattedPrice = chair?.price?.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
 
   return (
     <div className="p-5">
@@ -323,10 +323,10 @@ const ProductViewer = ({ chair }) => {
                       <option>03</option>
                     </select>
                   </div> */}
-                  <div className="flex flex-col md:flex-row  gap-3 items-end">
+                  <div className="flex flex-col gap-3 items-end">
                     <button
                       onClick={() => navigate(`/cart/${chair?.id}`)}
-                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
+                      className="w-full text-white bg-[#00C2FF] border-0 justify-center btn btn-sm btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">
                         Add to Cart
@@ -336,7 +336,7 @@ const ProductViewer = ({ chair }) => {
 
                     <label
                       htmlFor="my-modal-3"
-                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
+                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-sm btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">
                         Make Appointment <FaStickyNote />

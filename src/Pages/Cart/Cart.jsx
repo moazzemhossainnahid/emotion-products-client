@@ -128,7 +128,6 @@ const Cart = () => {
                         </div>
                     </div>
                 </div>
-                )
             </div>
 
             <style>
