@@ -28,20 +28,30 @@ const PayButton = ({ checkoutItems }) => {
 
     const handleCheckout = () => {
         // send to database
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/stripe/create-checkout-session`, {
+        fetch('https://emotion-products-server-iii.vercel.app/api/v1/stripe/create-checkout-session', {
             method: 'POST',
             headers: {
-                "content-type": "application/json",
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
-
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            checkoutItems,
-            user,
-        }).then(res => {
-            if (res.data.url) {
-                window.location.href = res.data.url
-            }
-        }).catch((err) => console.log(err.message))
+            body: JSON.stringify({
+              checkoutItems,
+              user,
+            }),
+          })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              return response.json();
+          })
+          .then(data => {
+              console.log('Response Data:', data);
+              if (data.url) {
+                  window.location.href = data.url;
+              }
+          })
+          .catch(error => console.error('Error:', error));
 
     }
 
