@@ -40,7 +40,7 @@ const Cart = () => {
         setQuantity(newQuantity);
     };
 
-    console.log("item", item);
+    // console.log("item", item);
 
     return (
         <div className='container z-30 w-full'>
