@@ -12,26 +12,26 @@ const DBCards = () => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/users`)
+        fetch(`http://localhost:5000/api/v1/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, []);
 
 
     useEffect(() => {
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/products`)
+        fetch(`http://localhost:5000/api/v1/products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     useEffect(() => {
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/orders`)
+        fetch(`http://localhost:5000/api/v1/orders`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
 
     useEffect(() => {
-        fetch(`https://emotion-products-server-iii.vercel.app/api/v1/appointments`)
+        fetch(`http://localhost:5000/api/v1/appointments`)
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [])

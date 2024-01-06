@@ -18,9 +18,9 @@ const Cart = () => {
 
 
     useEffect(() => {
-        const newPrice = parseInt((chair?.price * quantity) + (chair?.price * 0.02) * quantity);
+        const newPrice = parseInt((chair?.price) + (chair?.price * 0.02));
         setTotalPrice(newPrice);
-    }, [chair, quantity])
+    }, [chair])
 
 
     const item = [
@@ -29,7 +29,6 @@ const Cart = () => {
             name: chair?.title,
             description: chair?.mainDesc,
             category: chair?.category,
-            badge: "top",
             image: chair?.images?.banner,
             quantity: quantity,
             price: totalPrice,
