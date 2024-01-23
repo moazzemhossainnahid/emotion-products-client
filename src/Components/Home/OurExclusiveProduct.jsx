@@ -58,7 +58,7 @@ const OurExclusiveProduct = () => {
                                 <h5 className="text-sm">It is a long established fact that a reader</h5>
                             </div> */}
                             <div className="pt-2 gap-5 flex justify-start items-center">
-                                <button onClick={() => navigate("/productdetails/1")} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">{t('homeExclusiveProduct.viewD')} </button>
+                                <button onClick={() => navigate("/productdetails/massagechair/ms-131plus")} className="px-7 py-2 rounded font-semibold flex items-center border-2 hover:bg-primary group">{t('homeExclusiveProduct.viewD')} </button>
                                 {/* <button className="px-7 py-2 rounded font-semibold flex bg-primary items-center border-2 hover:bg-white group">BUY NOW <FaArrowRight className='pl-2 text-2xl' /> </button> */}
                             </div>
                         </div>

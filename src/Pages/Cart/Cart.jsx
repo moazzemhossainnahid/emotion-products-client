@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaEuroSign } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import PayButton from '../../Components/Others/PayButton/PayButton';
 import UseMChair from '../../Hooks/useMChair';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
     const { id } = useParams();
@@ -15,12 +16,24 @@ const Cart = () => {
     const chair = chairs && chairs?.find(c => c?.id === id);
     const [quantity, setQuantity] = useState(1); // Initialize quantity to 1
     const [totalPrice, setTotalPrice] = useState(chair?.price); // Initialize quantity to 1
+    const downPayRef = useRef(null);
+    const [downPayment, setDownPayment] = useState(null); // Initialize amount to 1
 
+
+    // useEffect(() => {
+    //     const newPrice = parseInt((chair?.price) + (chair?.price * 0.02));
+    //     setTotalPrice(newPrice);
+    // }, [chair])
 
     useEffect(() => {
-        const newPrice = parseInt((chair?.price) + (chair?.price * 0.02));
-        setTotalPrice(newPrice);
-    }, [chair])
+        const newPrice = parseInt(chair?.price);
+        const downPayent = parseInt(downPayment)
+        if(downPayent > 0){
+            setTotalPrice(downPayent);
+        }else{
+            setTotalPrice(newPrice);
+        }
+    }, [chair, downPayment])
 
 
     const item = [
@@ -41,6 +54,17 @@ const Cart = () => {
     };
 
     // console.log("item", item);
+
+    const processDownPayment = () => {
+        const downPayent = downPayRef?.current?.value;
+
+        if(downPayent > 500){
+            setDownPayment(downPayent);
+        }else{
+            toast.error(`DownPayment not processing under €500`);
+        }
+
+    };
 
     return (
         <div className='container z-30 w-full'>
@@ -104,23 +128,47 @@ const Cart = () => {
                                             <p className="text-base leading-none text-gray-800">Subtotal</p>
                                             <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(chair?.price * quantity)?.toFixed(2)}</p>
                                         </div>
-                                        <div className="flex items-center justify-between pt-5">
+                                        {/* <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Shipping</p>
                                             <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * 0.02) * quantity)?.toFixed(2)}</p>
-                                        </div>
+                                        </div> */}
                                         {/* <div className="flex items-center justify-between pt-5">
                                             <p className="text-base leading-none text-gray-800">Tax</p>
                                             <p className="text-base leading-none text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(chair?.price * 2 / 100).toFixed(2)}</p>
                                         </div> */}
+
+                                        <div className="w-full md:flex flex-col items-center justify-center gap-3 lg:text-lg font-medium text-black border-b border-primary pb-3 pt-2 md:pt-3 mt-10">
+                                            <p>Down Payments <span className="text-sm">(Optional)</span>:</p>{" "}
+                                            <div className="w-fit h-8 flex items-center gap-2">
+                                                <input
+                                                    type="text"
+                                                      ref={downPayRef}
+                                                    placeholder="Enter Amount"
+                                                    className="outline-none rounded-md px-2 bg-gray-300 border text-sm font-semibold text-gray-800 max-w-[150px] h-full"
+                                                ></input>
+                                                <button
+                                                      onClick={processDownPayment}
+                                                    className="px-3 rounded bg-primary text-white h-full"
+                                                >
+                                                    Process
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div>
-                                        <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
+                                        {/* <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
                                             <p className="text-2xl leading-normal text-gray-800">Total</p>
                                             <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * quantity) + (chair?.price * 0.02) * quantity)?.toFixed(2)}</p>
-                                        </div>
+                                        </div> */}
                                         {/* <button onClick={() => navigate('/checkout')} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
                                         </button> */}
+
+                                        <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
+                                            <p className="text-2xl leading-normal text-gray-800">Total</p>
+                                            {/* <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * quantity)?.toFixed(2))}</p> */}
+                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {totalPrice}</p>
+                                        </div>
                                         <PayButton checkoutItems={item} />
                                     </div>
                                 </div>
