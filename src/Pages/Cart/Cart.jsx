@@ -17,7 +17,7 @@ const Cart = () => {
     const [quantity, setQuantity] = useState(1); // Initialize quantity to 1
     const [totalPrice, setTotalPrice] = useState(chair?.price); // Initialize quantity to 1
     const downPayRef = useRef(null);
-    const [downPayment, setDownPayment] = useState(null); // Initialize amount to 1
+    const [downPayment, setDownPayment] = useState(0); // Initialize amount to 0
 
 
     // useEffect(() => {
@@ -26,11 +26,11 @@ const Cart = () => {
     // }, [chair])
 
     useEffect(() => {
-        const newPrice = parseInt(chair?.price);
+        const newPrice = parseInt(chair?.price * quantity);
         const downPayent = parseInt(downPayment)
-        if(downPayent > 0){
-            setTotalPrice(downPayent);
-        }else{
+        if (downPayent > 0) {
+            setTotalPrice(downPayment > 0 ? downPayment : (chair?.price * quantity));
+        } else {
             setTotalPrice(newPrice);
         }
     }, [chair, downPayment])
@@ -44,7 +44,11 @@ const Cart = () => {
             category: chair?.category,
             image: chair?.images?.banner,
             quantity: quantity,
-            price: totalPrice,
+            price: chair?.price,
+            total: chair?.price * quantity,
+            downPay: downPayment,
+            duePayment: downPayment > 0 ? ((chair?.price * quantity) - downPayment) : 0,
+            payableAmount: totalPrice
         }
     ];
 
@@ -53,14 +57,14 @@ const Cart = () => {
         setQuantity(newQuantity);
     };
 
-    // console.log("item", item);
+    console.log("item", item);
 
     const processDownPayment = () => {
         const downPayent = downPayRef?.current?.value;
 
-        if(downPayent > 500){
+        if (downPayent > 500) {
             setDownPayment(downPayent);
-        }else{
+        } else {
             toast.error(`DownPayment not processing under €500`);
         }
 
@@ -72,7 +76,7 @@ const Cart = () => {
                 <div className="w-full h-full bg-black sticky-0" id="chec-div">
                     <div className="w-full relative h-full transform translate-x-0 transition ease-in-out duration-700" id="checkout">
                         <div className="flex md:flex-row flex-col justify-end" id="cart">
-                            <div className="lg:w-1/2 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen" id="scroll">
+                            <div className="lg:w-2/3 w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen" id="scroll">
                                 <div onClick={() => navigate(-1)} className="flex items-center text-gray-500 hover:text-gray-600 cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -120,7 +124,7 @@ const Cart = () => {
                                 </div>
 
                             </div>
-                            <div className="md:w-1/3 xl:w-1/4 w-full bg-gray-100 h-full">
+                            <div className="md:w-1/3 w-full bg-gray-100 h-full">
                                 <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto">
                                     <div>
                                         <p className="text-4xl font-black leading-9 text-gray-800">Summary</p>
@@ -142,12 +146,12 @@ const Cart = () => {
                                             <div className="w-fit h-8 flex items-center gap-2">
                                                 <input
                                                     type="text"
-                                                      ref={downPayRef}
+                                                    ref={downPayRef}
                                                     placeholder="Enter Amount"
                                                     className="outline-none rounded-md px-2 bg-gray-300 border text-sm font-semibold text-gray-800 max-w-[150px] h-full"
                                                 ></input>
                                                 <button
-                                                      onClick={processDownPayment}
+                                                    onClick={processDownPayment}
                                                     className="px-3 rounded bg-primary text-white h-full"
                                                 >
                                                     Process
@@ -163,12 +167,29 @@ const Cart = () => {
                                         {/* <button onClick={() => navigate('/checkout')} className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                                             Checkout
                                         </button> */}
-
-                                        <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
-                                            <p className="text-2xl leading-normal text-gray-800">Total</p>
-                                            {/* <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * quantity)?.toFixed(2))}</p> */}
-                                            <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {totalPrice}</p>
-                                        </div>
+                                        {
+                                            downPayment > 0 && <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
+                                                <p className="text-xl leading-normal text-gray-800">Total</p>
+                                                <p className="text-xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {(((chair?.price * quantity))?.toFixed(2))}</p>
+                                            </div>}
+                                        {
+                                            downPayment > 0 &&
+                                            <div className="flex items-center pb-6 justify-between lg:pt-5 pt-5 border-primary border-b">
+                                                <p className="text-xl leading-normal text-gray-800">DownPayment</p>
+                                                <p className="text-xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {`${downPayment}.00`}</p>
+                                            </div>
+                                        }
+                                        {
+                                            !downPayment > 0 && <div className="flex items-center pb-6 justify-between lg:pt-5 pt-10">
+                                                <p className="text-xl leading-normal font-bold text-gray-800">Grand Total</p>
+                                                {/* <p className="text-2xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((chair?.price * quantity)?.toFixed(2))}</p> */}
+                                                <p className="text-xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {`${downPayment > 0 ? downPayment : (chair?.price * quantity)}.00`}</p>
+                                            </div>
+                                        }
+                                        {downPayment > 0 && <div className="flex items-center pb-6 justify-between lg:pt-5 pt-5">
+                                            <p className="text-xl leading-normal text-gray-800"> Due</p>
+                                            <p className="text-xl font-bold leading-normal text-right text-gray-800 flex gap-2 items-center"><FaEuroSign /> {((downPayment - (chair?.price * quantity))?.toFixed(2))}</p>
+                                        </div>}
                                         <PayButton checkoutItems={item} />
                                     </div>
                                 </div>
