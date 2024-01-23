@@ -29,19 +29,19 @@ const CompleteCollection = () => {
             href: "furniture",
             img: "https://i.ibb.co/2Ybnw7x/sofa-1.png",
         },
-        {
-            id: 4,
-            title: t('homeCompleteCollection.r4'),
-            href: "lights",
-            img: "https://i.ibb.co/7GbC1ZQ/image-4.png",
-        },
+        // {
+        //     id: 4,
+        //     title: t('homeCompleteCollection.r4'),
+        //     href: "lights",
+        //     img: "https://i.ibb.co/7GbC1ZQ/image-4.png",
+        // },
     ]
     return (
         <div id="abc" className='w-full py-20 text-center p-5'>
             <h3 className="text-2xl md:text-3xl">{t('homeCompleteCollection.title')}</h3>
             <p className="text-sm pt-2">{t('homeCompleteCollection.desc')}</p>
 
-            <div className="w-full text-left md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-10 p-3 py-10">
+            <div className="w-full text-left md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-10 p-3 py-10">
                 {
                     CompleteCollectionData?.map(d => (
                         <div key={d?.id} className="w-full mx-auto flex md:flex-col justify-center items-center">

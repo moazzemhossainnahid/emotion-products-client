@@ -51,7 +51,7 @@ const Header = ({ currentLanguageCode, languages }) => {
                                 <li><NavLink reloadDocument to="/carport"><img src="https://i.ibb.co/xG1cvng/parking-1.png" alt="" className="pr-2 w-7" />{t('navbar.carport')}</NavLink></li>
                                 <li><NavLink reloadDocument to="/furniture"><img src="https://i.ibb.co/60N5kfW/armchair-1.png" alt="" className="pr-2 w-7" />{t('navbar.furniture')}</NavLink></li>
                                 <li><NavLink reloadDocument to="/massagechair"><img src="https://i.ibb.co/Csy2jsP/massage-chair-2.png" alt="" className="pr-2 w-7" />{t('navbar.massagechair')}</NavLink></li>
-                                <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />{t('navbar.lights')}</NavLink></li>
+                                {/* <li><NavLink reloadDocument to="/lights"><img src="https://i.ibb.co/yF8sGqx/chandelier-2-1.png" alt="" className="pr-2 w-7" />{t('navbar.lights')}</NavLink></li> */}
                                 {/* {
                                     user && <li><button onClick={signOut} className=""> <FaSignOutAlt className='pr-2 w-7' /> SignOut</button></li>
                                 } */}
