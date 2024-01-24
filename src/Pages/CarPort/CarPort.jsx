@@ -10,12 +10,14 @@ import CarPortVideos from '../../Components/CarPort/CarPortVideos';
 import TopBannerCarousel from '../../Components/CarPort/TopBannerCarousel';
 import ProtectVehicle from '../../Components/CarPort/ProtectVehicle';
 import CarportBestMeterials from '../../Components/CarPort/CarportBestMeterials';
+import CarportUses from '../../Components/CarPort/CarportUses';
 
 const Carport = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <ProtectVehicle />
-            <PremiumService />
+            {/* <PremiumService /> */}
+            <CarportUses/>
             <CarportBestMeterials />
             {/* <Overview /> */}
             <ExclusivePackages />

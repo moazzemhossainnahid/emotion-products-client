@@ -17,7 +17,7 @@ const ProtectVehicle = () => {
                     </Slide>
                 </div>
                 <div className='w-full md:w-3/6 mx-auto'>
-                    <img className='w-full object-cover' src="https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg" alt="" />
+                    <img className='w-full object-cover border border-primary' src="https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg" alt="" />
                 </div>
             </div>
         </div>
