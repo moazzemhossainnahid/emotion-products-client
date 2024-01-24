@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import { ScrollRotate } from 'react-scroll-rotate';
-import Vimeo from '@u-wave/react-vimeo'
 import { useTranslation } from 'react-i18next';
-import { GiCancel } from 'react-icons/gi';
 
 const MChairVideos = () => {
     const { t } = useTranslation();
