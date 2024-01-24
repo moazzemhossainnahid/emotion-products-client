@@ -19,7 +19,7 @@ const Footer = () => {
                             <div className="input-group w-full flex justify-center">
                                 <input type="text" placeholder="Enter Email Address" className="input z-0 input-bordered" />
                                 <button className="btn btn-square w-28 text-white bg-[#00C2FF]">
-                                {t('footer.sub')}
+                                    {t('footer.sub')}
                                 </button>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-[#212121] py-7">
                     <div className="w-full md:w-5/6 mx-auto flex flex-col gap-3 py-7 ">
-                        <footer className="footer p-10 bg-transparent text-base-200">
+                        <footer className="footer p-10 pb-0 bg-transparent text-base-200">
                             <div>
                                 <span className="text-xl font-bold text-gray-300">{t('footer.aep')}</span>
                                 <a className="link link-hover">{t('footer.aep_1')}</a>
@@ -50,26 +50,27 @@ const Footer = () => {
                             </div>
                         </footer>
                         <div className="px-10 py-4 bg-transparent text-base-200">
-                            <div className="flex gap-3 pb-5 justify-center items-center">
-                                <FaFacebook className='text-2xl text-gray-500' />
-                                <FaInstagram className='text-2xl text-gray-500' />
-                                <FaSkype className='text-2xl text-gray-500' />
-                                <FaTwitter className='text-2xl text-gray-500' />
-                                <FaPinterest className='text-2xl text-gray-500' />
-                                <FaLinkedin className='text-2xl text-gray-500' />
-                            </div>
                             <hr />
-                            <div className="text-center pt-5">
-                                <p>{t('footer.footer_down')}</p>
+                            <div className="flex justify-between items-center flex-col md:flex-row">
+                                <div className="text-center pt-5">
+                                    <p>{t('footer.footer_down')}</p>
+                                </div>
+                                <div className="flex gap-3 pt-5 justify-center items-center">
+                                    <FaFacebook className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                    <FaInstagram className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                    <FaSkype className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                    <FaTwitter className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                    <FaPinterest className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                    <FaLinkedin className='text-2xl text-gray-500 hover:text-white duration-200 cursor-pointer' />
+                                </div>
                             </div>
-                            <div className="w-full flex justify-center gap-3 items-center pt-3">
+                            {/* <div className="w-full flex justify-center gap-3 items-center pt-3">
                                 <img src="https://i.ibb.co/StPWWYS/aexpress.png" alt="" className="w-12" />
                                 <img src="https://i.ibb.co/hDfbhXw/pngimg-com-visa-PNG18.png" alt="" className="w-12" />
                                 <img src="https://i.ibb.co/3FHRYSJ/mcard.png" alt="" className="w-12" />
                                 <img src="https://i.ibb.co/1T5H2r5/gpay.png" alt="" className="w-12 bg-gray-200 px-2 h-8 rounded" />
                                 <img src="https://i.ibb.co/1fGV3N5/Paypal.png" alt="" className="w-12" />
-                            </div>
-
+                            </div> */}
                         </div>
                     </div>
                 </div>
