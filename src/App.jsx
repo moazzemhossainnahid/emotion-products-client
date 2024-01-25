@@ -9,7 +9,7 @@ import Sofa from './Pages/Sofa/Sofa';
 import NotFound from './Pages/NotFound/NotFound';
 import SinglePage from './Pages/SinglePage/SinglePage';
 import Carport from './Pages/CarPort/CarPort';
-import Cart from './Pages/Cart/Cart';
+import CartChair from './Pages/Cart/CartChair';
 import { useEffect, useState } from 'react';
 import Checkout from './Pages/Checkout/Checkout';
 import CardPayment from './Pages/Checkout/CardPayment/CardPayment';
@@ -33,6 +33,7 @@ import cookies from 'js-cookie';
 import ProductDetailsCarport from './Pages/CarPort/ProductDetails/ProductDetails';
 import ProductDetailsFurniture from './Pages/Sofa/ProductDetails/ProductDetails';
 import ProductDetailsLights from './Pages/Lights/ProductDetails/ProductDetails';
+import CartCarport from './Pages/Cart/CartCarport';
 
 const languages = [
   {
@@ -69,7 +70,8 @@ function App() {
             <Route path='/productdetails/massagechair/:id' element={<ProductDetailsMC />} />
             <Route path='/productdetails/furniture/:id' element={<ProductDetailsFurniture />} />
             <Route path='/productdetails/light/:id' element={<ProductDetailsLights />} />
-            <Route path='/cart/:id' element={<RequireAuth><Cart /></RequireAuth>} />
+            <Route path='/massagechair/cart/:id' element={<RequireAuth><CartChair /></RequireAuth>} />
+            <Route path='/carport/cart/:id' element={<RequireAuth><CartCarport /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
             <Route path="/checkout-success" element={<RequireAuth><CheckoutSuccess /></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />

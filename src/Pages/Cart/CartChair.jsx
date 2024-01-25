@@ -7,7 +7,7 @@ import PayButton from '../../Components/Others/PayButton/PayButton';
 import UseMChair from '../../Hooks/useMChair';
 import { toast } from 'react-toastify';
 
-const Cart = () => {
+const CartChair = () => {
     const { id } = useParams();
     const [chairs] = UseMChair();
     const navigate = useNavigate();
@@ -220,4 +220,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default CartChair;

@@ -325,7 +325,7 @@ const ProductViewer = ({ chair }) => {
                   </div> */}
                   <div className="flex flex-col gap-3 items-end">
                     <button
-                      onClick={() => navigate(`/cart/${chair?.id}`)}
+                      onClick={() => navigate(`/massagechair/cart/${chair?.id}`)}
                       className="w-full text-white bg-[#00C2FF] border-0 justify-center btn btn-sm btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">
