@@ -19,7 +19,7 @@ const MChairTopBanner = () => {
                     </Slide> */}
                 </div>
                 <div className='w-full md:w-3/6 relative overflow-hidden mx-auto'>
-                    <img className='w-3/5 p-5 mx-auto z-20 relative' src="https://i.ibb.co/C1zRRQW/Screenshot-9.png" alt="" />
+                    <img className='w-3/5 border border-primary mx-auto z-20 relative' src="https://i.ibb.co/C1zRRQW/Screenshot-9.png" alt="" />
                 </div>
             </div>
         </div>

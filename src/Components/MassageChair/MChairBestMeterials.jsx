@@ -31,7 +31,7 @@ const MChairBestMeterials = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-2/6 flex justify-center mx-auto">
-                    <img src="https://i.ibb.co/7VSJ4ZF/Screenshot-10.png" alt="" className="p-5 flex justify-center" />
+                    <img src="https://i.ibb.co/7VSJ4ZF/Screenshot-10.png" alt="" className="flex border border-primary justify-center" />
                 </div>
             </div>
         </div>
