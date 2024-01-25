@@ -32,7 +32,7 @@ const CarportUses = () => {
                         </div>
                         <div className="space-y-2">
                             <div className="w-12 h-12 bg-[#22363C] p-1 rounded-full">
-                                <img src="https://i.ibb.co/f8LgLZ3/69840.png" alt="" className="w-full h-full flex justify-center items-center" />
+                                <img src="https://i.ibb.co/9GKcC2Q/8615929-1.png" alt="" className="w-full h-full flex justify-center items-center" />
                             </div>
                             <h3 className="text-xl text-dark font-bold">Versatile Coverage for Any Vehicle</h3>
                             {/* <h3 className="text-xl text-dark font-bold">{t('mchair.uses.t3')}</h3> */}

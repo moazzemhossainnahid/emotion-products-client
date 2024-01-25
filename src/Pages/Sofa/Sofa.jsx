@@ -10,14 +10,16 @@ import TrustedPartners from '../../Components/Others/TrustedPartners';
 import SofaTopBannerCarousel from '../../Components/Sofa/SofaTopBannerCarousel';
 import LuxuryRelaxation from '../../Components/Sofa/LuxuryRelaxation';
 import SofaBestMeterials from '../../Components/Sofa/SofaBestMeterials';
+import SofaUses from '../../Components/Sofa/SofaUses';
 
 const Sofa = () => {
     return (
         <div className='container w-full max-w-full overflow-hidden'>
             <LuxuryRelaxation />
-            <SofaPremiumService />
+            {/* <SofaPremiumService /> */}
+            <SofaUses />
             <SofaBestMeterials />
-            <SofaOverview />
+            {/* <SofaOverview /> */}
             <SofaExclusivePackages />
             <SofaVideos />
             {/* <SofaSuccessStories /> */}

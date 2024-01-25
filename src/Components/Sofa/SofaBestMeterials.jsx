@@ -18,7 +18,7 @@ const SofaBestMeterials = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-2/5 flex justify-center mx-auto">
-                    <img src="https://i.ibb.co/RjCm5S8/Rectangle-187.png" alt="" className="p-5" />
+                    <img src="https://i.ibb.co/tczxKN8/Whats-App-Image-2023-05-18-dddat-15-42-21.jpg" alt="" className="w-full h-80 border border-primary p-5" />
                 </div>
             </div>
         </div>
