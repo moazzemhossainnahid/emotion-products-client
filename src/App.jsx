@@ -34,6 +34,7 @@ import ProductDetailsCarport from './Pages/CarPort/ProductDetails/ProductDetails
 import ProductDetailsFurniture from './Pages/Sofa/ProductDetails/ProductDetails';
 import ProductDetailsLights from './Pages/Lights/ProductDetails/ProductDetails';
 import CartCarport from './Pages/Cart/CartCarport';
+import CartFurniture from './Pages/Cart/CartFurniture';
 
 const languages = [
   {
@@ -72,6 +73,7 @@ function App() {
             <Route path='/productdetails/light/:id' element={<ProductDetailsLights />} />
             <Route path='/massagechair/cart/:id' element={<RequireAuth><CartChair /></RequireAuth>} />
             <Route path='/carport/cart/:id' element={<RequireAuth><CartCarport /></RequireAuth>} />
+            <Route path='/furniture/cart/:id' element={<RequireAuth><CartFurniture /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
             <Route path="/checkout-success" element={<RequireAuth><CheckoutSuccess /></RequireAuth>} />
             <Route path='/signin' element={<Signin />} />
