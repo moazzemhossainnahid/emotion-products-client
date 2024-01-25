@@ -54,8 +54,8 @@ const MoreDetails = ({chair}) => {
             <tbody className="w-full">
               {/* row 1 */}
               {chair?.specifications?.map((d) => (
-                <tr key={d?.property} className="text-sm py-2">
-                  <td className="font-semibold p-2">{d?.property}</td>
+                <tr key={d?.key} className="text-sm py-2">
+                  <td className="font-semibold p-2">{d?.key}</td>
                   <td>{d?.value}</td>
                 </tr>
               ))}

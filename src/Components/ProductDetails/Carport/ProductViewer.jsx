@@ -14,7 +14,7 @@ import modal_img_4 from "../../../assets/images/appoint-modal-img-4.png";
 import { useTranslation } from "react-i18next";
 
 
-const ProductViewer = () => {
+const ProductViewer = ({ carport }) => {
   const {
     register,
     formState: { errors },
@@ -25,7 +25,7 @@ const ProductViewer = () => {
   const [selectProduct, setSelectProduct] = useState("carport");
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   function ImageMagnifier({
     src,
@@ -93,9 +93,8 @@ const ProductViewer = () => {
             backgroundRepeat: "no-repeat",
 
             //calculate zoomed image size
-            backgroundSize: `${imgWidth * zoomLevel}px ${
-              imgHeight * zoomLevel
-            }px`,
+            backgroundSize: `${imgWidth * zoomLevel}px ${imgHeight * zoomLevel
+              }px`,
 
             //calculete position of zoomed image.
             backgroundPositionX: `${-x * zoomLevel + magnifieWidth / 2}px`,
@@ -106,11 +105,17 @@ const ProductViewer = () => {
     );
   }
 
-  
-  const mc1 = "https://i.ibb.co/8b1XWNQ/DSC03611.jpg";
-  const mc2 = "https://i.ibb.co/0M2WPDm/DSC03635.jpg";
-  const mc3 = "https://i.ibb.co/FDtBZ8H/DSC03640.jpg";
-  const mc4 = "https://i.ibb.co/BrrN1wd/DSC03643.jpg";
+
+  const mc1 = carport && carport?.images?.showcase[0];
+  const mc2 = carport && carport?.images?.showcase[1];
+  const mc3 = carport && carport?.images?.showcase[2];
+  const mc4 = carport && carport?.images?.showcase[3];
+
+
+  // const mc1 = "https://i.ibb.co/8b1XWNQ/DSC03611.jpg";
+  // const mc2 = "https://i.ibb.co/0M2WPDm/DSC03635.jpg";
+  // const mc3 = "https://i.ibb.co/FDtBZ8H/DSC03640.jpg";
+  // const mc4 = "https://i.ibb.co/BrrN1wd/DSC03643.jpg";
 
   const pdImage = [
     {
@@ -173,6 +178,12 @@ const ProductViewer = () => {
         }
       });
   };
+  // Format the number with commas and two decimal places
+  const formattedPrice = carport?.price?.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
 
   return (
     <div className="p-5">
@@ -180,7 +191,7 @@ const ProductViewer = () => {
         style={{ fontFamily: "Silk Serif" }}
         className="text-2xl py-7 md:text-5xl font-semibold"
       >
-        {t('mchair.singleMChar.title')}
+        {carport?.title}
       </h3>
 
       <div className="w-full flex flex-col md:flex-row gap-5">
@@ -207,27 +218,27 @@ const ProductViewer = () => {
                     {Image === "third" && <img src={shoes3} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
                     {Image === "forth" && <img src={shoes4} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />} */}
 
-          <CarouselSlider setImage={setImage}></CarouselSlider>
+          <CarouselSlider setImage={setImage} mc1={mc1} mc2={mc2} mc3={mc3} mc4={mc4}></CarouselSlider>
         </div>
         <div className="w-full md:w-2/5 space-y-3">
-          <h2 className="text-sm font-semibold mt-1">{t('mchair.singleMChar.itemNo')}</h2>
+          <h2 className="text-sm font-semibold mt-1">{carport?.item}</h2>
           <h5 className="text-sm text-gray-600">
-          {t('mchair.singleMChar.itemName')}
+            {carport?.itemDesc}
           </h5>
-          <div className="py-3">
+          {carport?.cmin && <div className="py-3">
             <h3 className="text-sm">
               {" "}
               <span className="font-bold">CM</span> | INCH{" "}
             </h3>
-            <h5 className="text-xs font-semibold">1460×846×1245 mm</h5>
-          </div>
+            <h5 className="text-xs font-semibold">{carport?.cminDesc}</h5>
+          </div>}
           <div className="space-y-5 mb-5">
             <div className="">
               <p className="text-sm">
-              {t('mchair.singleMChar.shortDesc')}
+                {carport?.shortDesc}
               </p>
               <h4 className="text-xs underline cursor-pointer pt-2 text-gray-500">
-              {t('mchair.singleMChar.rdm')}
+                {t('mchair.singleMChar.rdm')}
               </h4>
             </div>
             {/* <div className="flex gap-3">
@@ -301,7 +312,7 @@ const ProductViewer = () => {
             {user ? (
               <div className="py-7 w-full">
                 <h3 className="text-md flex gap-2 items-center font-semibold">
-                  <FaEuroSign /> <span className="">7,700.00</span>
+                  <FaEuroSign /> <span className="">{formattedPrice}</span>
                 </h3>
                 <div className="w-full text-left pt-5 flex flex-col md:flex-row justify-start items-end gap-5">
                   {/* <div className="flex flex-col font-semibold gap-1">
@@ -312,10 +323,10 @@ const ProductViewer = () => {
                       <option>03</option>
                     </select>
                   </div> */}
-                  <div className="flex flex-col md:flex-row  gap-3 items-end">
+                  <div className="flex flex-col gap-3 items-end">
                     <button
-                      onClick={() => navigate(`/cart/1`)}
-                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
+                      onClick={() => navigate(`/cart/${carport?.id}`)}
+                      className="w-full text-white bg-[#00C2FF] border-0 justify-center btn btn-sm btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">
                         Add to Cart
@@ -325,7 +336,7 @@ const ProductViewer = () => {
 
                     <label
                       htmlFor="my-modal-3"
-                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-4 py-1 rounded"
+                      className=" text-white bg-[#00C2FF] border-0 justify-center btn btn-sm btn-warning px-4 py-1 rounded"
                     >
                       <p className=" flex tracking-widest gap-2">
                         Make Appointment <FaStickyNote />
@@ -337,9 +348,9 @@ const ProductViewer = () => {
             ) : (
               <div className="bg-gray-100 rounded text-center p-5">
                 <h3 className="text-sm">
-                {t('mchair.singleMChar.wholStore')} <br />{" "}
+                  {t('mchair.singleMChar.wholStore')} <br />{" "}
                   <Link className="underline" to="/signin">
-                  {t('mchair.singleMChar.pLogin')}
+                    {t('mchair.singleMChar.pLogin')}
                   </Link>{" "}
                   {t('mchair.singleMChar.tcpOrder')}
                 </h3>
@@ -350,26 +361,26 @@ const ProductViewer = () => {
                   {t('mchair.singleMChar.bsCus')}
                 </h2>
                 <h2 className="text-xs pt-5 cursor-pointer hover:underline duration-300 font-semibold">
-                {t('mchair.singleMChar.findDealer')} →
+                  {t('mchair.singleMChar.findDealer')} →
                 </h2>
               </div>
             )}
 
             <div className="space-y-5 bg-gray-100 rounded p-5 text-xs pt-5">
               <div className="flex items-center gap-3 tracking-widest">
-                <FaCheck className="text-primary" />{t('mchair.singleMChar.addInfo.t1')}
+                <FaCheck className="text-primary" />{carport?.checkers[0]}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                {t('mchair.singleMChar.addInfo.t2')}
+                {carport?.checkers[1]}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                {t('mchair.singleMChar.addInfo.t3')}
+                {carport?.checkers[2]}
               </div>
               <div className="flex items-center gap-3 tracking-widest">
                 <FaCheck className="text-primary" />
-                {t('mchair.singleMChar.addInfo.t4')}
+                {carport?.checkers[3]}
               </div>
             </div>
           </div>

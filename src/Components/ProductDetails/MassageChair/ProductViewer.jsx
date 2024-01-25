@@ -218,7 +218,7 @@ const ProductViewer = ({ chair }) => {
                     {Image === "third" && <img src={shoes3} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />}
                     {Image === "forth" && <img src={shoes4} className="py-2 pb-3 h-96 w-width mx-auto rounded" alt="" />} */}
 
-          <CarouselSlider setImage={setImage}></CarouselSlider>
+          <CarouselSlider setImage={setImage} mc1={mc1} mc2={mc2} mc3={mc3} mc4={mc4}></CarouselSlider>
         </div>
         <div className="w-full md:w-2/5 space-y-3">
           <h2 className="text-sm font-semibold mt-1">{chair?.item}</h2>
