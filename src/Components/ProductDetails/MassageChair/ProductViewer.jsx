@@ -45,6 +45,7 @@ const ProductViewer = ({ chair }) => {
           height: height,
           width: width,
         }}
+        className="w-full mx-auto flex justify-center"
       >
         <img
           src={src}

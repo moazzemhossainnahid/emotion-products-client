@@ -41,7 +41,7 @@ const OurGallery = () => {
           <div className="w-full md:w-3/5 relative">
             <div className="w-5/6 mx-auto md:m-0 bg-gradient-to-r from-[#0f667b] p-7 rounded-2xl relative">
               <img
-                src="https://i.ibb.co/qdbwmF3/Rectangle-168.png"
+                src="https://i.ibb.co/86bfH9k/Rectangle-114-2.png"
                 alt=""
                 className="w-full mx-auto h-96"
               />

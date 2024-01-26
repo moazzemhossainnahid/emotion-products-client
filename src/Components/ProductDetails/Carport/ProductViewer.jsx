@@ -45,6 +45,7 @@ const ProductViewer = ({ carport }) => {
           height: height,
           width: width,
         }}
+        className="w-full mx-auto flex justify-center"
       >
         <img
           src={src}
@@ -204,8 +205,8 @@ const ProductViewer = ({ carport }) => {
               >
                 {Image === p?.position && (
                   <ImageMagnifier
-                    width={550}
-                    height={450}
+                  width="90%"
+                  height="80%"
                     src={p?.img}
                     className="py-2 pb-5 h-80 w-5/6 mx-auto rounded"
                   />

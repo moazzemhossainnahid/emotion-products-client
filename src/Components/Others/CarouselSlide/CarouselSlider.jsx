@@ -20,7 +20,7 @@ const CarouselSlider = ({ setImage,mc1,mc2,mc3,mc4 }) => {
   return (
     <>
 
-      <div className="w-full mx-auto">
+      <div className="w-4/5 mx-auto">
         <Carousel
           showArrows={false}
           pagination={false}
