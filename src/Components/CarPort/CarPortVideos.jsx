@@ -10,7 +10,7 @@ const CarPortVideos = () => {
         <div className="w-full h-[80vh] md:h-[95vh] py-7 md:mb-28">
             <div data-aos="fade-down" data-aos-duration="1000" className="bg-gradient-to-r from-[#1E120A] to-[#343434] rounded w-5/6 md:w-4/5 h-96 mx-auto relative">
                 <div className="flex w-4/5 mx-auto justify-between items-center gap-3 pt-5">
-                    <h3 className="text-xl md:text-2xl font-bold text-white">{t('mchair.vdo.title')}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">{`Premium quality and watch our hottest Carport videos`}</h3>
                     <div className="md:pr-20">
                         <ScrollRotate from={0} to={360} throttle={0.1} animationDuration={0.3}>
                             <img src="https://i.ibb.co/XZvKfRP/Group-75.png" alt="" className="" />
