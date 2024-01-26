@@ -49,7 +49,7 @@ const OurGallery = () => {
           </div>
           <div className="w-full md:w-2/5">
             <h3
-              style={{ fontFamily: "Silk Serif" }}
+              style={{ fontFamily: "Helvetica" }}
               className="text-white text-3xl md:text-5xl font-semibold text-right pb-10 pr-7"
             >
               {t("ourGallery.title")}

@@ -9,7 +9,7 @@ const MChairTopBanner = () => {
         <div className="container bg-white h-[80vh] px-7 mx-auto w-full text-black">
             <div className='flex h-full flex-col md:flex-row justify-between gap-3 py-10 items-center'>
                 <div className='w-full md:w-3/6 p-0 sm:p-5'>
-                    <h2 style={{ fontFamily: 'Silk Serif' }} className='text-center text-2xl sm:text-5xl sm:text-left'>{t('mchair.topBanner.title')}</h2>
+                    <h2 style={{ fontFamily: 'Helvetica' }} className='text-center text-2xl sm:text-5xl sm:text-left'>{t('mchair.topBanner.title')}</h2>
                     <p className='text-center text-sm sm:text-left pt-5 pb-3'>{t('mchair.topBanner.desc1')}</p>
                     <p className='text-center text-sm sm:text-left pt-5 pb-7'>{t('mchair.topBanner.desc2')}</p>
                     {/* <Slide bottom duration={2500}>

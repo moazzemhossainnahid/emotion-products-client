@@ -51,7 +51,7 @@ export default function CKUserDetails() {
     return strTime;
   };
   return (
-    <div style={{ fontFamily: 'Silk Serif' }} className="border bg-white px-5 col-span-2 shadow-sm py-5">
+    <div style={{ fontFamily: 'Helvetica' }} className="border bg-white px-5 col-span-2 shadow-sm py-5">
       <h2 className="py-5 text-3xl text-black text-opacity-75">
         Personal Information
       </h2>

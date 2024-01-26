@@ -43,7 +43,7 @@ const MoreDetails = ({carport}) => {
     <div className="w-full flex flex-col md:flex-row gap-5 justify-between pt-7 pb-10 px-5">
       <div className="w-full md:w-3/6">
         <h3
-          style={{ fontFamily: "Silk Serif" }}
+          style={{ fontFamily: "Helvetica" }}
           className="text-2xl uppercase font-extralight font-serif pb-3"
         >
           {t('mchair.singleMChar.specifications.title')}
@@ -65,7 +65,7 @@ const MoreDetails = ({carport}) => {
       </div>
       <div className="w-full md:w-3/6">
         <h3
-          style={{ fontFamily: "Silk Serif" }}
+          style={{ fontFamily: "Helvetica" }}
           className="text-2xl uppercase font-extralight font-serif pb-3"
         >
           {t('mchair.singleMChar.descriptions.title')}

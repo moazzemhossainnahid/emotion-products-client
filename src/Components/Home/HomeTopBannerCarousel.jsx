@@ -93,7 +93,7 @@ const HomeTopBannerCarousel = () => {
                                 />
                                 <div className="w-full text-center absolute bottom-20 md:bottom-40 space-y-3">
                                     <Slide top duration={1500}>
-                                        <h3 style={{ fontFamily: 'Silk Serif' }} className="w-full md:w-4/5 mx-auto text-2xl md:text-5xl text-white">{data?.title}</h3>
+                                        <h3 style={{ fontFamily: 'Helvetica' }} className="w-full md:w-4/5 mx-auto text-2xl md:text-5xl text-white">{data?.title}</h3>
                                     </Slide>
                                     <Slide bottom duration={2000}>
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>

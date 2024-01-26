@@ -16,7 +16,7 @@ const BestInTown = () => {
             
             <div className="bg-[#FDFDFD] pb-10 w-full">
                 <div className="w-4/5 px-10 mx-auto p-5 shadow bg-white">
-                    <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl md:text-4xl pb-5 text-gray-700 ">{t('homeBestInTown.title')} </h3>
+                    <h3 style={{ fontFamily: 'Helvetica' }} className="text-2xl md:text-4xl pb-5 text-gray-700 ">{t('homeBestInTown.title')} </h3>
                     <div className="space-y-3">
                         <p className="py-1 text-sm">{t('homeBestInTown.desc1')} </p>
                         <p className="py-1 text-sm">{t('homeBestInTown.desc2')}</p>

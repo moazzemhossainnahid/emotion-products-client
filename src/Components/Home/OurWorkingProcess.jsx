@@ -7,7 +7,7 @@ const OurWorkingProcess = () => {
 
     return (
         <div className='w-full text-center py-10 p-5'>
-            <h3 style={{ fontFamily: 'Silk Serif' }} className="text-2xl md:text-4xl pb-5 text-gray-700 ">{t('homeOurWorkingProcess.title')} </h3>
+            <h3 style={{ fontFamily: 'Helvetica' }} className="text-2xl md:text-4xl pb-5 text-gray-700 ">{t('homeOurWorkingProcess.title')} </h3>
             {/* <p className="">It is a long established fact that a reader will be distracted by the readable content of a page</p> */}
             <div className="py-7 w-full md:w-4/5 mx-auto text-left flex flex-col md:flex-row gap-5 justify-between items-center">
                 <div className="space-y-3">

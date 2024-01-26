@@ -101,7 +101,7 @@ const CartChair = () => {
                                         <img src={item[0]?.image} alt className="w-20 h-full object-center object-cover" />
                                     </div>
                                     <div className="md:pl-3 md:w-3/4">
-                                        <p style={{ fontFamily: 'Silk Serif' }} className="text-base font-semibold leading-none text-gray-500">{item[0]?.name}</p>
+                                        <p style={{ fontFamily: 'Helvetica' }} className="text-base font-semibold leading-none text-gray-500">{item[0]?.name}</p>
 
                                         <div className="flex items-center justify-between pt-5 pr-6">
                                             <div className="flex gap-1 items-center">

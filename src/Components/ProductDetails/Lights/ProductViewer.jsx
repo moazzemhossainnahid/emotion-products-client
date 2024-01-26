@@ -177,7 +177,7 @@ const ProductViewer = () => {
   return (
     <div className="p-5">
       <h3
-        style={{ fontFamily: "Silk Serif" }}
+        style={{ fontFamily: "Helvetica" }}
         className="text-2xl py-7 md:text-5xl font-semibold"
       >
         {t('mchair.singleMChar.title')}
@@ -344,7 +344,7 @@ const ProductViewer = () => {
                   {t('mchair.singleMChar.tcpOrder')}
                 </h3>
                 <h2
-                  style={{ fontFamily: "Silk Serif" }}
+                  style={{ fontFamily: "Helvetica" }}
                   className="text-xl md:text-2xl font-extralight py-2 font-serif"
                 >
                   {t('mchair.singleMChar.bsCus')}
@@ -590,7 +590,7 @@ const ProductViewer = () => {
                       />
                     </Link>
                     <h3
-                      style={{ fontFamily: "Silk Serif" }}
+                      style={{ fontFamily: "Helvetica" }}
                       className="text-5xl pt-7 font-bold text-start"
                     >
                       Make an Appointment
