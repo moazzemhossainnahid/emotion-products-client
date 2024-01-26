@@ -195,7 +195,7 @@ const ProductViewer = ({ chair }) => {
       </h3>
 
       <div className="w-full flex flex-col md:flex-row gap-5">
-        <div className="w-full md:w-3/5">
+        <div className="w-full md:w-3/5 mx-auto">
           <div className="pb-3">
             {pdImage?.map((p) => (
               <div
@@ -204,10 +204,10 @@ const ProductViewer = ({ chair }) => {
               >
                 {Image === p?.position && (
                   <ImageMagnifier
-                    width={550}
-                    height={450}
+                    width="90%"
+                    height="80%"
                     src={p?.img}
-                    className="py-2 pb-5 h-80 w-5/6 mx-auto rounded"
+                    className="py-2 pb-5 h-80 w-full flex justify-center mx-auto rounded"
                   />
                 )}
               </div>
