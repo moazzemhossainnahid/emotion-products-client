@@ -22,7 +22,7 @@ const CarPortVideos = () => {
                         <div className="flex flex-col justify-center items-center h-full">
                             <div className="hero-content w-full h-full text-center text-neutral-content">
                             <video className='rounded backdrop-saturate-125 w-full bg-cover bg-center' controls width="100%" height="100%">
-                                    <source src="/src/assets/videos/Protect-Your-Vehicle.mp4" type="video/mp4" />
+                                    <source src="/Protect-Your-Vehicle.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
