@@ -7,7 +7,7 @@ const SofaUses = () => {
     return (
         <div className='bg-[#ffffff] py-7'>
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full mx-auto pt-10">
-                <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6 md:h-80 mx-auto relative">
+                <div data-aos="fade-down" data-aos-duration="1000" className="w-full md:w-2/6 mx-auto relative">
                     <img src="https://i.ibb.co/Lv8Qsn7/Whats-App-Image-2023-05-18-fdat-15-42-22.jpg" alt="" className="w-5/6 h-full relative border border-primary flex justify-center items-center mx-auto" />
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className="w-full md:w-4/6 mx-auto p-5">
