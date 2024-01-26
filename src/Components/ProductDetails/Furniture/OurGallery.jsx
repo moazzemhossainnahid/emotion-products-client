@@ -8,29 +8,23 @@ const OurGallery = () => {
   const { t } = useTranslation();
 
   const data2 = [
-    "https://i.ibb.co/2dR0Dx2/Whats-App-Image-2023-05-ff14-at-19-06-13.jpg",
-    "https://i.ibb.co/sWJCpRw/Whats-App-Image-2023-05-14-fat-19-06-13.jpg",
-    "https://i.ibb.co/gW382r3/Whats-App-Image-2023-05-14-at-19-06-1ff2.jpg",
-    "https://i.ibb.co/r5Yssd7/Rectangle-114-1.png",
-    "https://i.ibb.co/86bfH9k/Rectangle-114-2.png",
-    "https://i.ibb.co/XpsNBjd/Rectangle-14.png",
+    "https://i.ibb.co/ZGDsvJG/Whats-App-ddd-Image-2023-05-18-at-15-42-20.jpg",
+    "https://i.ibb.co/sywyrRQ/Whats-App-Image-2023-05-18-at-d15-42-d21.jpg",
+    "https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg",
+    "https://i.ibb.co/PG57PrL/Whats-Appdd-Image-2023-05-18-at-15-42-21.jpg",
+    "https://i.ibb.co/y54Q2f6/Whats-App-Image-2023-05-1dd8-at-15-42-21.jpg",
+    "https://i.ibb.co/tczxKN8/Whats-App-Image-2023-05-18-dddat-15-42-21.jpg",
   ];
 
   const images = [
-    "https://i.ibb.co/2dR0Dx2/Whats-App-Image-2023-05-ff14-at-19-06-13.jpg",
-    "https://i.ibb.co/sWJCpRw/Whats-App-Image-2023-05-14-fat-19-06-13.jpg",
-    "https://i.ibb.co/gW382r3/Whats-App-Image-2023-05-14-at-19-06-1ff2.jpg",
-    "https://i.ibb.co/r5Yssd7/Rectangle-114-1.png",
-    "https://i.ibb.co/86bfH9k/Rectangle-114-2.png",
-    "https://i.ibb.co/XpsNBjd/Rectangle-14.png",
-    "https://i.ibb.co/k3Wc87Y/Rectangle-114.png",
-    "https://i.ibb.co/LhsKTLh/Rectangle-37.png",
-    "https://i.ibb.co/9nJmz6Z/Rectangle-111.png",
-    "https://i.ibb.co/7Cy5Gxt/Rectangle-38.png",
-    "https://i.ibb.co/qdbwmF3/Rectangle-168.png",
-    "https://i.ibb.co/SmFRkTd/Rectangle-197.png",
-    "https://i.ibb.co/9NsVh0c/Whats-App-Image-2023-05-14-afft-19-06-12.jpg",
-    "https://i.ibb.co/TrnSTM8/Whats-App-Image-2023-0f5-14-at-19-06-13.jpg",
+    "https://i.ibb.co/ZGDsvJG/Whats-App-ddd-Image-2023-05-18-at-15-42-20.jpg",
+    "https://i.ibb.co/sywyrRQ/Whats-App-Image-2023-05-18-at-d15-42-d21.jpg",
+    "https://i.ibb.co/XLqrmyS/Whats-App-Image-2023-05-18-at-1d5-42-21.jpg",
+    "https://i.ibb.co/PG57PrL/Whats-Appdd-Image-2023-05-18-at-15-42-21.jpg",
+    "https://i.ibb.co/y54Q2f6/Whats-App-Image-2023-05-1dd8-at-15-42-21.jpg",
+    "https://i.ibb.co/tczxKN8/Whats-App-Image-2023-05-18-dddat-15-42-21.jpg",
+    "https://i.ibb.co/VMvrw25/Whats-App-Imagedd-2023-05-18-at-15-42-21.jpg",
+    "https://i.ibb.co/Lv8Qsn7/Whats-App-Image-2023-05-18-fdat-15-42-22.jpg"
   ];
 
   return (
@@ -41,7 +35,7 @@ const OurGallery = () => {
           <div className="w-full md:w-3/5 relative">
             <div className="w-5/6 mx-auto md:m-0 bg-gradient-to-r from-[#0f667b] p-7 rounded-2xl relative">
               <img
-                src="https://i.ibb.co/qdbwmF3/Rectangle-168.png"
+                src="https://i.ibb.co/VMvrw25/Whats-App-Imagedd-2023-05-18-at-15-42-21.jpg"
                 alt=""
                 className="w-full mx-auto h-96"
               />
