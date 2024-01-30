@@ -85,31 +85,29 @@ const HomeTopBannerCarousel = () => {
                 {
                     SliderData.map((data, idx) => {
                         return (
-                            <div key={idx} className={`bg-gradient-to-tr from-gray-900 to-gray-500 relative h-[60vh] md:h-[85vh] bg-cover bg-center`}>
+                            <div key={idx} className={`relative h-[60vh] md:h-[85vh] bg-cover bg-center`}>
                                 <img
                                     src={data?.img}
                                     alt=""
                                     className="w-full absolute mix-blend-overlay h-full object-cover"
                                 />
                                 <div className="w-full text-center absolute bottom-20 md:bottom-40 space-y-3">
-                                    <Slide top duration={1500}>
+                                    {/* <Slide top duration={1500}>
                                         <h3 style={{ fontFamily: 'Helvetica' }} className="w-full md:w-4/5 mx-auto text-2xl md:text-5xl text-white">{data?.title}</h3>
                                     </Slide>
                                     <Slide bottom duration={2000}>
                                         <p className="pb-5 text-gray-300 text-sm">{data?.desc}</p>
-                                    </Slide>
+                                    </Slide> */}
                                     <div className="w-full lg:w-5/6 xl:w-3/5 mx-auto flex flex-col md:flex-row justify-around items-center gap-5">
-                                        <div className="">
+                                        {/* <div className="">
                                             <Slide bottom duration={2500}>
-                                                {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
                                                 <Link to="abc" smooth={true} duration={500}>
                                                     <label className="mx-auto text-white bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 rounded">
                                                         <p className="uppercase flex gap-2">{t('homeSlider.aboutUS')} <FaArrowRight /></p>
                                                     </label>
                                                 </Link>
-                                                {/* </button> */}
                                             </Slide>
-                                        </div>
+                                        </div> */}
                                         <div className="">
                                             <Slide bottom duration={2500}>
                                                 {/* <button className='bg-[#00C2FF] border-0 justify-center btn btn-warning px-7 py-2 text-black rounded'> */}
