@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
-import Slide from 'react-reveal/Slide';
+import Slide from 'react-awesome-reveal';
 import Slider from 'react-slick';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-scroll';

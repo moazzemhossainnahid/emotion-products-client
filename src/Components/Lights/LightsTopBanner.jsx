@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngleRight, FaArrowRight } from 'react-icons/fa';
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 
 const LightsTopBanner = () => {
     return (

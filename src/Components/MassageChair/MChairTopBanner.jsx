@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaAngleRight } from 'react-icons/fa';
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 
 const MChairTopBanner = () => {
     const {t} = useTranslation();

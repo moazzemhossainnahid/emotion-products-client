@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import Slide from 'react-reveal/Slide';
+import Slide from 'react-awesome-reveal';
 import Slider from 'react-slick';
 
 const TopBannerCarousel = () => {
