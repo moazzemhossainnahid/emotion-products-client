@@ -1,9 +1,18 @@
-import React from 'react';
-import { ScrollRotate } from 'react-scroll-rotate';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MChairVideos = () => {
     const { t } = useTranslation();
+    const [rotate, setRotate] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const rotation = window.scrollY % 360;
+            setRotate(rotation);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="w-full h-[80vh] md:h-[95vh] py-7 md:mb-28">
@@ -11,9 +20,11 @@ const MChairVideos = () => {
                 <div className="flex w-4/5 mx-auto justify-between items-center gap-3 pt-5">
                     <h3 className="text-xl md:text-2xl font-bold text-white">{`Premium quality and watch our hottest Massage Chair videos`}</h3>
                     <div className="md:pr-20">
-                        <ScrollRotate from={0} to={360} throttle={0.1} animationDuration={0.3}>
-                            <img src="https://i.ibb.co/XZvKfRP/Group-75.png" alt="" className="" />
-                        </ScrollRotate>
+                        <img 
+                            src="https://i.ibb.co/XZvKfRP/Group-75.png" 
+                            alt="" 
+                            style={{ transform: `rotate(${rotate}deg)`, transition: "transform 0.1s linear" }}
+                        />
                     </div>
                 </div>
 
