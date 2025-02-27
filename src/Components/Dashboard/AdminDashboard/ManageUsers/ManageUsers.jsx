@@ -9,7 +9,7 @@ const ManageUsers = () => {
     const [users, setUsers] = useState([]);
 
     useEffect( () => {
-        fetch('https://emotion-products-server-iii.vercel.app/api/v1/users')
+        fetch('https://emotion-products-server-new.vercel.app/api/v1/users')
         .then(res => res.json())
         .then(data => setUsers(data))
     }, [users]);

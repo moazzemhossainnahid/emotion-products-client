@@ -11,7 +11,7 @@ const ManageOrders = () => {
 
 
     useEffect(() => {
-        fetch('https://emotion-products-server-iii.vercel.app/api/v1/orders')
+        fetch('https://emotion-products-server-new.vercel.app/api/v1/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [number]);

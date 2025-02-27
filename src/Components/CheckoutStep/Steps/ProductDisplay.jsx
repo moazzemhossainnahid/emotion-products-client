@@ -8,7 +8,7 @@ const ProductDisplay = () => {
             price: "3700"
         }
 
-        fetch(`https://emotion-products-server-iii.vercel.app/create-checkout-session`, {
+        fetch(`https://emotion-products-server-new.vercel.app/create-checkout-session`, {
             method: 'POST',
             mode: "no-cors",
         })
