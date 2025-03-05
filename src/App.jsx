@@ -35,6 +35,8 @@ import ProductDetailsFurniture from './Pages/Sofa/ProductDetails/ProductDetails'
 import ProductDetailsLights from './Pages/Lights/ProductDetails/ProductDetails';
 import CartCarport from './Pages/Cart/CartCarport';
 import CartFurniture from './Pages/Cart/CartFurniture';
+import CartChairNew from './Pages/Cart/CartChairNew';
+import CartCarportNew from './Pages/Cart/CartCarportNew';
 
 const languages = [
   {
@@ -71,8 +73,10 @@ function App() {
             <Route path='/productdetails/massagechair/:id' element={<ProductDetailsMC />} />
             <Route path='/productdetails/furniture/:id' element={<ProductDetailsFurniture />} />
             <Route path='/productdetails/light/:id' element={<ProductDetailsLights />} />
-            <Route path='/massagechair/cart/:id' element={<RequireAuth><CartChair /></RequireAuth>} />
-            <Route path='/carport/cart/:id' element={<RequireAuth><CartCarport /></RequireAuth>} />
+            {/* <Route path='/massagechair/cart/:id' element={<RequireAuth><CartChair /></RequireAuth>} /> */}
+            <Route path='/massagechair/cart/:id' element={<RequireAuth><CartChairNew /></RequireAuth>} />
+            {/* <Route path='/carport/cart/:id' element={<RequireAuth><CartCarport /></RequireAuth>} /> */}
+            <Route path='/carport/cart/:id' element={<RequireAuth><CartCarportNew /></RequireAuth>} />
             <Route path='/furniture/cart/:id' element={<RequireAuth><CartFurniture /></RequireAuth>} />
             <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
             <Route path="/checkout-success" element={<RequireAuth><CheckoutSuccess /></RequireAuth>} />

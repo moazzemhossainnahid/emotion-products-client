@@ -63,9 +63,9 @@ const PayButton = ({ checkoutItems }) => {
     <>
       <button
         onClick={() => handleCheckout()}
-        className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white"
+        className="text-base leading-none w-full py-3 bg-primary border-primary border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white"
       >
-        Check Out
+        Pay Now
       </button>
     </>
   );
